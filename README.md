@@ -11,7 +11,17 @@ Please note these models ***come as is***. Furthermore, no personal information 
 It needs to be noted that this is a very loose category list. For those interested models with (GIS) are ones which utilize GIS data.
 
 
-### Social Science Models
+### Social Models
+
+* [Two-tiered Tiebout: An agent-based model of federalism](CSS645Models/Two_tiered_Tiebout)
+* [Growing a Grocery Store: Mechanisms for Impulse Purchase Cascades](CSS645Models/Grocery_Store)
+* [Pickpocketing in a Crowd of People](CSS645Models/Pickpocketing)
+* [Modeling Bomb Placement Location: An Agent Based Model](CSS645Models/BombScenario) (GIS)
+* [Housing Availability, Student Debt, and an Aging Population](CSS645Models/HousingAvailability)
+* [Designing a Sustainable Bikesharing Program Operation: An Agent-Based Approach](CSS645Models/Bikeshare)
 
 ### Environmetal Models
-[Prediction of Impact in Submerged Aquatic Vegetation (SAV) Density Due to Climate Change and Implications on Macroinvertebrate Biodiversity](CSS645Models/ABC2)
+* [Prediction of Impact in Submerged Aquatic Vegetation (SAV) Density Due to Climate Change and Implications on Macroinvertebrate Biodiversity](CSS645Models/ABC2)
+* [FIShED: Fish Ingestion by Snakeheads – an Exploratory Design](CSS645Models/Snakeheads)
+
+
