@@ -35,6 +35,7 @@ It needs to be noted that this is a very loose category list. For those interest
 * [Modeling Solar Technology Diffusion using Memory-dynamics](CSS645Models/SolarTechnology) (GIS)
 * [GEO Referenced Redistricting by Emergence (GeRR-E): An Agent Based Model](CSS645Models/GeRRE) (GIS)
 * [Star-Crossed Trufflers: A Tragedy (of the Commons)](CSS645Models/Star_Crossed_Trufflers)
+* [A Spatial and Temporal Implementation of Needs-based Pattern of Life](CSS645Models/Needs_based_patterns_of_life)
 * [An Agent-Based Model of British Counter-Insurgency Strategies during the Anglo-Boer War](CSS645Models/Anglo_Boer_War)
 * [Along the Border: An agent-based Model of Migration Patterns to the Southwestern United States- Mexico Border](CSS645Models/Along_the_border)
 * [An Agent-Based Model of the Spatial and Social Dynamics of Playground Bullying](CSS645Models/Bullying)
