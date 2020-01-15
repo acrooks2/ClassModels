@@ -19,9 +19,25 @@ It needs to be noted that this is a very loose category list. For those interest
 * [Modeling Bomb Placement Location: An Agent Based Model](CSS645Models/BombScenario) (GIS)
 * [Housing Availability, Student Debt, and an Aging Population](CSS645Models/HousingAvailability)
 * [Designing a Sustainable Bikesharing Program Operation: An Agent-Based Approach](CSS645Models/Bikeshare)
+* [A Spatially Explicit Agent Based Model of Food Deserts](CSS645Models/Food_Desert) (GIS)
+* [Agent-Based Modeling of Information Propagation in Physical and Cyber Spaces](CSS645Models/Information_Propagation) (GIS)
+* [Modeling Refugee and Internally Displaced Person Flow in Countries Experiencing Internal Conflicts](CSS645Models/RefugeeModel)
+* [West Virginia: A Mountain Mining Model](CSS645Models/Mining_Model)
+* [Spatial Agent-Based Model for The Effect of Social Network on Wildfire Evacuation](CSS645Models/Wildfire_Evacuation)
+* [Simulating the Ridesharing Economy: The Individual Agent Metro-Washington Area Ridesharing Model (IAMWARM)](CSS645Models/Ridesharing) (GIS)
+* [Using Agent Based Modeling to Replicate Origins of Social Complexity: The Case of Limited Evidence in the Late Longshan Cultures and Early Erlitou Culture](CSS645Models/Neolithic_China) (GIS)
+* [Estimating Populations at Risk to Terrorism: An Agent-Based Modeling Approach](CSS645Models/MyLITTELPWNES) (GIS)
+* [Layering Access to Reentry Programs with an Agent-Based Modeling Simulation](CSS645Models/LARPing) (GIS)
+* [Exploring Urban Shrinkage by Simulation of Housing Market in Detroit: An Agent-Based Model Implementation](CSS645Models/Urban_Shrinkage) (GIS)
+* [Modeling Appalachian Trail Recreation: Camping, Hiking & Overcrowding in our Natural parks (MARCH-ON)](CSS645Models/MARCH_ON) (GIS)
+* [Spread of Disease as Defined by its Attributes (SODDA): An Agent-Based Model](CSS645Models/SODDA)
+
+
+
 
 ### Environmetal Models
 * [Prediction of Impact in Submerged Aquatic Vegetation (SAV) Density Due to Climate Change and Implications on Macroinvertebrate Biodiversity](CSS645Models/ABC2)
 * [FIShED: Fish Ingestion by Snakeheads – an Exploratory Design](CSS645Models/Snakeheads)
+* [Ecosystem Recovery Modeling: Utilizing Individual Based Modeling to Replicate Tri-Tropic Cascades in Yellowstone National Park](CSS645Models/Ecosystem_Recovery)
 
 

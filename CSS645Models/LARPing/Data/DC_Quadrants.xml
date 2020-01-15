@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?><metadata>
+<idinfo>
+<citation>
+<citeinfo>
+<origin/>
+<origin/>
+<pubdate>20050712</pubdate>
+<title>DC Quadrants</title>
+<geoform>vector digital data</geoform>
+<pubinfo>
+<publish>DC GIS</publish>
+</pubinfo>
+<lworkcit>
+<citeinfo>
+<origin/>
+<title>DC Geographic Information System</title>
+<geoform>vector digital data</geoform>
+</citeinfo>
+</lworkcit>
+</citeinfo>
+</citation>
+<descript>
+<abstract>District of Columbia quadrants. The dataset contains locations and attributes of the District of Columbia quadrants, created as part of the DC Geographic Information System (DC GIS) for the D.C. Office of the Chief Technology Officer (OCTO) and participating D.C. government agencies.</abstract>
+<purpose>This data is used for the planning and management of Washington, D.C. by local government agencies.</purpose>
+</descript>
+<timeperd>
+<timeinfo>
+<sngdate>
+<caldate>20050712</caldate>
+</sngdate>
+</timeinfo>
+<current>publication date</current>
+</timeperd>
+<status>
+<progress>In work</progress>
+<update>As needed</update>
+</status>
+<spdom>
+<bounding>
+<westbc>-77.119896</westbc>
+<eastbc>-76.909016</eastbc>
+<northbc>38.995967</northbc>
+<southbc>38.791582</southbc>
+</bounding>
+</spdom>
+<keywords>
+<theme>
+<themekt>None</themekt>
+<themekey>Quadrant</themekey>
+<themekey>imageryBasemapsEarthCover</themekey>
+<themekey>Geography</themekey>
+<themekey>Government Jurisdiction</themekey>
+<themekey>boundary</themekey>
+<themekey>Political Jurisdiction</themekey>
+<themekey>location</themekey>
+</theme>
+<theme>
+<themekt>ISO 19115 Topic Categories</themekt>
+<themekey>imageryBaseMapsEarthCover</themekey>
+<themekey>location</themekey>
+</theme>
+<place>
+<placekt>None</placekt>
+<placekey>Washington</placekey>
+<placekey>D.C.</placekey>
+<placekey>DCGIS</placekey>
+<placekey>District of Columbia</placekey>
+<placekey>DC GIS</placekey>
+<placekey>DC</placekey>
+</place>
+</keywords>
+<accconst>None</accconst>
+<useconst>This work is licensed under a Creative Commons Attribution 4.0 International License.</useconst>
+<ptcontac>
+<cntinfo>
+<cntorgp>
+<cntorg>D.C. Office of the Chief Technology Officer</cntorg>
+<cntper>GIS Data Coordinator</cntper>
+</cntorgp>
+<cntaddr>
+<addrtype>mailing and physical</addrtype>
+<address>200 I Street SE, 5th Floor</address>
+<city>Washington</city>
+<state>DC</state>
+<postal>20003</postal>
+<country>US</country>
+</cntaddr>
+<cntfax>(202) 727-5660</cntfax>
+<cntemail>dcgis@dc.gov</cntemail>
+<hours>8:30 am - 5 pm</hours>
+</cntinfo>
+</ptcontac>
+<datacred>DC Office of Planning, DC Office of the Chief Technology Officer</datacred>
+<crossref>
+<citeinfo>
+<origin/>
+<pubdate>20020214</pubdate>
+<title>DC Geographic Information System</title>
+</citeinfo>
+</crossref>
+</idinfo>
+<dataqual>
+<attracc>
+<attraccr>Data believed to be complete and accurate as of the time period cited. Subject to change. Digital version compared with original source data for accuracy and completeness. Not validated, currently under review by source and/or responsible agency.</attraccr>
+</attracc>
+<logic>Not validated, currently under review by source and/or responsible agency.</logic>
+<complete>Data believed to be complete and accurate, subject to change. Digital version compared with original source data for accuracy and completeness. Not validated, currently under review by source and/or responsible agency.</complete>
+<posacc>
+<horizpa>
+<horizpar>Not validated, currently under review by source and/or responsible agency.</horizpar>
+</horizpa>
+<vertacc>
+<vertaccr>N/A</vertaccr>
+</vertacc>
+</posacc>
+<lineage>
+<srcinfo>
+<srccite>
+<citeinfo>
+<origin/>
+<pubdate>20050101</pubdate>
+<title>Metro Washington, DC</title>
+<edition>37</edition>
+<onlink>http://www.adcmap.com</onlink>
+</citeinfo>
+</srccite>
+<srcscale>24000</srcscale>
+<typesrc>None</typesrc>
+<srccitea>Metro Washington, DC</srccitea>
+<srccontr>location</srccontr>
+</srcinfo>
+<procstep>
+<procdesc>Due to inconsistencies between the actual addresses and the quadrant boundaries, the DCQuadPly layer was revaluated and changes were made, as follows: -------------------------------------------------------------------------------------------- Quad Change 1: North Capitol Street at Van Buren Street to Eastern Avenue The old boundary went straight north from the intersection of North Capitol Street and Van Buren Street. North Capitol Street curves to the northeast at this point while the old boundary went straight cutting through a block. This caused inconsistencies between some of the quad assignments to actual addresses and the true quadrant areas. The boundary was adjusted so that the boundary runs along North Capitol Street and follows North Capitol Street as it veers to the northeast. The boundary ends at Eastern Ave. --------------------------------------------------------------------------------------------- Quad Change 2: North Capitol Street where it becomes Blair Rd NW The old boundary went straight connecting the two discontinuous North Capitol Streets not running along a street segment. This caused inconsistencies between some of the quad assignments with actual addresses and the quadrant areas. The new boundary curves around the northwest addresses located on Sligo Mill Rd NW. The boundary runs on a diagonal from the intersection of Blair Rd and North Capitol Street to the train tracks. It then diverges and heads north to the Chillum Place and Kansas Ave intersection. It then offsets slightly to the west of Chillum Place NE and then does a right turn until it joins the intersection of Chillum Place and North Capitol. -------------------------------------------------------------------------------------------- Quad Change 3: South Capitol Street where it splits into two (Frederick Douglas Bridge and South Capitol Street) The old boundary followed South Capitol Street across the Frederick Douglas Bridge and then straight along South Capitol Street across Anacostia. This caused inconsistencies between the quad assignments of some of the actual addresses and the quadrant areas. These addresses were located between the South Capitol Street Bridge and the local South Capitol Street. The new boundary runs along South Capitol Street to Potomac Ave. It touches Potomac Ave then runs just to the north of Potomac Ave (it is a SE street), then reconnects to the intersection of Potomac Ave and South Capitol Street (non bridge). Then it follows South Capitol Street (local road) south until its end. Then it heads straight south except where it diverges slightly to avoid F Street SW. It continues to the Anacostia River and then heads across the water until it connects with the intersection of South Capitol Street Bridge and the south bank of the Anacostia River. ------------------------------------------------------------------------------------------- Quad Change 4: North Capitol Street by Hawaii Ave NE and Clermont Drive NE The old boundary ran along North Capitol Street, then along Hawaii Ave NE, then along Clermont Drive NE, and finally back to North Capitol Street. But, two problems arose from this. First, 1 Hawaii Ave NE is actually west of Hawaii Ave NE. Second, both Clermont Drive and Hawaii Ave are NE streets there. The new quadrant boundary follows North Capitol Street until the intersection with Hawaii Ave NE. Then, it diverges and stays slightly to the west of Hawaii Ave NE until reconnecting with the intersection at the Hawaii Ave NE, Clermont Drive NE, and Allison NW. Then it follows Clermont Drive, but stays slightly to the west and then reconnects to North Capitol Street at its intersection with Clermont Drive NE. -------------------------------------------------------------------------------------------- The following principles were used to delineate the quadrant boundaries: 1) Where possible addresses should remain with their current address. No addresses had to change. 2) Streets centerlines must retain their assigned quadrant. -------------------------------------------------------------------------------------------- The quadrant boundaries were created by selecting matching lines from the Snapbase. If there was no matching snapbase line, digitized new lines were created. The lines were then converted to a polygon feature class. The feature class was attributed and QC'd.</procdesc>
+<proccont>
+<cntinfo>
+<cntorgp>
+<cntorg>Office of the Chief Technology Officer</cntorg>
+<cntper>GIS Data Coordinator</cntper>
+</cntorgp>
+<cntaddr>
+<addrtype>mailing and physical</addrtype>
+<address>441 4th St NW, Suite 930 South</address>
+<city>Washington</city>
+<state>DC</state>
+<postal>20001</postal>
+<country>US</country>
+</cntaddr>
+<cntfax>202-727-5660</cntfax>
+<cntemail>dcgis@dc.gov</cntemail>
+<hours>8:30am - 5:30pm</hours>
+</cntinfo>
+</proccont>
+</procstep>
+<procstep>
+<procdesc>The quadrants were identified from public records and heads-up digitized from the 1995 orthophotographs. Attribute data was provided by public records. Planimetrics were created at a scale of 1:1,000. This means that a well defined feature falls within two feet of true position. All DC GIS data is stored and exported in Maryland State Plane coordinates NAD 83 meters.</procdesc>
+<procdate>20010806</procdate>
+<proccont>
+<cntinfo>
+<cntorgp>
+<cntorg>D.C. Office of the Chief Technology Officer</cntorg>
+<cntper>GIS Coordinator</cntper>
+</cntorgp>
+<cntfax>(202) 727-5660</cntfax>
+<cntemail>dcgis@dc.gov</cntemail>
+<hours>8:30am - 5:30pm</hours>
+</cntinfo>
+</proccont>
+</procstep>
+</lineage>
+</dataqual>
+<spdoinfo>
+<direct>Vector</direct>
+<ptvctinf>
+<sdtsterm>
+<sdtstype>GT-polygon composed of chains</sdtstype>
+<ptvctcnt>4</ptvctcnt>
+</sdtsterm>
+</ptvctinf>
+</spdoinfo>
+<eainfo>
+<detailed>
+<enttyp>
+<enttypl>DCGIS.DCQuadPly</enttypl>
+</enttyp>
+<attr>
+<attrlabl>NAME</attrlabl>
+<attrdef>Quadrant NAme</attrdef>
+</attr>
+<attr>
+<attrlabl>Shape</attrlabl>
+<attrdef>Feature geometry.</attrdef>
+<attrdefs>ESRI</attrdefs>
+<attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+</attr>
+<attr>
+<attrlabl>GIS_ID</attrlabl>
+<attrdef>OCTO GIS sequential identifier</attrdef>
+<attrdefs>Esri</attrdefs>
+<attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+</attr>
+<attr>
+<attrlabl>OBJECTID</attrlabl>
+<attrdef>Internal feature number.</attrdef>
+<attrdefs>ESRI</attrdefs>
+<attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+</attr>
+<attr>
+<attrlabl>Editor</attrlabl>
+</attr>
+<attr>
+<attrlabl>Edited</attrlabl>
+</attr>
+<attr>
+<attrlabl>SHAPE.AREA</attrlabl>
+</attr>
+<attr>
+<attrlabl>QUADRANT</attrlabl>
+<attrdef>Quadrant Abbreviation</attrdef>
+</attr>
+<attr>
+<attrlabl>SHAPE.LEN</attrlabl>
+<attrdef>Feature geometry.</attrdef>
+<attrdefs>Esri</attrdefs>
+<attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+</attr>
+<attr>
+<attrlabl>SHAPE</attrlabl>
+<attrdef>Feature geometry.</attrdef>
+<attrdefs>ESRI</attrdefs>
+<attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+</attr>
+<attr>
+<attrlabl>GlobalID</attrlabl>
+</attr>
+<attr>
+<attrlabl>Creator</attrlabl>
+</attr>
+<attr>
+<attrlabl>Created</attrlabl>
+</attr>
+</detailed>
+</eainfo>
+<distinfo>
+<distrib>
+<cntinfo>
+<cntorgp>
+<cntorg>D.C. Office of the Chief Technology Officer</cntorg>
+<cntper>GIS Data Coordinator</cntper>
+</cntorgp>
+<cntaddr>
+<addrtype>mailing and physical</addrtype>
+<address>200 I Street SE, 5th Floor</address>
+<city>Washington</city>
+<state>DC</state>
+<postal>20003</postal>
+<country>US</country>
+</cntaddr>
+<cntfax>(202) 727-5660</cntfax>
+<cntemail>dcgis@dc.gov</cntemail>
+<hours>8:30 am - 5 pm</hours>
+</cntinfo>
+</distrib>
+<distliab>See access and use constraints information.</distliab>
+<custom>DC datasets can be downloaded from "http://opendata.dc.gov".</custom>
+</distinfo>
+<metainfo>
+<metd>20171030</metd>
+<metc>
+<cntinfo>
+<cntorgp>
+<cntorg>D.C. Office of the Chief Technology Officer</cntorg>
+<cntper>GIS Data Coordinator</cntper>
+</cntorgp>
+<cntaddr>
+<addrtype>mailing and physical</addrtype>
+<address>200 I Street SE, 5th Floor</address>
+<city>Washington</city>
+<state>DC</state>
+<postal>20003</postal>
+<country>US</country>
+</cntaddr>
+<cntfax>(202) 727-5660</cntfax>
+<cntemail>dcgis@dc.gov</cntemail>
+<hours>8:30 am - 5 pm</hours>
+</cntinfo>
+</metc>
+<metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+<metstdv>FGDC-STD-001-1998</metstdv>
+<mettc>local time</mettc>
+</metainfo>
+</metadata>
