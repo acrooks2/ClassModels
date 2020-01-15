@@ -9,7 +9,6 @@
 Model Variables: 
 ![Model Variables](ModelVariables.png)
 
-
 The NetLogo Graphical User Interface of the Model: 
 ![The NetLogo Graphical User Interface](GUI.png)
 

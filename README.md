@@ -31,13 +31,22 @@ It needs to be noted that this is a very loose category list. For those interest
 * [Exploring Urban Shrinkage by Simulation of Housing Market in Detroit: An Agent-Based Model Implementation](CSS645Models/Urban_Shrinkage) (GIS)
 * [Modeling Appalachian Trail Recreation: Camping, Hiking & Overcrowding in our Natural parks (MARCH-ON)](CSS645Models/MARCH_ON) (GIS)
 * [Spread of Disease as Defined by its Attributes (SODDA): An Agent-Based Model](CSS645Models/SODDA)
-
-
+* [Evacuation Model for the North Carolina Coast](CSS645Models/Hurricane_Evacuation_Model) (GIS)
+* [Modeling Solar Technology Diffusion using Memory-dynamics](CSS645Models/SolarTechnology) (GIS)
+* [GEO Referenced Redistricting by Emergence (GeRR-E): An Agent Based Model](CSS645Models/GeRRE) (GIS)
+* [Star-Crossed Trufflers: A Tragedy (of the Commons)](CSS645Models/Star_Crossed_Trufflers)
+* [An Agent-Based Model of British Counter-Insurgency Strategies during the Anglo-Boer War](CSS645Models/Anglo_Boer_War)
+* [Along the Border: An agent-based Model of Migration Patterns to the Southwestern United States- Mexico Border](CSS645Models/Along_the_border)
+* [An Agent-Based Model of the Spatial and Social Dynamics of Playground Bullying](CSS645Models/Bullying)
+* [Simulating Suburban Commuter Behavior in Reston, Virginia: An Agent-based Transportation Model](CSS645Models/TransitModel)
 
 
 ### Environmetal Models
 * [Prediction of Impact in Submerged Aquatic Vegetation (SAV) Density Due to Climate Change and Implications on Macroinvertebrate Biodiversity](CSS645Models/ABC2)
 * [FIShED: Fish Ingestion by Snakeheads – an Exploratory Design](CSS645Models/Snakeheads)
 * [Ecosystem Recovery Modeling: Utilizing Individual Based Modeling to Replicate Tri-Tropic Cascades in Yellowstone National Park](CSS645Models/Ecosystem_Recovery)
+* [CrabSim: An Individual-Based Model (IBM) of Foraging Behavior in Sand-Bubbler Crabs](CSS645Models/CrabSim)
+* [The Scenario of Arsenic Contamination in Ground Water](CSS645Models/ArsenicContamination)
+* [Simulating the Effect of Subsistence Agriculture on a Population of Spider Monkeys in the Amazon Rainforest: An Individual-based Model](CSS645Models/Farming_Monkey_Model)
 
 
