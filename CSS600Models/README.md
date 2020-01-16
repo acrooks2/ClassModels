@@ -19,6 +19,7 @@ Please note these models ***come as is***. Furthermore, no personal information 
 For those interested models with (GIS) are ones which utilize GIS data.
 
 ## Models
-* [Simulating the Effect of Subsistence Agriculture on a Population of Spider Monkeys in the Amazon Rainforest: An Individual-based Model](Farming_Monkey_Model)
+* [Youth and Environmental Risk and Protective Scores (YERPS): An Agent-based Model of Interactional Theory](YERPS)
+* [Impact of Academic Advising on Student Retention: Care and Trust Building for Student Success](Retention)
 
 
