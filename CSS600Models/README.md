@@ -4,10 +4,10 @@ Description: This course is a graduate-level survey of computational approaches 
 
 Computational social science (CSS) is at the interdisciplinary frontier in the social sciences. As an introduction to the subject, the course has the following objectives:
 
-1.     To understand the motivation for the use of computational models in social science theory and research, including some historical aspects (Why conduct computational research in the social sciences?).
-1.     To learn about the variety of CSS research programs across the social science disciplines, through a survey of social simulation models (What has CSS accomplished thus far?).
-1.     To understand the distinct contribution that CSS can make by providing specific insights about society, social phenomena at multiple scales, and the nature of social complexity (What is the relation between computational social science.
-1.     To provide foundations for more advanced work in subsequent courses or projects for those students who already have or will develop a long-term interest in computational social science.
+1. To understand the motivation for the use of computational models in social science theory and research, including some historical aspects (Why conduct computational research in the social sciences?).
+1. To learn about the variety of CSS research programs across the social science disciplines, through a survey of social simulation models (What has CSS accomplished thus far?).
+1. To understand the distinct contribution that CSS can make by providing specific insights about society, social phenomena at multiple scales, and the nature of social complexity (What is the relation between computational social science.
+1. To provide foundations for more advanced work in subsequent courses or projects for those students who already have or will develop a long-term interest in computational social science.
 
 Click on the links to see a selection of course projects from [Fall 2014](https://youtu.be/kbH9qWMVj6Y), [Fall 2015](https://youtu.be/W79IS9LETEc), [Fall 2016](https://youtu.be/CWV-RfbSsmk), [Fall 2017](https://youtu.be/_cOHYyYEnYU), [Fall 2018](https://youtu.be/j2zehqPFCkY) and [Fall 2019](https://youtu.be/tE-DGT3kYyM) classes.
  
