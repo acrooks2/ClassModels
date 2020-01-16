@@ -16,10 +16,47 @@ Click on the links to see a selection of course projects from [Fall 2014](https:
 ## Release Notes
 Please note these models ***come as is***. Furthermore, no personal information is given on who created these models (unless there is a publication withit, but I need to acknowledge all the students who submitted the models, you know who you are! This project would not be possible without you!), What explanations there are given by the README file for each model (these mainly come in the form of abstracts from the papers that were submitted with the models). **No further explanations, support etc. will be given**. Lastly, these models are only given for pedagogical reasons and where possible each model has been upgraded to NetLogo 6.1.
 
-For those interested models with (GIS) are ones which utilize GIS data.
+For those interested, models with "***(GIS)***" next to them are ones which utilize GIS data.
 
 ## Models
 * [Youth and Environmental Risk and Protective Scores (YERPS): An Agent-based Model of Interactional Theory](YERPS)
 * [Impact of Academic Advising on Student Retention: Care and Trust Building for Student Success](Retention)
+* [A Model of Job Search Using Near Zero-Intelligence Agents](JobSearch)
+* [Marriage, Divorce and Maslow’s Hierarchy of Needs: An Agent-Based Model of Divorce Rates](Divorce)
+* [Agent Based Implementation of the Drake Equation](DrakeEquation)
+* [A System Dynamics Approach to the Augmented Solow Growth Model](SolowSD)
+* [The Welfare Effects of Endogenous Immobility in Tiebout’s Model](TieboutModel)
+* [Drug-Resistant Fungal Infection Model (DR-FIM): An Agent-Based Model of Multidrug Resistant *Candida auris* in an Intensive-Care Unit](MultidrugResistant) (GIS)
+* [Political Influence of Multi-Track Diplomacy on Population  Opinion Dynamics](MultiTrackDiplomacy)
+* [Voters' Economic Confidence Levels, Partisanship and Support for Incumbents: An Agent-Based Model Analyzing the 2012 US Presidential Elections](VotersEconomicConfidence)
+* [Its Not Easy Being Green: A modeling approach to analyzing environmentally friendly behavior](BeingGreen)
+* [An Agent-Based Model of Dating](Dating)
+* [Intrinsic Factors Influencing The Bullwhip Effect](BullwhipEffect)
+* [Modelling the Effects of Crowdsourced Traffic Data on Traffic Flow: An Agent Based Approach](CrowdsourcedTrafficData)
+* [Multiagent Modeling of Extraversion Reveals Dynamics of Reward Processing](Extraversion)
+* [Pedestrian Modeling: Simulating The Boston Marathon Bombing](BostonMarathon) (GIS)
+* [Crisis Prevention and Management: The Use of Agent Based Models in Human Disaster Reaction](DisasterReaction)
+* [The Impact of Homophily, Social Selection Processes, and Propinquity On Urban Housing Segregation](HomophilyAndSegregation)
+* [Factors that Influence Voting Analyzed Through an Agent-based Model](VotingInfluence) (GIS)
+* [Agent-Based Model of Hiring Discrimination in U.S. Labor Markets](LaborMarketDiscrimination)
+* [The Tragedy of the Commons, Collective Action and the Coase Theorem](CollectiveActionAndCoaseTheorem)
+* [An Agent Based Model Approach to the One-Sided Optimal Search Path Problem to find Fugitives, Missing Persons, and wanted Persons with Sensors](SearchPath)
+* [An Agent-Based Modeling Approach Applied To The Diffusion Of HIV In States With High Travel](DiffusionOfHIV) (GIS)
+* [The Evolution Of Civilizations: A Study Of Civilization Growth Conditions](CivilizationGrowth)
+* [An Agent Based Model using the SEIR to Analysis Opioid Abuse in The United States](OpioidAbuse)
+* [An Agent-based Approach To Modeling Population Migration: Looking at the Effects of Corruption and Unemployment in Kosovo](PopulationMigration)
+* [Comparison between Real Estate Commission Policies](CommissionPolicies)
+* [Building Simulation Models of Resilience of Small Teams](ResilientTeam)
+* [Privacy Opinion Dynamics of Employee Health and Wellness Program Candidates](PrivacyOpinionDynamics)
+* [Oversight in Traffic Model: An Investigation of Traffic Patterns in a Gridlock Situation with Observer Monitoring](ObserverOversightInTraffic)
+* [Post-Disaster Fuel Distribution](GasDistributionModel)
+* [Elephant Poaching in Africa: Agent-based Modeling for Conservation Policy](ElephantPoaching)
+* [An Agent-Based Simulation of Marine Corps Unit Cohesion](UnitCohesion)
+* [The Hospital in My Computer: Medical Emergencies - Diagnosing by Instantiating Communication (MEDIC)](MEDIC)
+* [LIARS: A Model of Preference Falsifiers and Democratic Elections](LIARS)
+* [Participation as Lagging Emergent Behavior in Electoral Systems (PLEBES): An Agent-Based Model of Candidate and Voter Position-Seeking](PLEBES)
+* [Avoid Shortcuts: Investigating the Impact of Management Interventions and Social Influence on Construction Workers’ Safety Behavior](ConstructionWorkersSafety)
+* [Billboard Effects on Vaccination and Contagion (BEVAC): An Agent-Based Model](BillboardEffectsOnVaccination)
+* [Exploring Peer Effects and Classroom Assignment in Schools](ClassroomAssignment)
 
 
