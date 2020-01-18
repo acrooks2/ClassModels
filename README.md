@@ -112,7 +112,7 @@ It needs to be noted that this is a very loose category list. For those interest
 * [CrabSim: An Individual-Based Model (IBM) of Foraging Behavior in Sand-Bubbler Crabs](CSS645Models/CrabSim)
 * [The Scenario of Arsenic Contamination in Ground Water](CSS645Models/ArsenicContamination)
 * [Simulating the Effect of Subsistence Agriculture on a Population of Spider Monkeys in the Amazon Rainforest: An Individual-based Model](CSS645Models/Farming_Monkey_Model)
-* * [The role of fisheries in direct and indirect species declines: The case of the Chinook salmon fishery in the Pacific Northwest](CSS600Models/OrcaChinook)
+* [The role of fisheries in direct and indirect species declines: The case of the Chinook salmon fishery in the Pacific Northwest](CSS600Models/OrcaChinook)
 * [An Agent Based Model to simulate the enforcement of illegal poaching of African elephants](CSS600Models/ElephantPoaching2)
 * [Private Conservation and Habitat Fragmentation](CSS600Models/HabitatFragmentation)
 
