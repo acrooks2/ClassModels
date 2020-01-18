@@ -1,6 +1,6 @@
 # Sample of NetLogo Models from CSS 600 - Computational Social Science 
 
-Description: This course is a graduate-level survey of computational approaches to social science research, with emphasis on methods, tools, software frameworks, and complexity theory as these apply to the investigation of social phenomena. For our purposes, "the social sciences" include anthropology, communication, economics and finance, geography, history, linguistics, political science, sociology, and social psychology, informed by developments in psychology, cognitive science, neuroscience, and related branches of behavioral science.
+**Description**: This course is a graduate-level survey of computational approaches to social science research, with emphasis on methods, tools, software frameworks, and complexity theory as these apply to the investigation of social phenomena. For our purposes, "the social sciences" include anthropology, communication, economics and finance, geography, history, linguistics, political science, sociology, and social psychology, informed by developments in psychology, cognitive science, neuroscience, and related branches of behavioral science.
 
 Computational social science (CSS) is at the interdisciplinary frontier in the social sciences. As an introduction to the subject, the course has the following objectives:
 
@@ -9,7 +9,7 @@ Computational social science (CSS) is at the interdisciplinary frontier in the s
 1. To understand the distinct contribution that CSS can make by providing specific insights about society, social phenomena at multiple scales, and the nature of social complexity (What is the relation between computational social science.
 1. To provide foundations for more advanced work in subsequent courses or projects for those students who already have or will develop a long-term interest in computational social science.
 
-Click on the links to see a selection of course projects from [Fall 2014](https://youtu.be/kbH9qWMVj6Y), [Fall 2015](https://youtu.be/W79IS9LETEc), [Fall 2016](https://youtu.be/CWV-RfbSsmk), [Fall 2017](https://youtu.be/_cOHYyYEnYU), [Fall 2018](https://youtu.be/j2zehqPFCkY) and [Fall 2019](https://youtu.be/tE-DGT3kYyM) classes.
+Click on the links to see a selection of course projects from [Fall 2014](https://youtu.be/kbH9qWMVj6Y), [Fall 2015](https://youtu.be/W79IS9LETEc), [Fall 2016](https://youtu.be/CWV-RfbSsmk), [Fall 2017](https://youtu.be/_cOHYyYEnYU), [Fall 2018](https://youtu.be/j2zehqPFCkY) and [Fall 2019](https://youtu.be/tE-DGT3kYyM) classes (many of which are linked below).
  
 [Sample Syllabus](https://www.dropbox.com/s/xmi2qgeosmxgdw5/CSS600.pdf?dl=0)
 
@@ -58,5 +58,32 @@ For those interested, models with "***(GIS)***" next to them are ones which util
 * [Avoid Shortcuts: Investigating the Impact of Management Interventions and Social Influence on Construction Workers’ Safety Behavior](ConstructionWorkersSafety)
 * [Billboard Effects on Vaccination and Contagion (BEVAC): An Agent-Based Model](BillboardEffectsOnVaccination)
 * [Exploring Peer Effects and Classroom Assignment in Schools](ClassroomAssignment)
+* [Modeling Two-Party Assimilation with U.S. American Data](Assimilation)
+* [An Agent-Based Model of Network Eects on Tax Compliance and Evasion](TaxCompliance)
+* [Coalition Airstrikes in Iraq: An Agent-based Model to Test the Tribal-Islamic State Relationship](Airstrikes)
+* [How World Of Warcraft Lost The Hype: An Agent Based Model approach through Gamers’ Motivations](WorldofWarcraftMotivation)
+* [Simulating Bottom-Up Data Generation, Consumption, and Deception based on Hermann Ebbinghaus’ Forgetting Curve](ForgettingCurve)
+* [The Battle of Tours: An Agent-Based Model](BattleOfTours)
+* [Using a Genetic Algorithm for Optimization of Traffic Signal Timing in a Grid](GA_TrafficSim)
+* [Do Knowledge Seeking Birds Flock Together?](KnowledgeHomophily)
+* [Would the Volcker Rule Limit Banks’ Ability to Compete?](LimitingBankRisk)
+* [Counterinsurgency Force Planning Ratio:  Analyzing The U.S. Military’s Published Minimum Force Planning Ratio For Coin Operations Through The Use Of An Agent-Based Model](COIN)
+* [Pakistan’s Urban Challenge: An Agent-Based Model of Karachi](Creativity_model)
+* [Modeling Emotions in Groups Using Agent-Based Models](Emotions_inGroups)
+* [Social Networks and Charity](SocialNetworks_and_Charity)
+* [Group Polarization: An Agent-Based Theoretical Integration](GroupPolarization)
+* [Language Borders and the Emergence of Dialects](LanguageBorders)
+* [Social Norms and Social Complexity](SocialNorms)
+* [Hirschman’s Exit, Voice, and Loyalty: An Agent-Based Model Implementation](ExitVoiceLoyalty)
+* [Insurgency:  An Agent-Based Model of Conflict between Civilians and Government Authority](Insurgency)
+* [An Agent Based Model for Understanding the Dynamics of the Social Security Trust Fund](Retirement)
+* [Personal Food Choice and Greenhouse Gas Emissions](FoodChoiceandGGE)
+* [Creating an Agent Based Artificial Economy](ArtificialEconomy)
+* [Exploration of Future Supervisory Control Paradigms: Modeling the Human and System Performance](HumanSystemPerformance)
+* [Emotionally-Rational Cognitive Agents](RationalEvolvingPD)
+* [Reconciliation: Modeling the Role of Conflict Narratives in Protracted Social Conflicts](Reconciliation)
+* [The role of fisheries in direct and indirect species declines: The case of the Chinook salmon fishery in the Pacific Northwest](OrcaChinook)
+* [An Agent Based Model to simulate the enforcement of illegal poaching of African elephants](ElephantPoaching2)
+* [Private Conservation and Habitat Fragmentation](HabitatFragmentation)
 
 
