@@ -7,6 +7,8 @@ These models come from a varity of end of semester projects from studnets who ha
 ## Release Notes
 Please note these models ***come as is***. Furthermore, no personal information is given on who created these models (unless there is a publication withit, but I need to acknowledge all the students who submitted the models, you know who you are! This project would not be possible without you!), What explanations there are given by the README file for each model (these mainly come in the form of abstracts from the papers that were submitted with the models). **No further explanations, support etc. will be given**. Lastly, these models are only given for pedagogical reasons and where possible each model has been upgraded to NetLogo 6.1.
 
+Note this a work in progress project and more models will be added over time.
+
 
 ## Model Categories
 For those interested, models with "***(GIS)***" next to them are ones which utilize GIS data.
@@ -104,6 +106,9 @@ For those interested, models with "***(GIS)***" next to them are ones which util
 * [Exploration of Future Supervisory Control Paradigms: Modeling the Human and System Performance](CSS600Models/HumanSystemPerformance)
 * [Emotionally-Rational Cognitive Agents](CSS600Models/RationalEvolvingPD)
 * [Reconciliation: Modeling the Role of Conflict Narratives in Protracted Social Conflicts](CSS600Models/Reconciliation)
+* * [Hiking & Elevation: Designing Park Trails for the Slope Preferences and Time Constraints of Visitors](OtherClasses/HikingElevation) (GIS)
+* [Landscape and Religion](OtherClasses/Landscape_and_Religion)
+* [Cellular Automata Model of Urban Growth in Washington DC and Baltimore, 1850-1992](OtherClasses/UrbanGrowthModel) (GIS)
 
 
 ### Environmetal Models
