@@ -11,6 +11,7 @@ Please note these models ***come as is***. Furthermore, no personal information 
 * [Hiking & Elevation: Designing Park Trails for the Slope Preferences and Time Constraints of Visitors](HikingElevation) (GIS)
 * [Landscape and Religion](Landscape_and_Religion)
 * [Cellular Automata Model of Urban Growth in Washington DC and Baltimore, 1850-1992](UrbanGrowthModel) (GIS)
+* [Studying the Politics of Land-Use with the SLEUTH Model](Politics_of_LandUse) (GIS)
 
 
 

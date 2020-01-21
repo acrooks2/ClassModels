@@ -44,7 +44,10 @@ For those interested, models with "***(GIS)***" next to them are ones which util
 * [Along the Border: An agent-based Model of Migration Patterns to the Southwestern United States- Mexico Border](Along_the_border)
 * [An Agent-Based Model of the Spatial and Social Dynamics of Playground Bullying](Bullying)
 * [Simulating Suburban Commuter Behavior in Reston, Virginia: An Agent-based Transportation Model](TransitModel)
-
+* [Piracy in the Malacca Straits](Piracy_in_the_Malacca_Straits) (GIS)
+* [Modeling the Rise of Radicalism and Terrorism using Hybrid Space and GIS Modeling Techniques](Rise_of_Radicalism) (GIS)
+* [An Agent-­Based Model on Tourism Destination Lifecycle Theory](Tourism_Destination)
+* [Politics of Slums: A Spatial Agent-based Model](Slums)
 
 ### Environmetal Models
 * [Prediction of Impact in Submerged Aquatic Vegetation (SAV) Density Due to Climate Change and Implications on Macroinvertebrate Biodiversity](ABC2)
@@ -53,5 +56,8 @@ For those interested, models with "***(GIS)***" next to them are ones which util
 * [CrabSim: An Individual-Based Model (IBM) of Foraging Behavior in Sand-Bubbler Crabs](CrabSim)
 * [The Scenario of Arsenic Contamination in Ground Water](ArsenicContamination)
 * [Simulating the Effect of Subsistence Agriculture on a Population of Spider Monkeys in the Amazon Rainforest: An Individual-based Model](Farming_Monkey_Model)
+* [PISIC<sup>2</sup>: A Model of Polar Bears and Climate Change](PISIC2)
+* [The Conservation of the Zebra Swallowtail (Lepidoptera: Papilionidae)  Eurytides marcellus in Northern Virginia Forests: An Individual-Based Modeling Approach](Zebra_Butterflies)
+* [Investigating WhiteTail Deer in Huntley Meadows Park: An AgentBased Geospatial Model of Deer Overpopulation and the Archery Program Solution in Fairfax County, Virginia](WhiteTailDear)
 
 

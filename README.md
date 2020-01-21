@@ -109,7 +109,14 @@ For those interested, models with "***(GIS)***" next to them are ones which util
 * * [Hiking & Elevation: Designing Park Trails for the Slope Preferences and Time Constraints of Visitors](OtherClasses/HikingElevation) (GIS)
 * [Landscape and Religion](OtherClasses/Landscape_and_Religion)
 * [Cellular Automata Model of Urban Growth in Washington DC and Baltimore, 1850-1992](OtherClasses/UrbanGrowthModel) (GIS)
-
+* * [Studying the Politics of Land-Use with the SLEUTH Model](OtherClasses/Politics_of_LandUse) (GIS)
+* [Climate Risks in the Federal Government Supply Chain: Informing Decision-Making on Climate Change Policy](CSS600Models/SupplyChainClimate)
+* [Offender Interaction NetLogo Model](CSS600Models/OffenderInteraction)
+* [Cooperation, Defection, and Hegemony: The Iterated Prisoner's Dilemma and Regional](CSS600Models/GeopoliticalPD_Model2) (GIS)
+* [Piracy in the Malacca Straits](CSS645Models/Piracy_in_the_Malacca_Straits) (GIS)
+* [Modeling the Rise of Radicalism and Terrorism using Hybrid Space and GIS Modeling Techniques](CSS645Models/Rise_of_Radicalism) (GIS)
+* [An Agent-­Based Model on Tourism Destination Lifecycle Theory](CSS645Models/Tourism_Destination)
+* [Politics of Slums: A Spatial Agent-based Model](CSS645Models/Slums)
 
 ### Environmetal Models
 * [Prediction of Impact in Submerged Aquatic Vegetation (SAV) Density Due to Climate Change and Implications on Macroinvertebrate Biodiversity](CSS645Models/ABC2)
@@ -121,5 +128,9 @@ For those interested, models with "***(GIS)***" next to them are ones which util
 * [The role of fisheries in direct and indirect species declines: The case of the Chinook salmon fishery in the Pacific Northwest](CSS600Models/OrcaChinook)
 * [An Agent Based Model to simulate the enforcement of illegal poaching of African elephants](CSS600Models/ElephantPoaching2)
 * [Private Conservation and Habitat Fragmentation](CSS600Models/HabitatFragmentation)
+* [Modeling The American Pika Habitat In The Light Of Climate Change](CSS600Models/PikaModel)
+* [PISIC<sup>2</sup>: A Model of Polar Bears and Climate Change](CSS645Models/PISIC2)
+* [The Conservation of the Zebra Swallowtail (Lepidoptera: Papilionidae)  Eurytides marcellus in Northern Virginia Forests: An Individual-Based Modeling Approach](CSS645Models/Zebra_Butterflies)
+* [Investigating WhiteTail Deer in Huntley Meadows Park: An AgentBased Geospatial Model of Deer Overpopulation and the Archery Program Solution in Fairfax County, Virginia](CSS645Models/WhiteTailDear)
 
 

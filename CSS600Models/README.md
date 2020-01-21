@@ -85,5 +85,9 @@ For those interested, models with "***(GIS)***" next to them are ones which util
 * [The role of fisheries in direct and indirect species declines: The case of the Chinook salmon fishery in the Pacific Northwest](OrcaChinook)
 * [An Agent Based Model to simulate the enforcement of illegal poaching of African elephants](ElephantPoaching2)
 * [Private Conservation and Habitat Fragmentation](HabitatFragmentation)
+* [Climate Risks in the Federal Government Supply Chain: Informing Decision-Making on Climate Change Policy](SupplyChainClimate)
+* [Modeling The American Pika Habitat In The Light Of Climate Change](PikaModel)
+* [Offender Interaction NetLogo Model](OffenderInteraction)
+* [Cooperation, Defection, and Hegemony: The Iterated Prisoner's Dilemma and Regional](GeopoliticalPD_Model2) (GIS)
 
 
