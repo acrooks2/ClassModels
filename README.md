@@ -83,7 +83,7 @@ For those interested, models with "***(GIS)***" next to them are ones which util
 * [Billboard Effects on Vaccination and Contagion (BEVAC): An Agent-Based Model](CSS600Models/BillboardEffectsOnVaccination)
 * [Exploring Peer Effects and Classroom Assignment in Schools](CSS600Models/ClassroomAssignment)
 * [Modeling Two-Party Assimilation with U.S. American Data](CSS600Models/Assimilation)
-* [An Agent-Based Model of Network Effects on Tax Compliance and Evasion](CSS600Models/TaxCompliance)
+* [An Agent-Based Model of Network Effects on Tax Compliance and Evasion](CSS600Models/TaxCompliance)
 * [Coalition Airstrikes in Iraq: An Agent-based Model to Test the Tribal-Islamic State Relationship](CSS600Models/Airstrikes)
 * [How World Of Warcraft Lost The Hype: An Agent Based Model approach through Gamers’ Motivations](CSS600Models/WorldofWarcraftMotivation)
 * [Simulating Bottom-Up Data Generation, Consumption, and Deception based on Hermann Ebbinghaus’ Forgetting Curve](CSS600Models/ForgettingCurve)
