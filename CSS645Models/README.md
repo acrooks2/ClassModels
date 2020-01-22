@@ -48,6 +48,8 @@ For those interested, models with "***(GIS)***" next to them are ones which util
 * [Modeling the Rise of Radicalism and Terrorism using Hybrid Space and GIS Modeling Techniques](Rise_of_Radicalism) (GIS)
 * [An Agent-­Based Model on Tourism Destination Lifecycle Theory](Tourism_Destination)
 * [Politics of Slums: A Spatial Agent-based Model](Slums)
+* [Close, But Not Close Enough: A Spatial Agent-Based Model of Manager-Subordinate Proximity](Manager_Subordinate_Proximity)
+* [Applications for Post-Disaster Humanitarian Relief Planning: ABM and GIS Scenarios for Novice Humanitarian Relief Providers](Humanitarian_Planning) (GIS)
 
 ### Environmetal Models
 * [Prediction of Impact in Submerged Aquatic Vegetation (SAV) Density Due to Climate Change and Implications on Macroinvertebrate Biodiversity](ABC2)
@@ -59,5 +61,10 @@ For those interested, models with "***(GIS)***" next to them are ones which util
 * [PISIC<sup>2</sup>: A Model of Polar Bears and Climate Change](PISIC2)
 * [The Conservation of the Zebra Swallowtail (Lepidoptera: Papilionidae)  Eurytides marcellus in Northern Virginia Forests: An Individual-Based Modeling Approach](Zebra_Butterflies)
 * [Investigating WhiteTail Deer in Huntley Meadows Park: An AgentBased Geospatial Model of Deer Overpopulation and the Archery Program Solution in Fairfax County, Virginia](WhiteTailDear)
+* [Agent-Based Modeling for Boat and Fish interaction: A tool for ecological and socioeconomic sustainability (BOFISLINK *Bo*ats and *Fis*h *Link*)](BOFISLYNK)
+* [Developing an individual-based model to predict the impact of sea level rise on *Dermocheyls coriacea* populations in Playa Grande, Costa Rica](LeatherbackTurtles)
+* [Modeling Sustainable Crab Harvest in the Chesapeake Bay](Chesapeake-Bay-Crab)
+* [Simulated Lift for Individual Passage (SLIP): An Individual-Based Model for Fishlift Passage of American Shad](Fishlift) (GIS)
+* [The Summer Flounder Regime Shift and Consequential Changes in Trophic Structure: A Theoretical Individual-­based Model](Flounder)
 
 

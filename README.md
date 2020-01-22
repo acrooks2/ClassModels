@@ -117,6 +117,9 @@ For those interested, models with "***(GIS)***" next to them are ones which util
 * [Modeling the Rise of Radicalism and Terrorism using Hybrid Space and GIS Modeling Techniques](CSS645Models/Rise_of_Radicalism) (GIS)
 * [An Agent-­Based Model on Tourism Destination Lifecycle Theory](CSS645Models/Tourism_Destination)
 * [Politics of Slums: A Spatial Agent-based Model](CSS645Models/Slums)
+* [Close, But Not Close Enough: A Spatial Agent-Based Model of Manager-Subordinate Proximity](CSS645Models/Manager_Subordinate_Proximity)
+* [Applications for Post-Disaster Humanitarian Relief Planning: ABM and GIS Scenarios for Novice Humanitarian Relief Providers](CSS645Models/Humanitarian_Planning) (GIS)
+* [From Cyber Space Opinion Leaders and the Spread of Anti-Vaccine Extremism to Physical Space Disease Vulnerable Clusters](CSS600Models/CyberSpaceOpinionLeaders)
 
 ### Environmetal Models
 * [Prediction of Impact in Submerged Aquatic Vegetation (SAV) Density Due to Climate Change and Implications on Macroinvertebrate Biodiversity](CSS645Models/ABC2)
@@ -132,5 +135,11 @@ For those interested, models with "***(GIS)***" next to them are ones which util
 * [PISIC<sup>2</sup>: A Model of Polar Bears and Climate Change](CSS645Models/PISIC2)
 * [The Conservation of the Zebra Swallowtail (Lepidoptera: Papilionidae)  Eurytides marcellus in Northern Virginia Forests: An Individual-Based Modeling Approach](CSS645Models/Zebra_Butterflies)
 * [Investigating WhiteTail Deer in Huntley Meadows Park: An AgentBased Geospatial Model of Deer Overpopulation and the Archery Program Solution in Fairfax County, Virginia](CSS645Models/WhiteTailDear)
+* [Agent-Based Modeling for Boat and Fish interaction: A tool for ecological and socioeconomic sustainability (BOFISLINK *Bo*ats and *Fis*h *Link*)](CSS645Models/BOFISLYNK)
+* [Developing an individual-based model to predict the impact of sea level rise on *Dermocheyls coriacea* populations in Playa Grande, Costa Rica](CSS645Models/LeatherbackTurtles)
+* [Modeling Sustainable Crab Harvest in the Chesapeake Bay](CSS645Models/Chesapeake-Bay-Crab)
+* [Simulated Lift for Individual Passage (SLIP): An Individual-Based Model for Fishlift Passage of American Shad](CSS645Models/Fishlift) (GIS)
+* [The Summer Flounder Regime Shift and Consequential Changes in Trophic Structure: A Theoretical Individual-­based Model](CSS645Models/Flounder)
+
 
 
