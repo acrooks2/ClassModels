@@ -120,6 +120,7 @@ For those interested, models with "***(GIS)***" next to them are ones which util
 * [Close, But Not Close Enough: A Spatial Agent-Based Model of Manager-Subordinate Proximity](CSS645Models/Manager_Subordinate_Proximity)
 * [Applications for Post-Disaster Humanitarian Relief Planning: ABM and GIS Scenarios for Novice Humanitarian Relief Providers](CSS645Models/Humanitarian_Planning) (GIS)
 * [From Cyber Space Opinion Leaders and the Spread of Anti-Vaccine Extremism to Physical Space Disease Vulnerable Clusters](CSS600Models/CyberSpaceOpinionLeaders)
+* [Modeling Crop Rotation Strategies on Organic Farms in the Northeast United States](CSS645Models/CropRotation)
 
 ### Environmetal Models
 * [Prediction of Impact in Submerged Aquatic Vegetation (SAV) Density Due to Climate Change and Implications on Macroinvertebrate Biodiversity](CSS645Models/ABC2)

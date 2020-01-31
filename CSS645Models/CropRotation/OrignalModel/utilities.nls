@@ -1,0 +1,128 @@
+;Update the patch label
+to update-patch-label
+  set plabel(word patch-id ": " patch-nitrogen-level "," (table:get crops-table-abbreviations patch-current-crop) "," patch-crop-harvest-week)
+end
+
+; Print crop totals
+to print-crop-totals
+  print-crop-yield-totals
+  print-crop-planting-totals
+end
+
+; Print total yields
+to print-crop-yield-totals
+  let y "TOTAL-YIELDS"
+  foreach crops-list-all[
+    ifelse (length (word table:get crop-yield-totals ?) >= 4)
+    [set y (word y ":" (substring (word table:get crop-yield-totals ?) 0 4))]
+    [set y (word y ":" table:get crop-yield-totals ?)]
+  ] 
+  set y (word y ":" init-nitrogen-mean ":" init-nitrogen-sd)
+    show y
+end
+
+; Print crop planting totals
+to print-crop-planting-totals 
+  let y "TOTAL-PLANTINGS"  
+  foreach crops-list-all[
+    set y (word y ":" table:get crop-planting-totals ?)
+  ] 
+  set y (word y ":" init-nitrogen-mean ":" init-nitrogen-sd)
+  show y
+end
+
+; Print totals of rules used.
+to print-crop-rule-totals
+  let y "TOTAL-RULES"  
+  foreach rules-list-all[
+    set y (word y ":" table:get crop-rule-totals ?)
+  ] 
+  set y (word y ":" init-nitrogen-mean ":" init-nitrogen-sd)
+  show y
+end
+
+; Print verbose harvest message.
+to print-harvest-message
+  
+  ifelse (length (word patch-crop-harvest-yield) >= 4)
+  [show (word patch-id " " "HARVEST " patch-current-crop " "  (substring (word patch-crop-harvest-yield) 0 4))]
+  [show (word patch-id " " "HARVEST " patch-current-crop " " patch-crop-harvest-yield)]
+  
+end
+
+; Print Verbose planting message
+to print-planting-message
+  show (word patch-id " " "PLANTING " patch-current-crop " <" patch-previous-crop-selection-rule "> ")
+end
+
+
+; Print crop distributions
+to print-current-crop-distribution
+  let y "DISTRIBUTION: "  
+  foreach crops-list-all[
+    set y (word y " " ? ":" count patches with [patch-current-crop = ?])
+  ] 
+end
+
+; Update patch color depending on Nitrogen level
+to set-patch-color
+  
+  ; lime is 65.  range for nitrogen is 63(dark) - 67 (light)
+  ; range for nitrogen is 0 (low) to max of patches
+  
+  let max-current-nitrogen max [patch-nitrogen-level] of patches
+  
+  let color-temp 67 - (patch-nitrogen-level / (max-current-nitrogen / 4) );
+  if (color-temp < 63)[ set color-temp 63]
+  if (color-temp > 67)[ set color-temp 67]
+  
+  set pcolor color-temp
+    
+end
+
+; Update crop icon - larger is closer to harvest.
+to update-crop-size
+  foreach sort turtles-here [ 
+    ask ? [ 
+      let weeks-to-harvest (table:get crops-table-harvest-time patch-current-crop) - (patch-crop-harvest-week - ticks)
+      set size  (weeks-to-harvest / table:get crops-table-harvest-time patch-current-crop) * .8 ; mult .8 so it doesn't get too big.
+    ] 
+  ]
+end
+
+; Set crop shape
+to set-crop-shape
+  ; set the shape on the patch
+  foreach sort turtles-here [ 
+    ask ?[ 
+      set shape table:get crops-shapes patch-current-crop
+    ]
+  ]
+  
+end
+
+; Updates the counts of crops in the patches.
+to update-plots
+  update-current-crops-count-plot
+end
+
+; don't graph fallow.
+to update-current-crops-count-plot
+  set-current-plot "current-crops-count-plot"
+  foreach crops-list-all[
+    if (? != fallow) [
+      set-current-plot-pen ?
+      plot count patches with [patch-current-crop = ?]
+    ]
+  ]
+end
+
+; Print yields
+to print-yield
+  show ( word patch-current-crop " " patch-crop-harvest-yield )
+end
+
+; Hyperbolic tangent
+to-report get-tanh [x]
+  report ((exp (2 * x)) - 1) / ((exp (2 * x)) + 1)
+end

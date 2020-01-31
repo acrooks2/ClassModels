@@ -1,0 +1,137 @@
+; Selects a crop to plant using the 13 rules listed.
+to-report select-crop-to-plant
+  
+  let low-yield .1
+  let random-fallow 0.05
+  let low-nitrogen 2
+  let medium-nitrogen 4
+  
+  ;1.  Review crop history
+  ; remove crop from fields permanently if bad weeds/disease
+  if (( (patch-crop-disease-loss > 0.65) or (patch-crop-weed-loss > 0.75) ) and 
+    patch-previous-crop != cover and patch-previous-crop != fallow) [ 
+ ; show ("-------")
+  set patch-available-crops remove patch-current-crop patch-available-crops
+    ]
+  
+  ; Build a list of the possible crops to plans
+  let possible-crops []
+  foreach patch-available-crops[set possible-crops fput ? possible-crops]
+  
+  ;2.  If there are no possible crops to plant, let the field lay fallow.
+  if empty? possible-crops [
+    set patch-previous-crop-selection-rule "Rule_2"
+    report fallow
+  ]
+  
+  ;3.  Fallow fields for weed or pest control.
+  ; Note: This is the rule that will be used at field setup
+  
+  if ( (patch-previous-crop-yield < low-yield) and (patch-previous-crop != fallow)) [
+    set patch-previous-crop-selection-rule "Rule_3"
+    set patch-previous-crop-yield 1
+    report fallow
+  ]
+  
+  ;4.  Random fallow periods.
+  if random-float 1 < random-fallow [
+    set patch-previous-crop-selection-rule "Rule_4"
+    report fallow
+  ]
+  
+  ;5.  Build soil fertility with cover crops
+  if patch-nitrogen-level < low-nitrogen [
+    set patch-previous-crop-selection-rule "Rule_5a"
+    report cover
+  ]
+  
+  if (patch-nitrogen-level < medium-nitrogen and (random-float 1 < .25) ) [
+    set patch-previous-crop-selection-rule "Rule_5b"
+    report cover
+  ]  
+  
+  
+  ;6.  Only plant a crop when sufficient nutrients exist in the soil.
+  ; remove any crops that require too much nitrogen
+  foreach possible-crops[
+    
+    if ( (table:get crops-table-nitrogen-requirements ?) > patch-nitrogen-level)[
+      set possible-crops remove ? possible-crops
+    ]
+  ]
+  
+  if empty? possible-crops [
+    set patch-previous-crop-selection-rule "Rule_6a"
+    report fallow
+  ]
+  if ( (length possible-crops) = 1) [
+    set patch-previous-crop-selection-rule "Rule_6b"
+    report first possible-crops
+  ]
+  
+  ; 7.  Never grow a crop consecutively
+  if (member? patch-previous-crop possible-crops)[
+    set possible-crops remove patch-previous-crop possible-crops
+  ]
+  
+  if empty? possible-crops [
+    set patch-previous-crop-selection-rule "Rule_7a"
+    report fallow
+  ]
+  if ( (length possible-crops) = 1) [
+    set patch-previous-crop-selection-rule "Rule_7b"
+    report first possible-crops
+  ] 
+  
+  ;8.  Single crops less than 25% of total farm
+  foreach possible-crops[
+    if ( (count patches with [patch-current-crop = ?] + 1) > (0.25 * count patches) and
+      (? != cover) and (? != grass) )[
+      set possible-crops remove ? possible-crops
+    ]
+  ]
+  if empty? possible-crops [
+    set patch-previous-crop-selection-rule "Rule_8a"
+    report fallow
+  ]
+  if ( (length possible-crops) = 1) [
+    set patch-previous-crop-selection-rule "Rule_8b"
+    report first possible-crops
+  ] 
+  
+  ;9.  Nightshade after beets or lettuce
+  if ( ( (patch-previous-crop = beet) or (patch-previous-crop = lettuce) ) and 
+    (member? nightshade possible-crops) and
+    (random-float 1 < 0.90))[
+  set patch-previous-crop-selection-rule "Rule_9"
+  report nightshade
+    ]
+  
+  ; 10.  Fallow after lily
+  if ( (patch-previous-crop = lily) and (random-float 1 < 0.90))[
+    set patch-previous-crop-selection-rule "Rule_10"
+    report fallow
+  ]
+  
+  
+  ;11.  Grass after cover
+  if ( (patch-previous-crop = cover) and 
+    (member? grass possible-crops) and
+    (random-float 1 < 0.95))[
+  set patch-previous-crop-selection-rule "Rule_11"
+  report grass
+    ]
+  
+  ; 12.  Beets after lettuce or mustard.
+  if ( ( (patch-previous-crop = lettuce) or (patch-previous-crop = mustard) ) and 
+    (member? beet possible-crops) and
+    (random-float 1 < 0.95))[
+  set patch-previous-crop-selection-rule "Rule_12"
+  report beet
+    ]
+  
+  ;13.  Random Selection
+  set patch-previous-crop-selection-rule "Rule_13"
+  report one-of patch-available-crops 
+  
+end

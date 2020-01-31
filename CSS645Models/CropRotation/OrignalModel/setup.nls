@@ -1,0 +1,159 @@
+;;;;; Global Variables ;;;;;;
+globals [
+  crops-list-all
+  crops-table-nitrogen-requirements
+  crops-table-weeds
+  crops-table-disease
+  crops-table-harvest-time
+  crops-shapes
+  crops-table-abbreviations
+  
+  crop-yield-totals
+  crop-planting-totals
+  crop-rule-totals
+  
+  rules-list-all
+  
+  beet
+  buckwheat
+  carrot
+  cucurbit
+  grass
+  legume
+  lettuce
+  lily
+  mustard
+  nightshade
+  rose
+  cover
+  fallow
+]
+
+;;;;; Patch Variables ;;;;;
+patches-own [
+  patch-id
+  patch-nitrogen-level
+  patch-crop-history
+  patch-current-crop
+  patch-available-crops
+  patch-crop-harvest-week
+  patch-crop-harvest-yield
+  patch-previous-crop
+  patch-previous-crop-yield
+  patch-previous-crop-selection-rule
+  patch-crop-weed-loss
+  patch-crop-disease-loss
+]
+
+;;;;;;;;; SETUP FIELDS ;;;;;;;;;;
+to setup-fields
+  let counter 0
+  foreach sort patches [
+    ask ? [
+      ; initialize nitrogen between Min-Init-Nitrogen and Max-Init-Nitrogen
+      set patch-nitrogen-level round (random-normal init-nitrogen-mean init-nitrogen-sd)
+      if (patch-nitrogen-level < 0)[set patch-nitrogen-level 0]
+      
+      ; initialize crop history to no crops
+      set patch-crop-history[]
+      
+      ; Set current crop and previous crop to fallow (no crop)
+      set patch-current-crop fallow
+      set patch-previous-crop fallow
+      
+      ; Copy list of all crops to each field
+      set patch-available-crops[]
+      foreach crops-list-all [
+        set patch-available-crops fput ? patch-available-crops
+      ]
+      ; but remove fallow from the possible crop selections
+      set patch-available-crops remove fallow patch-available-crops
+      
+      ; Set all fields to a previous yield of 1 - needed for crop selection
+      set patch-previous-crop-yield 1
+      
+      set-patch-color
+      
+      ;update-patch-label
+      set patch-id counter
+      set counter counter + 1
+      
+    ]
+  ]
+end
+
+;;;;;;;; SETUP GLOBALS ;;;;;;;;; See crop_data.nls
+to setup-globals 
+  
+  ;do this first
+  set-crop-names
+  
+  set-all-crops-list
+  set-crops-table-nitrogen-requirements
+  set-crops-table-weeds
+  set-crops-table-disease
+  set-crops-table-harvest-time
+  set-crops-table-abbreviations
+  set-crop-shapes
+  
+  set-rules-list-all
+  
+  set-crop-yield-totals
+  set-crop-planting-totals
+  set-crop-rule-totals
+  
+end
+
+;;; setup turtles
+to setup-turtles
+  foreach sort patches [
+    ask ? [
+      
+      ; turtles are used for patch shapes only.
+      sprout 1 [
+        facexy xcor (max-pycor + 1)
+        set shape (table:get crops-shapes patch-current-crop)
+        set color blue
+        set size .8
+      ]
+    ]
+  ]
+end
+
+; initialize the table for the yield totals
+to set-crop-yield-totals
+  
+  set crop-yield-totals table:make
+  foreach crops-list-all[
+    table:put crop-yield-totals ? 0
+  ]
+  
+end
+
+; initialize the table for the planting totals
+to set-crop-planting-totals
+  
+  set crop-planting-totals table:make
+  foreach crops-list-all[
+    table:put crop-planting-totals ? 0
+  ]
+  
+end
+
+to set-rules-list-all
+  set rules-list-all [
+    "Rule_2" "Rule_3" "Rule_4" "Rule_5a" "Rule_5b" "Rule_6a" 
+    "Rule_6b" "Rule_7a" "Rule_7b" "Rule_8a" 
+    "Rule_8b" "Rule_9" "Rule_10" "Rule_11" 
+    "Rule_12" "Rule_13" ]
+end
+
+to set-crop-rule-totals
+  
+  set crop-rule-totals table:make
+  foreach rules-list-all[
+    table:put crop-rule-totals ? 0
+  ]
+  
+end
+

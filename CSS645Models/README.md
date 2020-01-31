@@ -50,6 +50,7 @@ For those interested, models with "***(GIS)***" next to them are ones which util
 * [Politics of Slums: A Spatial Agent-based Model](Slums)
 * [Close, But Not Close Enough: A Spatial Agent-Based Model of Manager-Subordinate Proximity](Manager_Subordinate_Proximity)
 * [Applications for Post-Disaster Humanitarian Relief Planning: ABM and GIS Scenarios for Novice Humanitarian Relief Providers](Humanitarian_Planning) (GIS)
+* [Modeling Crop Rotation Strategies on Organic Farms in the Northeast United States](CropRotation)
 
 ### Environmetal Models
 * [Prediction of Impact in Submerged Aquatic Vegetation (SAV) Density Due to Climate Change and Implications on Macroinvertebrate Biodiversity](ABC2)
