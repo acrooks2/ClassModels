@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<metadata>
+	<idinfo>
+		<citation>
+			<citeinfo>
+				<geoform Sync="TRUE">vector digital data</geoform>
+				<lworkcit>
+					<citeinfo>
+						<origin>DC GIS</origin>
+						<title>DC Geographic Information System</title>
+						<geoform>vector digital data</geoform>
+					</citeinfo>
+				</lworkcit>
+				<ftname Sync="TRUE">DCGIS_PublicHousingAreaPly</ftname>
+				<pubinfo>
+					<publish>DC GIS</publish>
+				</pubinfo>
+				<origin>Housing Authority</origin><title>Public Housing Areas</title><pubdate>20080327</pubdate><onlink>http://www.dcatlas.dcgis.dc.gov/download/PublicHousingAreaPly.zip</onlink><onlink>http://www.dcatlas.dcgis.dc.gov/download/PublicHousingAreaPly.kmz</onlink></citeinfo>
+		</citation>
+		<descript>
+			<purpose>This data is used for the planning and management of Washington, D.C. by local government agencies.</purpose>
+			<langdata Sync="TRUE">en</langdata>
+			<abstract>Public Housing Areas. The dataset contains locations of Public Housing Building areas created as part of the DC Geographic Information System (DC GIS) for the D.C. Office of the Chief Technology Officer (OCTO) and participating D.C. government agencies.
+
+All DC GIS data is stored and exported in Maryland State Plane coordinates NAD 83 meters.
+
+METADATA CONTENT IS IN PROCESS OF VALIDATION AND SUBJECT TO CHANGE.</abstract></descript>
+		<timeperd>
+			<timeinfo>
+				<sngdate>
+					<caldate>20080327</caldate>
+				</sngdate>
+			</timeinfo>
+			<current>publication date</current>
+		</timeperd>
+		<status>
+			<progress>Complete</progress>
+			<update>As needed</update>
+		</status>
+		<spdom>
+			<bounding>
+				<westbc Sync="TRUE">-77.043627</westbc>
+				<eastbc Sync="TRUE">-76.915693</eastbc>
+				<northbc Sync="TRUE">38.977206</northbc>
+				<southbc Sync="TRUE">38.831015</southbc>
+			</bounding>
+			<dsgpoly>
+				<dsgpolyo>
+					<grngpoin>
+					</grngpoin>
+				</dsgpolyo>
+			</dsgpoly>
+			<lboundng>
+				<leftbc Sync="TRUE">396219.729500</leftbc>
+				<rightbc Sync="TRUE">407305.206500</rightbc>
+				<bottombc Sync="TRUE">129250.802000</bottombc>
+				<topbc Sync="TRUE">145475.841000</topbc>
+			</lboundng>
+		</spdom>
+		<keywords>
+			<place>
+				<placekey>Washington, D.C.</placekey>
+				<placekey>District of Columbia</placekey>
+				<placekey>DC</placekey>
+				<placekey>DC GIS</placekey>
+				<placekey>DCGIS</placekey>
+			</place>
+			<theme>
+				<themekey> Public Housing</themekey><themekey> Community</themekey><themekey> Social</themekey><themekey> structure</themekey><themekey> Facility</themekey></theme>
+		</keywords>
+		<accconst>Contact OCTO GIS. Any data obtained outside of OCTO GIS are unauthorized copies.</accconst>
+		<useconst>Data cannot be redistributed in any manner without written authorization.  OCTO makes no claims as to the completeness, accuracy or content of any data contained hereon, and makes no representation of any kind, including, but not limited to, the warranty of the accuracy or fitness for a  particular use, nor are any such warranties to be implied or inferred with respect to the information or data furnished herein.</useconst>
+		<ptcontac>
+			<cntinfo>
+				<cntorgp>
+					<cntorg>D.C. Office of the Chief Technology Officer</cntorg>
+					<cntper>GIS Data Coordinator</cntper>
+				</cntorgp>
+				<cntaddr>
+					<addrtype>mailing and physical address</addrtype>
+					<address>441 4th St NW, Suite 930 South</address>
+					<city>Washington</city>
+					<state>DC</state>
+					<postal>20001</postal>
+					<country>USA</country>
+				</cntaddr>
+				<cntfax>(202) 727-5660</cntfax>
+				<cntemail>dcgis@dc.gov</cntemail>
+				<hours>8:30 am - 5 pm</hours>
+			</cntinfo>
+		</ptcontac>
+		<datacred>DC Housing Authority</datacred>
+		<native Sync="TRUE">Microsoft Windows XP Version 5.1 (Build 2600) Service Pack 2; ESRI ArcCatalog 9.2.4.1420</native>
+		<natvform Sync="TRUE">Shapefile</natvform>
+	</idinfo>
+	<dataqual>
+		<attracc>
+			<attraccr>Validated by source and/or responsible agency.</attraccr>
+		</attracc>
+		<logic>In process of validation by source and/or responsible agency.</logic>
+		<complete>Data believed to be complete and accurate, subject to change. Digital version compared with original source data for accuracy and completeness. Validated by source and/or responsible agency.</complete>
+		<posacc>
+			<horizpa>
+				<horizpar>Linework digitzed following property lines mainly.</horizpar>
+			</horizpa>
+			<vertacc>
+				<vertaccr>N/A</vertaccr>
+			</vertacc>
+		</posacc>
+		<lineage>
+			<procstep>
+				<procdesc>The DC Housing Authority provided a list of public housing addresses as part of the Census LUCA project.  Staff goecoded the points to the Master Address Repository.  Then, the planimetrics buildings were spatially selected from the public housing address points. 
+
+From these source layers, staff outlined each public housing area using the property lines.  Staff connected property lines across streets and other features to make one polygon dilineating the area.</procdesc>
+				<proccont>
+					<cntinfo>
+						<cntorgp>
+							<cntorg>Office of the Chief Technology Office</cntorg>
+							<cntper>GIS Data Coordinator</cntper></cntorgp>
+						<cntaddr><addrtype>mailing and physical address</addrtype><address>441 4th St NW, Suite 930 South</address><city>Washington </city><state>DC</state><postal>20001</postal><country>USA</country></cntaddr><cntfax>202-727-5660</cntfax><cntemail>dcgis@dc.gov</cntemail><hours>8:30am - 5:30pm</hours></cntinfo>
+				</proccont>
+				<procdate>20080327</procdate>
+			</procstep>
+			<srcinfo>
+				<typesrc>database</typesrc>
+				<srccitea>Vector Property map</srccitea>
+				<srccontr>locations</srccontr>
+				<srccite>
+					<citeinfo>
+						<pubdate>2008</pubdate>
+						<title>Vector Property Map</title>
+						<origin>Office of the Chief Technology Officer</origin>
+						<geoform>vector digital data</geoform>
+						<origin>Department of Consumer and Regulatory Affairs</origin><origin>Office of the Chief Financial Officer - Real Property Tax Administration</origin><onlink>http://dcgis.dc.gov</onlink></citeinfo>
+				</srccite>
+			</srcinfo>
+			<srcinfo>
+				<srccite>
+					<citeinfo>
+						<origin>DC Housing Authority</origin>
+						<title>Maps from select local housing complex office</title>
+						<geoform>map</geoform>
+					</citeinfo>
+				</srccite>
+				<typesrc>maps</typesrc>
+				<srccitea>Housing Complex maps</srccitea>
+				<srccontr>attributes and location</srccontr>
+			</srcinfo>
+		</lineage>
+	</dataqual>
+	<spdoinfo>
+		<direct Sync="TRUE">Vector</direct>
+		<ptvctinf><esriterm Name="Public_Housing_Pointfinal"><efeatyp Sync="TRUE">Simple</efeatyp><efeageom code="1" Sync="TRUE"></efeageom><esritopo Sync="TRUE">FALSE</esritopo><efeacnt Sync="TRUE">0</efeacnt><spindex Sync="TRUE">FALSE</spindex><linrefer Sync="TRUE">FALSE</linrefer></esriterm></ptvctinf></spdoinfo>
+	<spref>
+		<horizsys>
+			<geodetic>
+				<horizdn Sync="TRUE">North American Datum of 1983</horizdn>
+				<ellips Sync="TRUE">Geodetic Reference System 80</ellips>
+				<semiaxis Sync="TRUE">6378137.000000</semiaxis>
+				<denflat Sync="TRUE">298.257222</denflat>
+			</geodetic>
+			<cordsysn>
+				<geogcsn Sync="TRUE">GCS_North_American_1983</geogcsn>
+				<projcsn Sync="TRUE">NAD_1983_StatePlane_Maryland_FIPS_1900</projcsn>
+			</cordsysn>
+		</horizsys>
+		<vertdef>
+			<altsys>
+				<altres Sync="TRUE">1.000000</altres>
+				<altenc Sync="TRUE">Explicit elevation coordinate included with horizontal coordinates</altenc>
+			</altsys>
+		</vertdef>
+	</spref>
+	<eainfo>
+		<detailed Name="Public_Housing_Pointfinal">
+			<attr><attrlabl Sync="TRUE">Shape</attrlabl><attalias Sync="TRUE">FID</attalias><attrtype Sync="TRUE">OID</attrtype><attwidth Sync="TRUE">4</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale><attrdef Sync="TRUE">Feature geometry.</attrdef><attrdefs Sync="TRUE">ESRI</attrdefs><attrdomv><udom Sync="TRUE">Coordinates defining the features.</udom></attrdomv></attr><enttyp>
+				<enttypl Sync="TRUE">Public_Housing_Pointfinal</enttypl>
+				<enttypt Sync="TRUE">Feature Class</enttypt>
+				<enttypc Sync="TRUE">0</enttypc>
+			</enttyp>
+			<attr><attrlabl Sync="TRUE">FID</attrlabl><attalias Sync="TRUE">Shape</attalias><attrtype Sync="TRUE">Geometry</attrtype><attwidth Sync="TRUE">0</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale><attrdef Sync="TRUE">Internal feature number.</attrdef><attrdefs Sync="TRUE">ESRI</attrdefs><attrdomv><udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom></attrdomv></attr><attr><attrlabl Sync="TRUE">Name</attrlabl><attalias Sync="TRUE">NAME</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">50</attwidth><attrdef>Public Housing complex name</attrdef><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">SHAPE</attrlabl><attalias Sync="TRUE">SHAPE_AREA</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">19</attwidth><attrdef Sync="TRUE">Feature geometry.</attrdef><attrdefs Sync="TRUE">ESRI</attrdefs><attrdomv><udom Sync="TRUE">Coordinates defining the features.</udom></attrdomv><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">NAME</attrlabl><attalias Sync="TRUE">SHAPE_LEN</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">19</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">SHAPE_AREA</attrlabl><attalias Sync="TRUE">ORIG_FID</attalias><attrtype Sync="TRUE">Integer</attrtype><attwidth Sync="TRUE">9</attwidth><atprecis Sync="TRUE">9</atprecis><attscale Sync="TRUE">0</attscale><attrdef Sync="TRUE">Area of feature in internal units squared.</attrdef><attrdefs Sync="TRUE">ESRI</attrdefs><attrdomv><udom Sync="TRUE">Positive real numbers that are automatically generated.</udom></attrdomv></attr><attr><attrlabl Sync="TRUE">SHAPE_LEN</attrlabl><attalias Sync="TRUE">SHAPE_LEN</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">19</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr></detailed>
+		<overview>
+		</overview>
+	</eainfo>
+	<distinfo>
+		<distrib>
+			<cntinfo>
+				<cntorgp>
+					<cntorg>D.C. Office of the Chief Technology Officer</cntorg>
+					<cntper>GIS Data Coordinator</cntper>
+				</cntorgp>
+				<cntaddr>
+					<addrtype>mailing and physical address</addrtype>
+					<address>441 4th St NW, Suite 930 South</address>
+					<city>Washington</city>
+					<state>DC</state>
+					<postal>20001</postal>
+					<country>USA</country>
+				</cntaddr>
+				<cntfax>(202) 727-5660</cntfax>
+				<cntemail>dcgis@dc.gov</cntemail>
+				<hours>8:30 am - 5 pm</hours>
+			</cntinfo>
+		</distrib>
+		<resdesc>Downloadable Data</resdesc>
+		<distliab>OCTO makes no claims as to the completeness, accuracy or content of any data contained hereon, and makes no representation of any kind, including, but not limited to, the warranty of the accuracy or fitness for a particular use, nor are any such warranties to be implied or inferred, with respect to the information or data furnished herein. Subject to terms and conditions of the Memorandum of Agreement. Memorandum of Agreement must have authorized signature.</distliab>
+		<stdorder>
+			<digform>
+				<digtinfo>
+					<transize>0.080</transize>
+					<dssize Sync="TRUE">0.000</dssize>
+				</digtinfo>
+				<digtopt>
+					<onlinopt>
+						<computer>
+							<networka>
+							</networka>
+						</computer>
+					</onlinopt>
+				</digtopt>
+			</digform>
+			<ordering>Contact OCTO GIS.</ordering>
+		</stdorder>
+	</distinfo>
+	<metainfo>
+		<metd Sync="TRUE">20080418</metd>
+		<metrd>03/16/05</metrd>
+		<metc>
+			<cntinfo>
+				<cntorgp>
+					<cntorg>D.C. Office of the Chief Technology Officer</cntorg>
+					<cntper>GIS Data Coordinator</cntper>
+				</cntorgp>
+				<cntaddr>
+					<addrtype>mailing and physical address</addrtype>
+					<address>441 4th St NW, Suite 930 South</address>
+					<city>Washington</city>
+					<state>DC</state>
+					<postal>20001</postal>
+					<country>USA</country>
+				</cntaddr>
+				<cntfax>(202) 727-5660</cntfax>
+				<cntemail>dcgis@dc.gov</cntemail>
+				<hours>8:30 am - 5 pm</hours>
+			</cntinfo>
+		</metc>
+		<metstdn Sync="TRUE">FGDC Content Standards for Digital Geospatial Metadata</metstdn>
+		<metstdv Sync="TRUE">FGDC-STD-001-1998</metstdv>
+		<mettc Sync="TRUE">local time</mettc>
+		<langmeta Sync="TRUE">en</langmeta>
+	</metainfo>
+	<Esri>
+		<CreaDate>20140501</CreaDate>
+		<CreaTime>17450500</CreaTime>
+		<SyncOnce>FALSE</SyncOnce>
+		<SyncDate>20140406</SyncDate>
+		<SyncTime>20444800</SyncTime>
+		<ModDate>20140406</ModDate>
+		<ModTime>20444800</ModTime>
+		<PublishStatus>Published</PublishStatus><DataProperties><lineage><Process ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\CopyFeatures" Date="20080330" Time="152301">CopyFeatures E:\DataLoadApril\HA.mdb\PublicHousingAreaPly "Database Connections\vector_data_dcgiscentral.sde\DCGIS.PublicHousingAreaPly" DCGISDBP_S 10000 0 0</Process><Process ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\CopyFeatures" Date="20080418" Time="120540">CopyFeatures "Database Connections\DCGISCentral_RO.sde\DCGIS.PublicHousingAreaPly" G:\GIS\SPATIAL_DATA\DataCatalog\DCGIS_PublicHousingAreaPly.shp # 0 0 0</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\Project" Date="20140406" Time="190939">Project PublicHousingAreaPly "C:\Users\Alleen\Documents\Homework\CSS 643\Project\Shapefile\Public_Housing.shp" GEOGCS['GCS_WGS_1984',DATUM['D_WGS_1984',SPHEROID['WGS_1984',6378137.0,298.257223563]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433],METADATA['World',-180.0,-90.0,180.0,90.0,0.0,0.0174532925199433,0.0,1262]] WGS_1984_(ITRF00)_To_NAD_1983 PROJCS['NAD_1983_StatePlane_Maryland_FIPS_1900',GEOGCS['GCS_North_American_1983',DATUM['D_North_American_1983',SPHEROID['GRS_1980',6378137.0,298.257222101]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]],PROJECTION['Lambert_Conformal_Conic'],PARAMETER['False_Easting',400000.0],PARAMETER['False_Northing',0.0],PARAMETER['Central_Meridian',-77.0],PARAMETER['Standard_Parallel_1',38.3],PARAMETER['Standard_Parallel_2',39.45],PARAMETER['Latitude_Of_Origin',37.66666666666666],UNIT['Meter',1.0]]</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\FeatureToPoint" Date="20140406" Time="204448">FeatureToPoint Public_Housing_Concentrated "C:\Users\Alleen\Documents\Homework\CSS 643\Project\Shapefile\Public_Housing_Pointfinal.shp" CENTROID</Process></lineage><itemProps><itemName Sync="TRUE">Public_Housing_Pointfinal</itemName><imsContentType Sync="TRUE">002</imsContentType><itemSize Sync="TRUE">0.000</itemSize><itemLocation><linkage Sync="TRUE">file://\\LEWOO-HOM\Users\Alleen\Documents\Homework\CSS 643\Project\Shapefile\Public_Housing_Pointfinal.shp</linkage><protocol Sync="TRUE">Local Area Network</protocol></itemLocation></itemProps><coordRef><type Sync="TRUE">Geographic</type><geogcsn Sync="TRUE">GCS_WGS_1984</geogcsn><csUnits Sync="TRUE">Angular Unit: Degree (0.017453)</csUnits><peXml Sync="TRUE">&lt;GeographicCoordinateSystem xsi:type='typens:GeographicCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.1'&gt;&lt;WKT&gt;GEOGCS[&amp;quot;GCS_WGS_1984&amp;quot;,DATUM[&amp;quot;D_WGS_1984&amp;quot;,SPHEROID[&amp;quot;WGS_1984&amp;quot;,6378137.0,298.257223563]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433],METADATA[&amp;quot;World&amp;quot;,-180.0,-90.0,180.0,90.0,0.0,0.0174532925199433,0.0,1262],AUTHORITY[&amp;quot;EPSG&amp;quot;,4326]]&lt;/WKT&gt;&lt;XOrigin&gt;-400&lt;/XOrigin&gt;&lt;YOrigin&gt;-400&lt;/YOrigin&gt;&lt;XYScale&gt;11258999068426.238&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;8.983152841195215e-009&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;LeftLongitude&gt;-180&lt;/LeftLongitude&gt;&lt;WKID&gt;4326&lt;/WKID&gt;&lt;LatestWKID&gt;4326&lt;/LatestWKID&gt;&lt;/GeographicCoordinateSystem&gt;</peXml></coordRef></DataProperties><ArcGISFormat>1.0</ArcGISFormat></Esri>
+	<dataIdInfo>
+		<envirDesc Sync="TRUE">Microsoft Windows 7 Version 6.1 (Build 7601) Service Pack 1; Esri ArcGIS 10.1.0.3035</envirDesc>
+		<dataLang>
+			<languageCode Sync="TRUE" value="eng">
+			</languageCode>
+			<countryCode value="USA" Sync="TRUE"></countryCode></dataLang>
+		<idCitation>
+			<resTitle Sync="TRUE">Public_Housing_Pointfinal</resTitle>
+			<presForm>
+				<PresFormCd Sync="TRUE" value="005">
+				</PresFormCd>
+			</presForm>
+		</idCitation>
+		<spatRpType>
+			<SpatRepTypCd Sync="TRUE" value="001">
+			</SpatRepTypCd>
+		</spatRpType>
+		<dataExt>
+			<geoEle>
+				<GeoBndBox esriExtentType="native">
+					<westBL Sync="TRUE">396219.7295</westBL>
+					<eastBL Sync="TRUE">407305.2065</eastBL>
+					<northBL Sync="TRUE">145475.841</northBL>
+					<southBL Sync="TRUE">129250.802</southBL>
+					<exTypeCode Sync="TRUE">1</exTypeCode>
+				</GeoBndBox>
+			</geoEle>
+		</dataExt>
+		<geoBox esriExtentType="decdegrees">
+			<westBL Sync="TRUE">-77.043627</westBL>
+			<eastBL Sync="TRUE">-76.915693</eastBL>
+			<northBL Sync="TRUE">38.977206</northBL>
+			<southBL Sync="TRUE">38.831015</southBL>
+			<exTypeCode Sync="TRUE">1</exTypeCode>
+		</geoBox>
+	</dataIdInfo>
+	<mdLang>
+		<languageCode Sync="TRUE" value="eng">
+		</languageCode>
+		<countryCode value="USA" Sync="TRUE"></countryCode></mdLang>
+	<mdStanName Sync="TRUE">ISO 19115 Geographic Information - Metadata</mdStanName>
+	<mdStanVer Sync="TRUE">DIS_ESRI1.0</mdStanVer>
+	<mdChar>
+		<CharSetCd Sync="TRUE" value="006">
+		</CharSetCd>
+	</mdChar>
+	<mdHrLv>
+		<ScopeCd Sync="TRUE" value="005">
+		</ScopeCd>
+	</mdHrLv>
+	<mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+	<distInfo>
+		<distributor>
+			<distorTran>
+				<onLineSrc>
+					<orDesc Sync="TRUE">002</orDesc>
+					<linkage Sync="TRUE">file://\\OJSFILE1\OCTODATA$\GIS\SPATIAL_DATA\DataCatalog\DCGIS_PublicHousingAreaPly.shp</linkage>
+					<protocol Sync="TRUE">Local Area Network</protocol>
+				</onLineSrc>
+				<transSize Sync="TRUE">0.000</transSize>
+			</distorTran>
+			<distorFormat>
+				<formatName Sync="TRUE">Shapefile</formatName>
+			</distorFormat>
+		</distributor>
+		<distFormat><formatName Sync="TRUE">Shapefile</formatName></distFormat><distTranOps><transSize Sync="TRUE">0.000</transSize></distTranOps></distInfo>
+	<refSysInfo>
+		<RefSystem>
+			<refSysID>
+				<identCode Sync="TRUE" value="4326">NAD_1983_StatePlane_Maryland_FIPS_1900</identCode>
+				<idCodeSpace Sync="TRUE">EPSG</idCodeSpace><idVersion Sync="TRUE">7.9.4</idVersion></refSysID>
+		</RefSystem>
+	</refSysInfo>
+	<spatRepInfo>
+		<VectSpatRep><geometObjs Name="Public_Housing_Pointfinal"><geoObjTyp><GeoObjTypCd value="004" Sync="TRUE"></GeoObjTypCd></geoObjTyp><geoObjCnt Sync="TRUE">0</geoObjCnt></geometObjs><topLvl><TopoLevCd value="001" Sync="TRUE"></TopoLevCd></topLvl></VectSpatRep></spatRepInfo>
+	<mdDateSt Sync="TRUE">20140406</mdDateSt>
+	<mdFileID Sync="TRUE">{CB4C3FB6-C6A2-4917-9EC8-7C47D3921B4D}</mdFileID></metadata>

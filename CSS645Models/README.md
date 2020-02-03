@@ -67,5 +67,6 @@ For those interested, models with "***(GIS)***" next to them are ones which util
 * [Modeling Sustainable Crab Harvest in the Chesapeake Bay](Chesapeake-Bay-Crab)
 * [Simulated Lift for Individual Passage (SLIP): An Individual-Based Model for Fishlift Passage of American Shad](Fishlift) (GIS)
 * [The Summer Flounder Regime Shift and Consequential Changes in Trophic Structure: A Theoretical Individual-­based Model](Flounder)
+* [Using Agent-Based Modeling to Show Gentrification in a Southeast area of the District of Columbia](GentrificationDC) (GIS)
 
 

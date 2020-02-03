@@ -1,0 +1,762 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE metadata SYSTEM "http://www.fgdc.gov/metadata/fgdc-std-001-1998.dtd" []>
+<metadata>
+	<idinfo>
+		<citation>
+			<citeinfo>
+				<origin>DC District Department of Transportation</origin>
+				<pubdate>20070802</pubdate>
+				<title>Street Centerline Segments</title>
+				<geoform Sync="TRUE">vector digital data</geoform>
+				<pubinfo>
+					<pubplace>Washington, DC</pubplace>
+					<publish>DC GIS</publish>
+				</pubinfo>
+				<ftname Sync="TRUE">StreetSegmentLn</ftname>
+				<onlink>http://dcaatlas.dcgis.dc.gov/download/StreetSegmentLn.zip</onlink><onlink>http://dcaatlas.dcgis.dc.gov/download/StreetSegmentLn.kmz</onlink></citeinfo>
+		</citation>
+		<descript>
+			<abstract>Street Centerline Segments.  A single line representing each street in the District, segmented at major blocks to preserve geocoding integrity.  They follow the general trend of the street and do not deviate due to parking lanes, turning lanes, etc. and contain address ranges for geocoding.  The street GIS database includes only the major  road types: street centerline.
+
+All DC GIS data is stored and exported in Maryland State Plane coordinates NAD 83 meters.  This layer contains complete theoretical address ranges.
+
+METADATA CONTENT IS IN PROCESS OF VALIDATION AND SUBJECT TO CHANGE.</abstract>
+			<purpose>This data set was created to act as a basis for public and private institutions to improve their policy and decision making; promote economic development; and enhance the quality of life for residents and businesses.</purpose>
+			<langdata Sync="TRUE">en</langdata>
+		</descript>
+		<timeperd>
+			<timeinfo>
+				<sngdate>
+					<caldate>20070802</caldate>
+				</sngdate>
+			</timeinfo>
+			<current>publication date</current>
+		</timeperd>
+		<status>
+			<progress>Complete</progress>
+			<update>As needed</update>
+		</status>
+		<spdom>
+			<bounding>
+				<westbc Sync="TRUE">-77.116734</westbc>
+				<eastbc Sync="TRUE">-76.909401</eastbc>
+				<northbc Sync="TRUE">38.995255</northbc>
+				<southbc Sync="TRUE">38.793168</southbc>
+			</bounding>
+			<lboundng>
+				<leftbc Sync="TRUE">389887.540026</leftbc>
+				<rightbc Sync="TRUE">407848.400010</rightbc>
+				<bottombc Sync="TRUE">125052.640050</bottombc>
+				<topbc Sync="TRUE">147479.490022</topbc>
+			</lboundng>
+		</spdom>
+		<keywords>
+			<theme>
+				<themekt>None</themekt>
+				<themekey>transportation</themekey>
+				<themekey>Planimetrics</themekey>
+				<themekey>Roads</themekey>
+				<themekey>Interstate</themekey>
+				<themekey>location</themekey>
+				<themekey>Geographic Information System</themekey>
+				<themekey>Street Centerline</themekey>
+				<themekey>Streets</themekey>
+			</theme>
+			<place>
+				<placekt>None</placekt>
+				<placekey>Washington, DC</placekey>
+				<placekey>District of Columbia</placekey>
+			</place>
+		</keywords>
+		<accconst>Contact OCTO GIS. Any data obtained outside of OCTO GIS are unauthorized copies.</accconst>
+		<useconst>Data cannot be redistributed in any manner without written authorization.  OCTO makes no claims as to the completeness, accuracy or content of any data contained hereon, and makes no representation of any kind, including, but not limited to, the warranty of the accuracy or fitness for a  particular use, nor are any such warranties to be implied or inferred with respect to the information or data furnished herein.</useconst>
+		<ptcontac>
+			<cntinfo>
+				<cntorgp>
+					<cntorg>D.C. Office of the Chief Technology Officer</cntorg>
+					<cntper>GIS Data Coordinator</cntper>
+				</cntorgp>
+				<cntaddr>
+					<addrtype>mailing and physical address</addrtype>
+					<address>441 4th St NW, Suite 930 South</address>
+					<city>Washington</city>
+					<state>DC</state>
+					<postal>20001</postal>
+					<country>USA</country>
+				</cntaddr>
+				<cntfax>(202) 727-5660</cntfax>
+				<cntemail>dcgis@dc.gov</cntemail>
+				<hours>8:30 am - 5:00 pm</hours>
+			</cntinfo>
+		</ptcontac>
+		<datacred>DC District Department of Transportation</datacred>
+		<native Sync="TRUE">Microsoft Windows XP Version 5.1 (Build 2600) Service Pack 2; ESRI ArcCatalog 9.2.2.1350</native>
+		<natvform Sync="TRUE">Personal GeoDatabase Feature Class</natvform>
+	</idinfo>
+	<dataqual>
+		<attracc>
+			<attraccr>Validated by source and/or responsible agency. The original centerline attribute accuracy was tested by manual comparison of the digital orthos/aerial photography with the hard copy plots. In addition, several computer quality control programs were run on the accompanying digital data.</attraccr>
+		</attracc>
+		<logic>Validated by source and/or responsible agency.</logic>
+		<complete>Validated by source and/or responsible agency.</complete>
+		<posacc>
+			<horizpa>
+				<horizpar>Validated by source and/or responsible agency.  The original centerlines, as part of the photogrammetric mapping effort, are captured to a planimetric base that meets National Map Accuracy standards for digital mapping at a 1 inch equals 83.33'.</horizpar>
+			</horizpa>
+			<vertacc>
+				<vertaccr>N/A</vertaccr>
+			</vertacc>
+		</posacc>
+		<lineage>
+			<srcinfo>
+				<srccite>
+					<citeinfo>
+						<origin>Dewberry  Davis, LLC</origin>
+						<pubdate>Unknown</pubdate>
+						<pubtime>Unknown</pubtime>
+						<title>Washington DC GIS project</title>
+						<geoform>map</geoform>
+					</citeinfo>
+				</srccite>
+				<typesrc>CD-ROM</typesrc>
+				<srccitea>DD1</srccitea>
+				<srccontr>SIS data</srccontr>
+			</srcinfo>
+			<srcinfo>
+				<srccite>
+					<citeinfo>
+						<origin>District Department of Transportation (DDOT) - Spatial Database System Division</origin>
+						<pubdate>2005</pubdate>
+						<title>Street Spatial Database</title>
+						<geoform>vector digital data</geoform>
+						<onlink>http://ddot.dc.gov</onlink>
+					</citeinfo>
+				</srccite>
+				<typesrc>Database</typesrc>
+				<srccitea>Street Spatial Database</srccitea>
+				<srccontr>location and attributes</srccontr>
+			</srcinfo>
+			<procstep>
+				<procdesc>SIS Automation
+
+This methodology describes the original centerline capture as part of the 1999 planimetrics:
+
+Step 1	EDMD, D&amp;D, NCPC and designated representatives of DC DPW will meet to accomplish the presentation of the listing of government furnished material that are needed by D&amp;D. Then, set up conventions for the creation of intersection nodes, for attribution, for reporting of omissions, errors, or other QC issues in the SIS data to DC DPW and NCPC.  These conventions will be tested and validated during the pilot project.
+
+Step 2 	For each contiguous block of centerlines, D&amp;D will extend curb lines through street intersections and generate intersection nodes consistent with DPW
+guidance established in step 1.
+
+Step 3	Where two or more nodes are present that comprise a single intersection (e.g., two multi-street centerlines that intersect with four nodes), D&amp;D will cluster those nodes and identify an intersection centroid for linking SIS files of street names, address ranges, etc.
+
+Step 4	D&amp;D will overlay the SIS files and conflate them to match the centerlines, nodes, and multi-node centroids.  Because of anticipated SIS shortcomings, such as identified in D&amp;D's Washington GIS, Pilot Project Final Report, dated June 30, 1997, this conflation will normally be performed manually.
+
+Step 5	D&amp;D will overlay the georeferenced SIS files over 1995 digital orthophotos and copies of the 1999 planimetric mapping provided by EDI to ensure that the new SIS files satisfy positional accuracy requirements.
+
+Step 6	D&amp;D will deliver one set of ARC/INFO export files (.e00) on CD-ROM to NCPC and will conduct a demonstration, on DPW equipment (PC ArcView), that the current INFO attributes work with the revised streetcenterline file coverage. 
+
+Step 7	D&amp;D will conduct on-site field verification surveys (1)
+direction (2) street name, (3) address ranges for each street segment between cross-streets, (4) number of lanes, (5) directionality of lane, and (6) lane usage.
+
+Step 8	Addition of streets not digitized by EDMD.
+
+Step 9	Correction of address ranges where streets are bisected by added streets.
+
+Step 10	Correction of other SIS data errors observable from "windshield surveys."
+
+Step 11	Provision of discrepancy lists, to NCPC, where SIS street names differ from those posted on street signs.  D&amp;D will not change the SIS files to match street signs that are verified in the field.</procdesc>
+				<procdate>1999</procdate>
+				<proccont>
+					<cntinfo>
+						<cntorgp>
+							<cntorg>Dewberry  Davis, LLC</cntorg>
+						</cntorgp>
+						<cntaddr>
+							<addrtype>mailing and physical address</addrtype>
+							<address>8401 Arlington Blvd.</address>
+							<city>Fairfax</city>
+							<state>VA</state>
+							<postal>22031</postal>
+							<country>USA</country>
+						</cntaddr>
+						<hours>Regular office hours</hours>
+					</cntinfo>
+				</proccont>
+			</procstep>
+			<procstep>
+				<procdesc>District Department of Transportation (DDOT) Spatial Database System Division street database system moved into an enterprise environment, namely the Transportation Enterprise Asset Management System (TEAMS), in which GIS is a key component.  The street spatial database is designed based on an enterprise database management system (Oracle and ArcSDE), using ESRI's geodatabase technology. The new street spatial data model adopts object-oriented data modeling methodology, and follows guidelines of ESRI's UNETRANS data model (ArcGIS Transportation Data Model).  The new data model integrates GIS with transportation asset management and business processes within DDOT by making asset data spatial enabled using linear referencing system (LRS) and implements the new topology technology in ArcGIS 8.3 for maintaining the spatial database with shared geometries.
+
+DDOT constructed a public, readable version of the full Street Spatial Database containing various views for the centerlines and related data.  OCTO staff related the centerline view feature class (RoadwaySegView) with the following tables (keys): streetcode_view (stcode), streetnamelist_view (streetid), streettype_view (sttypeid), and quadrant_view (quadcode).  This pulled over the street names, types, and quadrants.  Staff then related the roadway segments to the streetsegment_view feature class, on sourceid, to pull over the ownership, functional class, and national highway system (nhs) attributes.  Then, staff created the ST_NAME attribute which combines street name with type into one field for labelling.  Various visual checks were done on functional class, street name, quadrant, and other items to ensure the relates worked using the key fields.</procdesc>
+				<srcused>C:\OCTOGIS\MetadataData\SDE.SISSCLN.xml</srcused>
+				<procdate>12/13/05</procdate>
+				<proccont>
+					<cntinfo>
+						<cntorgp>
+							<cntorg>Office of the Chief Technology Officer</cntorg>
+							<cntper>GIS Data Coordinator</cntper>
+						</cntorgp>
+						<cntaddr>
+							<addrtype>mailing and physical address</addrtype>
+							<address>441 4th St NW, Suite 930S</address>
+							<city>Washington</city>
+							<state>DC</state>
+							<postal>20001</postal>
+							<country>USA</country>
+						</cntaddr>
+						<cntfax>202-727-5660</cntfax>
+						<cntemail>dcgis@dc.gov</cntemail>
+						<hours>8:30am - 5pm</hours>
+					</cntinfo>
+				</proccont>
+			</procstep>
+			<procstep>
+				<procdesc>Metadata imported.</procdesc>
+				<srcused>C:\temp\metadata.xml</srcused>
+			</procstep>
+			<procstep>
+				<procdesc Sync="TRUE">Metadata imported.</procdesc>
+				<srcused Sync="TRUE">F:\DCGISDATA_WORKSPACE\DDOT\Street Centerlines\StreetCenterlineLn.shp.xml</srcused>
+				<date Sync="TRUE">20050907</date>
+				<time Sync="TRUE">13290900</time>
+			</procstep>
+			<procstep>
+				<procdesc Sync="TRUE">Metadata imported.</procdesc>
+				<srcused Sync="TRUE">E:\DCGISDATA_WORKSPACE\DDOT\Street Centerlines\StreetCenterlineLn.xml</srcused>
+				<date Sync="TRUE">20051213</date>
+				<time Sync="TRUE">14232200</time>
+			</procstep>
+			<procstep>
+				<procdesc Sync="TRUE">Metadata imported.</procdesc>
+				<srcused Sync="TRUE">c:\temp\scl.xml</srcused>
+				<date Sync="TRUE">20060919</date>
+				<time Sync="TRUE">15472000</time>
+			</procstep>
+			<procstep>
+				<procdesc Sync="TRUE">Metadata imported.</procdesc>
+				<srcused Sync="TRUE">C:\temp\StreetCenterlineLn_old.xml</srcused>
+				<date Sync="TRUE">20061031</date>
+				<time Sync="TRUE">16521900</time>
+			</procstep>
+			<procstep>
+				<procdesc Sync="TRUE">Metadata imported.</procdesc>
+				<srcused Sync="TRUE">C:\temp\StreetSegmentLn.shp.xml</srcused>
+				<date Sync="TRUE">20061116</date>
+				<time Sync="TRUE">12322100</time>
+			</procstep>
+			<procstep>
+				<procdesc Sync="TRUE">Metadata imported.</procdesc>
+				<srcused Sync="TRUE">C:\temp\StreetSegmentLn_old.xml</srcused>
+				<date Sync="TRUE">20070801</date>
+				<time Sync="TRUE">17175100</time>
+			</procstep>
+			<procstep><procdesc Sync="TRUE">Metadata imported.</procdesc><srcused Sync="TRUE">C:\temp\DCGIS.xml</srcused><date Sync="TRUE">20080131</date><time Sync="TRUE">14475200</time></procstep><procstep><procdesc Sync="TRUE">Dataset copied.</procdesc><srcused Sync="TRUE">\\10.128.100.32\fat\DCGISDATA_WORKSPACE\ddot\Street Centerlines\DDOT.mdb</srcused><date Sync="TRUE">20080131</date><time Sync="TRUE">16223600</time></procstep></lineage>
+		<cloud>0</cloud>
+	</dataqual>
+	<spdoinfo>
+		<direct Sync="TRUE">Vector</direct>
+		<ptvctinf>
+			<sdtsterm Name="StreetSegmentLn">
+				<sdtstype Sync="TRUE">String</sdtstype>
+				<ptvctcnt Sync="TRUE">13414</ptvctcnt>
+			</sdtsterm>
+			<esriterm Name="StreetSegmentLn">
+				<efeatyp Sync="TRUE">Simple</efeatyp>
+				<efeageom Sync="TRUE">Polyline</efeageom>
+				<esritopo Sync="TRUE">FALSE</esritopo>
+				<efeacnt Sync="TRUE">13414</efeacnt>
+				<spindex Sync="TRUE">TRUE</spindex>
+				<linrefer Sync="TRUE">TRUE</linrefer>
+			</esriterm>
+		</ptvctinf>
+	</spdoinfo>
+	<spref>
+		<horizsys>
+			<planar>
+				<planci>
+					<plance Sync="TRUE">coordinate pair</plance>
+					<coordrep>
+						<absres Sync="TRUE">0.000011</absres>
+						<ordres Sync="TRUE">0.000011</ordres>
+					</coordrep>
+					<plandu Sync="TRUE">meters</plandu>
+				</planci>
+				<gridsys><gridsysn>State Plane Coordinate System</gridsysn><spcs><spcszone Sync="TRUE">1900</spcszone><lambertc><stdparll Sync="TRUE">38.300000</stdparll><stdparll Sync="TRUE">39.450000</stdparll><longcm Sync="TRUE">-77.000000</longcm><latprjo Sync="TRUE">37.666667</latprjo><feast Sync="TRUE">400000.000000</feast><fnorth Sync="TRUE">0.000000</fnorth></lambertc></spcs></gridsys></planar>
+			<geodetic>
+				<horizdn Sync="TRUE">North American Datum of 1983</horizdn>
+				<ellips Sync="TRUE">Geodetic Reference System 80</ellips>
+				<semiaxis Sync="TRUE">6378137.000000</semiaxis>
+				<denflat Sync="TRUE">298.257222</denflat>
+			</geodetic>
+			<cordsysn>
+				<geogcsn Sync="TRUE">GCS_North_American_1983</geogcsn>
+				<projcsn Sync="TRUE">NAD_1983_StatePlane_Maryland_FIPS_1900</projcsn>
+			</cordsysn>
+		</horizsys>
+		<vertdef>
+			<altsys>
+				<altdatum>North American Vertical Datum of 1988</altdatum>
+				<altres Sync="TRUE">1.000000</altres>
+				<altunits>Meters</altunits>
+				<altenc Sync="TRUE">Explicit elevation coordinate included with horizontal coordinates</altenc>
+			</altsys>
+			<depthsys>
+				<depthdn>
+Mean sea level</depthdn>
+				<depthres>.01</depthres>
+				<depthdu>Meters</depthdu>
+				<depthem>Implicit coordinate</depthem>
+			</depthsys>
+		</vertdef>
+	</spref>
+	<eainfo>
+		<detailed Name="StreetSegmentLn">
+			<enttyp>
+				<enttypl Sync="TRUE">StreetSegmentLn</enttypl>
+				<enttypt Sync="TRUE">Feature Class</enttypt>
+				<enttypc Sync="TRUE">13414</enttypc>
+			</enttyp>
+			<attr>
+				<attrlabl Sync="TRUE">TOADDRESSRIGHTTHEO</attrlabl>
+				<attalias Sync="TRUE">TOADDRESSRIGHTTHEO</attalias>
+				<attrtype Sync="TRUE">Integer</attrtype>
+				<attwidth Sync="TRUE">4</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+			</attr>
+			<attr>
+				<attrlabl>STREETID</attrlabl>
+				<attrdef>Street identifier</attrdef>
+			</attr>
+			<attr>
+				<attrlabl>OWNERSHIP</attrlabl>
+				<attrdef>Entity responsible for street maintenance</attrdef>
+				<attrdomv>
+					<codesetd>
+						<codesetn>Unknown</codesetn>
+					</codesetd>
+				</attrdomv>
+				<attrdomv>
+					<codesetd>
+						<codesetn>Unknown</codesetn>
+					</codesetd>
+				</attrdomv>
+				<attrdomv>
+					<edom>
+						<edomv>Unknown</edomv>
+					</edom>
+					<edom>
+						<edomv>DDOT</edomv>
+					</edom>
+					<edom>
+						<edomv>National Park Service</edomv>
+					</edom>
+					<edom>
+						<edomv>Architect of the Capitol</edomv>
+					</edom>
+					<edom>
+						<edomv>Military Reservation</edomv>
+					</edom>
+					<edom>
+						<edomv>Private</edomv>
+					</edom>
+					<edom>
+						<edomv>WMATA-METRO</edomv>
+					</edom>
+					<edom>
+						<edomv>Other DC Agencies</edomv>
+					</edom>
+					<edom>
+						<edomv>Other Federal Agencies</edomv>
+					</edom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>FUNCTIONALCLASS</attrlabl>
+				<attrdef>Functional Class</attrdef>
+				<attrdomv>
+					<edom>
+						<edomv>Unknown</edomv>
+					</edom>
+					<edom>
+						<edomv>Interstate</edomv>
+					</edom>
+					<edom>
+						<edomv>Other Freeways and Expressway</edomv>
+					</edom>
+					<edom>
+						<edomv>Principal Arterial</edomv>
+					</edom>
+					<edom>
+						<edomv>Minor Arterial</edomv>
+					</edom>
+					<edom>
+						<edomv>Collector</edomv>
+					</edom>
+					<edom>
+						<edomv>Local</edomv>
+					</edom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>LIFECYCLESTATUS</attrlabl>
+				<attrdef>Status Code</attrdef>
+				<attrdomv>
+					<edom>
+						<edomv>1</edomv>
+						<edomvd>Active</edomvd>
+					</edom>
+					<edom>
+						<edomv>2</edomv>
+						<edomvd>Retired</edomvd>
+					</edom>
+					<edom>
+						<edomv>3</edomv>
+						<edomvd>Paper</edomvd>
+					</edom>
+					<edom>
+						<edomv>4</edomv>
+						<edomvd>Derived</edomvd>
+					</edom>
+					<edom>
+						<edomv>5</edomv>
+						<edomvd>Open</edomvd>
+					</edom>
+					<edom>
+						<edomv>6</edomv>
+						<edomvd>Close</edomvd>
+					</edom>
+					<edom>
+						<edomv>7</edomv>
+						<edomvd>On Hold</edomvd>
+					</edom>
+					<edom>
+						<edomv>8</edomv>
+						<edomvd>Changed</edomvd>
+					</edom>
+					<edom>
+						<edomv>9</edomv>
+						<edomvd>New</edomvd>
+					</edom>
+					<edom>
+						<edomv>10</edomv>
+						<edomvd>Old</edomvd>
+					</edom>
+					<edom>
+						<edomv>11</edomv>
+						<edomvd>Deleted</edomvd>
+					</edom>
+					<edom>
+						<edomv>12</edomv>
+						<edomvd>Completed</edomvd>
+					</edom>
+					<edom>
+						<edomv>13</edomv>
+						<edomvd>Budgeted</edomvd>
+					</edom>
+					<edom>
+						<edomv>14</edomv>
+						<edomvd>Under Construction</edomvd>
+					</edom>
+					<edom>
+						<edomv>15</edomv>
+						<edomvd>Planned</edomvd>
+					</edom>
+					<edom>
+						<edomv>16</edomv>
+						<edomvd>Under Design</edomvd>
+					</edom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">FROMADDRESSLEFT</attrlabl>
+				<attalias Sync="TRUE">FROMADDRESSLEFT</attalias>
+				<attrtype Sync="TRUE">SmallInteger</attrtype>
+				<attwidth Sync="TRUE">2</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+				<attrdef>Lower value of the actual address on the left side of the centerline</attrdef>
+			</attr>
+			<attr>
+				<attrlabl>SOURCEID</attrlabl>
+				<attrdef>Source Identifier</attrdef>
+			</attr>
+			<attr>
+				<attrlabl>INSERVICEDATE</attrlabl>
+				<attrdef>Date commisioned into service</attrdef>
+			</attr>
+			<attr>
+				<attrlabl>OUTOFSERVICEDATE</attrlabl>
+				<attrdef>Date taken out of service</attrdef>
+			</attr>
+			<attr>
+				<attrlabl>OBJECTID</attrlabl>
+				<attrdef>Object ID</attrdef>
+			</attr>
+			<attr>
+				<attrlabl>SHAPE</attrlabl>
+				<attrdef>Feature geometry.</attrdef>
+				<attrdefs>ESRI</attrdefs>
+				<attrdomv>
+					<udom>Coordinates defining the features.</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>UPDATETIMESTAMP</attrlabl>
+				<attrdef>Time stamp of last update to centerline</attrdef>
+			</attr>
+			<attr>
+				<attrlabl>REGISTEREDNAME</attrlabl>
+				<attrdef>Registered Name of the centerline</attrdef>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">TOADDRESSLEFT</attrlabl>
+				<attalias Sync="TRUE">TOADDRESSLEFT</attalias>
+				<attrtype Sync="TRUE">SmallInteger</attrtype>
+				<attwidth Sync="TRUE">2</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+				<attrdef>Upper value of the actual address on the left side of the centerline</attrdef>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">FROMADDRESSRIGHT</attrlabl>
+				<attalias Sync="TRUE">FROMADDRESSRIGHT</attalias>
+				<attrtype Sync="TRUE">SmallInteger</attrtype>
+				<attwidth Sync="TRUE">2</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+				<attrdef>Lower value of the actual address on the right side of the centerline</attrdef>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">TOADDRESSRIGHT</attrlabl>
+				<attalias Sync="TRUE">TOADDRESSRIGHT</attalias>
+				<attrtype Sync="TRUE">SmallInteger</attrtype>
+				<attwidth Sync="TRUE">2</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+				<attrdef>Upper value of the actual address on the right side of the centerline</attrdef>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">SSD_ID</attrlabl>
+				<attalias Sync="TRUE">SSD_ID</attalias>
+				<attrtype Sync="TRUE">String</attrtype>
+				<attwidth Sync="TRUE">19</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+			</attr>
+			<attr>
+				<attrlabl>STREETTYPE</attrlabl>
+				<attrdef>Street Type</attrdef>
+			</attr>
+			<attr>
+				<attrlabl>QUADRANT</attrlabl>
+				<attrdef>Quandrant Name</attrdef>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">DIRECTIONALITY</attrlabl>
+				<attalias Sync="TRUE">DIRECTIONALITY</attalias>
+				<attrtype Sync="TRUE">String</attrtype>
+				<attwidth Sync="TRUE">40</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+				<attrdef>Directionality of road segment</attrdef>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">STREETSEGID</attrlabl>
+				<attalias Sync="TRUE">STREETSEGID</attalias>
+				<attrtype Sync="TRUE">Integer</attrtype>
+				<attwidth Sync="TRUE">4</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+				<attrdef>Street Segment unique identifier</attrdef>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">NHSTYPE</attrlabl>
+				<attalias Sync="TRUE">NHSTYPE</attalias>
+				<attrtype Sync="TRUE">String</attrtype>
+				<attwidth Sync="TRUE">50</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">FROMADDRESSLEFTTHEO</attrlabl>
+				<attalias Sync="TRUE">FROMADDRESSLEFTTHEO</attalias>
+				<attrtype Sync="TRUE">Integer</attrtype>
+				<attwidth Sync="TRUE">4</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">TOADDRESSLEFTTHEO</attrlabl>
+				<attalias Sync="TRUE">TOADDRESSLEFTTHEO</attalias>
+				<attrtype Sync="TRUE">Integer</attrtype>
+				<attwidth Sync="TRUE">4</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+			</attr>
+			<attr><attrlabl Sync="TRUE">Shape</attrlabl><attalias Sync="TRUE">Shape</attalias><attrtype Sync="TRUE">Geometry</attrtype><attwidth Sync="TRUE">0</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale><attrdef Sync="TRUE">Feature geometry.</attrdef><attrdefs Sync="TRUE">ESRI</attrdefs><attrdomv><udom Sync="TRUE">Coordinates defining the features.</udom></attrdomv></attr><attr><attrlabl Sync="TRUE">LEN</attrlabl><attalias Sync="TRUE">LEN</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">8</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr>
+				<attrlabl Sync="TRUE">FROMADDRESSRIGHTTHEO</attrlabl>
+				<attalias Sync="TRUE">FROMADDRESSRIGHTTHEO</attalias>
+				<attrtype Sync="TRUE">Integer</attrtype>
+				<attwidth Sync="TRUE">4</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+			</attr>
+			<attr><attrlabl Sync="TRUE">Shape_Length</attrlabl><attalias Sync="TRUE">Shape_Length</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">8</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale><attrdef Sync="TRUE">Length of feature in internal units.</attrdef><attrdefs Sync="TRUE">ESRI</attrdefs><attrdomv><udom Sync="TRUE">Positive real numbers that are automatically generated.</udom></attrdomv></attr></detailed>
+	</eainfo>
+	<distinfo>
+		<distrib>
+			<cntinfo>
+				<cntorgp>
+					<cntorg>D.C. Office of the Chief Technology Officer</cntorg>
+					<cntper>GIS Data Coordinator</cntper>
+				</cntorgp>
+				<cntaddr>
+					<addrtype>mailing and physical address</addrtype>
+					<address>441 4th St NW, Suite 930 South</address>
+					<city>Washington</city>
+					<state>DC</state>
+					<postal>20001</postal>
+					<country>USA</country>
+				</cntaddr>
+				<cntfax>(202) 727-5660</cntfax>
+				<cntemail>dcgis@dc.gov</cntemail>
+				<hours>8:30 am - 5:00 pm</hours>
+			</cntinfo>
+		</distrib>
+		<resdesc>Downloadable Data</resdesc>
+		<distliab>OCTO makes no claims as to the completeness, accuracy or content of any data contained hereon, and makes no representation of any kind, including, but not limited to, the warranty of the accuracy or fitness for a particular use, nor are any such warranties to be implied or inferred, with respect to the information or data furnished herein. Subject to terms and conditions of the Memorandum of Agreement. Memorandum of Agreement must have authorized signature.</distliab>
+		<stdorder>
+			<digform>
+				<digtinfo>
+					<transize>10.249</transize>
+				</digtinfo>
+			</digform>
+			<ordering>Most DC GIS datasets can be downloaded from "http://dcgis.dc.gov" on the data center page.  Orders can also be made by contacting OCTO GIS at "dcgis@dc.gov", especially for datasets not available for download.</ordering>
+		</stdorder>
+	</distinfo>
+	<metainfo>
+		<metd Sync="TRUE">20080131</metd>
+		<metrd>05/09/05</metrd>
+		<metc>
+			<cntinfo>
+				<cntorgp>
+					<cntorg>D.C. Office of the Chief Technology Officer</cntorg>
+					<cntper>GIS Data Coordinator</cntper>
+				</cntorgp>
+				<cntaddr>
+					<addrtype>mailing and physical address</addrtype>
+					<address>441 4th St NW, Suite 930 South</address>
+					<city>Washington</city>
+					<state>DC</state>
+					<postal>20001</postal>
+					<country>USA</country>
+				</cntaddr>
+				<cntfax>(202) 727-5660</cntfax>
+				<cntemail>dcgis@dc.gov</cntemail>
+				<hours>8:30 am - 5:00 pm</hours>
+				<cntvoice>REQUIRED: The telephone number by which individuals can speak to the organization or individual.</cntvoice>
+			</cntinfo>
+		</metc>
+		<metstdn Sync="TRUE">FGDC Content Standards for Digital Geospatial Metadata</metstdn>
+		<metstdv Sync="TRUE">FGDC-STD-001-1998</metstdv>
+		<mettc Sync="TRUE">local time</mettc>
+		<metac>None</metac>
+		<metuc>None</metuc>
+		<langmeta Sync="TRUE">en</langmeta>
+		<metextns><onlink Sync="TRUE">http://www.esri.com/metadata/esriprof80.html</onlink><metprof Sync="TRUE">ESRI Metadata Profile</metprof></metextns></metainfo>
+	<Esri>
+		<CreaDate>20140403</CreaDate>
+		<CreaTime>16263000</CreaTime>
+		<SyncOnce>FALSE</SyncOnce>
+		<SyncDate>20080131</SyncDate>
+		<SyncTime>14475200</SyncTime>
+		<ModDate>20080131</ModDate>
+		<ModTime>14484700</ModTime>
+		<DataProperties>
+			<lineage>
+				<Process Name="RepairGeometry_2" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\RepairGeometry" Date="20051221" Time="103822">RepairGeometry "E:\DCGISDATA_WORKSPACE\DDOT\Street Centerlines\DDOT.mdb\StreetCenterlineLn" "E:\DCGISDATA_WORKSPACE\DDOT\Street Centerlines\DDOT.mdb\StreetCenterlineLn"</Process>
+				<Process ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\CopyFeatures" Date="20070802" Time="230425">CopyFeatures E:\DataLoad080207\DDOT.mdb\StreetSegmentLn "Database Connections\dcgiscentral Data Loader.sde\DCGIS.Planimetrics\DCGIS.StreetSegmentLn" DCGISDBP_S 600 0 0</Process>
+				<Process ToolSource="c:\program files (x86)\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\Project" Date="20140403" Time="162635">Project StreetSegmentLn E:\Shapefile\StreetSegmentLn_concentrated.shp GEOGCS['GCS_WGS_1984',DATUM['D_WGS_1984',SPHEROID['WGS_1984',6378137.0,298.257223563]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433],METADATA['World',-180.0,-90.0,180.0,90.0,0.0,0.0174532925199433,0.0,1262]] WGS_1984_(ITRF00)_To_NAD_1983 PROJCS['NAD_1983_StatePlane_Maryland_FIPS_1900',GEOGCS['GCS_North_American_1983',DATUM['D_North_American_1983',SPHEROID['GRS_1980',6378137.0,298.257222101]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]],PROJECTION['Lambert_Conformal_Conic'],PARAMETER['False_Easting',400000.0],PARAMETER['False_Northing',0.0],PARAMETER['Central_Meridian',-77.0],PARAMETER['Standard_Parallel_1',38.3],PARAMETER['Standard_Parallel_2',39.45],PARAMETER['Latitude_Of_Origin',37.66666666666666],UNIT['Meter',1.0]]</Process></lineage>
+		</DataProperties>
+		<PublishStatus>Published</PublishStatus><ArcGISFormat>1.0</ArcGISFormat></Esri>
+	<dataIdInfo>
+		<envirDesc Sync="TRUE">Microsoft Windows XP Version 5.1 (Build 2600) Service Pack 2; ESRI ArcCatalog 9.2.2.1350</envirDesc>
+		<dataLang>
+			<languageCode Sync="TRUE" value="en">
+			</languageCode>
+		</dataLang>
+		<idCitation>
+			<resTitle Sync="TRUE">StreetSegmentLn</resTitle>
+			<presForm>
+				<PresFormCd Sync="TRUE" value="005">
+				</PresFormCd>
+			</presForm>
+		</idCitation>
+		<spatRpType>
+			<SpatRepTypCd Sync="TRUE" value="001">
+			</SpatRepTypCd>
+		</spatRpType>
+		<dataExt>
+			<geoEle>
+				<GeoBndBox esriExtentType="native">
+					<westBL Sync="TRUE">389887.540026</westBL>
+					<eastBL Sync="TRUE">407848.40001</eastBL>
+					<northBL Sync="TRUE">147479.490022</northBL>
+					<southBL Sync="TRUE">125052.64005</southBL>
+					<exTypeCode Sync="TRUE">1</exTypeCode>
+				</GeoBndBox>
+			</geoEle>
+		</dataExt>
+		<geoBox esriExtentType="decdegrees">
+			<westBL Sync="TRUE">-77.116734</westBL>
+			<eastBL Sync="TRUE">-76.909401</eastBL>
+			<northBL Sync="TRUE">38.995255</northBL>
+			<southBL Sync="TRUE">38.793168</southBL>
+			<exTypeCode Sync="TRUE">1</exTypeCode>
+		</geoBox>
+	</dataIdInfo>
+	<mdLang>
+		<languageCode Sync="TRUE" value="en">
+		</languageCode>
+	</mdLang>
+	<mdStanName Sync="TRUE">ISO 19115 Geographic Information - Metadata</mdStanName>
+	<mdStanVer Sync="TRUE">DIS_ESRI1.0</mdStanVer>
+	<mdChar>
+		<CharSetCd Sync="TRUE" value="004">
+		</CharSetCd>
+	</mdChar>
+	<mdHrLv>
+		<ScopeCd Sync="TRUE" value="005">
+		</ScopeCd>
+	</mdHrLv>
+	<mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+	<distInfo>
+		<distributor>
+			<distorTran>
+				<onLineSrc>
+					<orDesc Sync="TRUE">002</orDesc>
+					<linkage Sync="TRUE">file://</linkage>
+					<protocol Sync="TRUE">Local Area Network</protocol>
+				</onLineSrc>
+			</distorTran>
+			<distorFormat>
+				<formatName Sync="TRUE">Personal GeoDatabase Feature Class</formatName>
+			</distorFormat>
+		</distributor>
+	</distInfo>
+	<refSysInfo>
+		<RefSystem>
+			<refSysID>
+				<identCode Sync="TRUE">NAD_1983_StatePlane_Maryland_FIPS_1900</identCode>
+			</refSysID>
+		</RefSystem>
+	</refSysInfo>
+	<spatRepInfo>
+		<VectSpatRep>
+			<topLvl>
+				<TopoLevCd Sync="TRUE" value="001">
+				</TopoLevCd>
+			</topLvl>
+			<geometObjs Name="StreetSegmentLn"><geoObjTyp><GeoObjTypCd Sync="TRUE" value="001"></GeoObjTypCd></geoObjTyp><geoObjCnt Sync="TRUE">13414</geoObjCnt></geometObjs></VectSpatRep>
+	</spatRepInfo>
+	<mdDateSt Sync="TRUE">20080131</mdDateSt>
+</metadata>
