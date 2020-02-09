@@ -1,0 +1,688 @@
+Globals [
+  ;----------------------Lot current and capacity----------------------
+  lot_o_current
+  lot_r_current 
+  lot_h_current 
+  lot_s_current 
+  lot_c_current 
+  lot_a_current 
+  lot_l_current 
+  lot_k_current 
+  lot_m_current 
+  lot_p_current 
+  
+  lot_o_capacity
+  lot_r_capacity 
+  lot_h_capacity 
+  lot_s_capacity 
+  lot_c_capacity 
+  lot_a_capacity 
+  lot_l_capacity 
+  lot_k_capacity 
+  lot_m_capacity 
+  lot_p_capacity 
+  
+  ;----------------------WAY POINT LIST----------------------
+  southeast-hunter-waypoints
+  southeast-hybrid-waypoints
+  southeast-satisf-waypoints
+  west-central-hunter-waypoints
+  west-central-hybrid-waypoints
+  west-central-satisf-waypoints
+  north-west-hunter-waypoints
+  north-west-hybrid-waypoints
+  north-west-satisf-waypoints
+  exit_o_lot
+  exit_r_lot
+  exit_h_lot
+  exit_s_lot
+  exit_c_lot
+  exit_a_lot
+  exit_l_lot
+  exit_k_lot
+  exit_m_lot
+  exit_p_lot
+
+  
+  ;----------------------Tracking Variables----------------------  
+  Hunter_parking_events
+  Hunter_total_parking_time
+  Hunter_total_walking_time
+  Hunter_waypoints_change
+  Hunter_abandon_drive_GMU
+  Hunter_parking_time_more_than_limit
+  
+  Hybrid_parking_events
+  Hybrid_total_parking_time
+  Hybrid_total_walking_time
+  Hybrid_waypoints_change
+  Hybrid_abandon_drive_GMU
+  Hybrid_parking_time_more_than_limit
+  
+  Satisf_parking_events
+  Satisf_total_parking_time
+  Satisf_total_walking_time
+  Satisf_waypoints_change
+  Satisf_abandon_drive_GMU
+  Satisf_parking_time_more_than_limit
+  
+  
+  ;----------------------Control Variables-------------------------
+  hybrid_lot_limit
+  satis_lot_limit
+  Max_trips_around_lot
+  cooldown-reset
+  base-speed
+  random-speed
+  traffic_factor
+  Parking-and-walking-goal
+  variability-in-lot-full-estimate
+  walking-speed
+  
+  SE-X
+  SE-Y
+  WC-X
+  WC-Y
+  NW-X
+  NW-Y
+  
+]
+
+to setup-variables
+  
+  set hybrid_lot_limit 0.85
+  set satis_lot_limit 0.75
+  set Max_trips_around_lot 2 
+  set cooldown-reset 10
+  set base-speed 0.7
+  set random-speed 0.29
+  set Parking-and-walking-goal 500
+  set variability-in-lot-full-estimate 0.10
+  set walking-speed   0.2
+  set traffic_factor 1
+
+  set SE-X 95
+  set SE-Y 25
+  set WC-X 50
+  set WC-Y 45
+  set NW-X 45
+  set NW-Y 105
+
+  
+end
+
+
+
+;---------------------------------------------------------------------------------------------------------
+;-------------------------------------------SETUP PATCHES--------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+
+to setup-parking
+  
+  ;run clockwise starting from top left
+  Create_Parking  8  118 3  ;O
+  Create_Parking 51  128 5  ;R
+  Create_Parking 83  128 6  ;H
+  Create_Parking 79   47 6  ;S
+  Create_Parking 93    6 3  ;C
+  Create_Parking 60    6 5  ;A
+  Create_Parking 45    6 2  ;L
+  Create_Parking  1    6 5  ;K
+  Create_Parking 35   66 2  ;M 
+  Create_Parking 19   86 2  ;P
+  
+  set lot_o_capacity 60
+  set lot_r_capacity 100
+  set lot_h_capacity 120
+  set lot_s_capacity 120
+  set lot_c_capacity 60
+  set lot_a_capacity 100
+  set lot_l_capacity 40
+  set lot_k_capacity 100
+  set lot_m_capacity 40
+  set lot_p_capacity 40
+  
+
+  ;Create a subset of patches where you can actually park
+  set patches-parking-spot-list patches with [Parking-spot? = true]
+
+  
+end
+
+
+to setup-landscape
+
+  ; default patches to not drivable, not parkable
+  set Parking-spot? false
+  set pcolor 63
+  set status 10
+  
+  ; horizontal roads
+  if (pycor = 120) and (pxcor <= 117) [set pcolor grey set Status 0]
+  if (pycor = 58 ) and (pxcor <= 33 ) [set pcolor grey set Status 0]
+  if (pycor = 58 ) and (pxcor >= 117) [set pcolor grey set Status 0]
+  if (pycor = 8  ) and (pxcor >= 33 ) and ( pxcor <= 117 ) [set pcolor grey set Status 0]
+  ; vertical roads
+  if (pxcor = 33) [set pcolor grey set Status 0]  
+  if (pxcor = 49)  and (pycor >= 120) [set pcolor grey set Status 0]
+  if (pxcor = 59)  and (pycor <= 8  ) [set pcolor grey set Status 0]
+  if (pxcor = 91)  and (pycor <= 8  ) [set pcolor grey set Status 0]
+  if (pxcor = 117) and (pycor <= 120) and ( pycor >= 8 ) [set pcolor grey set Status 0]
+  
+end
+
+
+to Create_Parking [Top-left-X Top-left-Y Mult-of-20-prk]
+  
+  if ( Mult-of-20-prk > 0 )[
+    
+    let recur_variable Mult-of-20-prk - 1
+    create-construction 1 [
+      set heading 90
+      
+      ;move to the top desired point, move to the right 1, then draw 5 parking spots (orange)
+      setxy Top-left-X Top-left-Y 
+      fd 1 repeat 5 [ask patch-here [set pcolor orange set Parking-spot? true set Status 40] fd 1 ] 
+      
+      ;move one line down, draw 6 parking roads (blue)
+      setxy Top-left-X Top-left-Y - 1
+      repeat 6 [ask patch-here [set pcolor blue set Status 5] fd 1]
+      
+      ;move one line down, move to the right 1, then draw 5 parking spots (orange)
+      setxy Top-left-X Top-left-Y - 2
+      fd 1 repeat 5 [ask patch-here [set pcolor orange set Parking-spot? true set Status 40] fd 1] 
+      
+      ;move one line down, move to the right 1, then draw 5 parking spots (orange)
+      setxy Top-left-X Top-left-Y - 3
+      fd 1 repeat 5 [ask patch-here [set pcolor orange set Parking-spot? true set Status 40] fd 1 ] 
+      
+      ;move one line down, draw 6 parking roads (blue)
+      setxy Top-left-X Top-left-Y - 4
+      repeat 6 [ask patch-here [set pcolor blue set Status 5] fd 1]
+      
+      ;move one line down, move to the right 1, then draw 5 parking spots (orange)
+      setxy Top-left-X Top-left-Y - 5
+      fd 1 repeat 5 [ask patch-here [set pcolor orange set Parking-spot? true set Status 40] fd 1] 
+      
+      ;draw blue road ends
+      set heading 180
+      setxy Top-left-X Top-left-Y - 1
+      repeat 4 [ask patch-here [set pcolor blue set Status 5] fd 1 ]
+      setxy Top-left-X + 6 Top-left-Y - 1 
+      repeat 4 [ask patch-here [set pcolor blue set Status 5] fd 1 ]
+      
+    ]
+    ask construction [die]
+    
+    ;draw the next set of 20 parking spot
+    Create_Parking Top-left-X + 6 Top-left-Y recur_variable
+    
+  ]
+
+end
+
+;---------------------------------------------------------------------------------------------------------
+;-------------------------------------------SETUP WAY POINTS--------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+
+
+to setup-routing
+  
+  ;johnson center
+  if (pxcor = 60 ) and (pycor = 65) [set pcolor cyan set status 15 set Name "crazy"]
+  if (pxcor = 60 ) and (pycor = 64) [set pcolor cyan set status 15 ]
+  if (pxcor = 60 ) and (pycor = 66) [set pcolor cyan set status 15 ]
+  if (pxcor = 59 ) and (pycor = 64) [set pcolor cyan set status 15 ]
+  if (pxcor = 59 ) and (pycor = 65) [set pcolor cyan set status 15 ]
+  if (pxcor = 59 ) and (pycor = 66) [set pcolor cyan set status 15 ]
+  if (pxcor = 61 ) and (pycor = 64) [set pcolor cyan set status 15 ]
+  if (pxcor = 61 ) and (pycor = 65) [set pcolor cyan set status 15 ]
+  if (pxcor = 61 ) and (pycor = 66) [set pcolor cyan set status 15 ]
+  
+  ;walking destinations
+  if (pxcor = SE-X ) and (pycor = SE-Y ) [set pcolor red set status 15 set Name "SE_dest"]  
+  if (pxcor = WC-X ) and (pycor = WC-Y ) [set pcolor red set status 15 set Name "WC_dest"]  
+  if (pxcor = NW-X ) and (pycor = NW-Y ) [set pcolor red set status 15 set Name "NW_dest"]  
+  
+  ;portal
+  if (pxcor = 33 ) and (pycor = 130) [set pcolor red set Name "red_portal"]
+  if (pxcor = 49 ) and (pycor = 130) [set pcolor red set Name "orange_portal"]
+  if (pxcor = 120) and (pycor = 58 ) [set pcolor red set Name "yellow_portal"]
+  if (pxcor = 91 ) and (pycor = 0  ) [set pcolor red set Name "blue_portal"]
+  if (pxcor = 59 ) and (pycor = 0  ) [set pcolor red set Name "indigo_portal"]
+  if (pxcor = 33 ) and (pycor = 0  ) [set pcolor red set Name "violet_portal"]
+  if (pxcor = 0  ) and (pycor = 58 ) [set pcolor red set Name "rainbow_portal"]
+  
+  ;intersections
+  if (pxcor = 33 ) and (pycor = 120) [set pcolor magenta set Name "int_1"]
+  if (pxcor = 49 ) and (pycor = 120) [set pcolor magenta set Name "int_2"]
+  if (pxcor = 117) and (pycor = 120) [set pcolor magenta set Name "int_3"]
+  if (pxcor = 117) and (pycor = 58 ) [set pcolor magenta set Name "int_4"]
+  if (pxcor = 117) and (pycor = 8  ) [set pcolor magenta set Name "int_5"]
+  if (pxcor = 91 ) and (pycor = 8  ) [set pcolor magenta set Name "int_6"]
+  if (pxcor = 59 ) and (pycor = 8  ) [set pcolor magenta set Name "int_7"]
+  if (pxcor = 33 ) and (pycor = 8  ) [set pcolor magenta set Name "int_8"]
+  if (pxcor = 33 ) and (pycor = 58 ) [set pcolor magenta set Name "int_9"]  
+  
+  ; Lot entrances
+  if (pxcor = 26 ) and (pycor = 120) [set pcolor white set Name "ent_lot_o"]
+  if (pxcor = 49 ) and (pycor = 127) [set pcolor white set Name "ent_lot_r"]
+  if (pxcor = 83 ) and (pycor = 120) [set pcolor white set Name "ent_lot_h"]
+  if (pxcor = 117) and (pycor = 46 ) [set pcolor white set Name "ent_lot_s"]
+  if (pxcor = 93 ) and (pycor = 8  ) [set pcolor white set Name "ent_lot_c"]
+  if (pxcor = 60 ) and (pycor = 8  ) [set pcolor white set Name "ent_lot_a"]
+  if (pxcor = 45 ) and (pycor = 8  ) [set pcolor white set Name "ent_lot_l"]
+  if (pxcor = 33 ) and (pycor = 5  ) [set pcolor white set Name "ent_lot_k"]
+  if (pxcor = 33 ) and (pycor = 65 ) [set pcolor white set Name "ent_lot_m"]  
+  if (pxcor = 33 ) and (pycor = 85 ) [set pcolor white set Name "ent_lot_p"]  
+
+  ; Places in lot to start looking for parking, note that except for those labelled right entrance numbers are same as those used to "create parking" procedureone
+  if (pxcor = 26 ) and (pycor = 118 - 1) [set pcolor 138 set Name "start_lot_o" set status 7 ] ; right entrance
+  if (pxcor = 51 ) and (pycor = 128 - 1) [set pcolor 138 set Name "start_lot_r" set status 7 ]
+  if (pxcor = 83 ) and (pycor = 128 - 1) [set pcolor 138 set Name "start_lot_h" set status 7 ]
+  if (pxcor = 115) and (pycor = 47  - 1) [set pcolor 138 set Name "start_lot_s" set status 7 ] ; right entrance
+  if (pxcor = 93 ) and (pycor = 6   - 1) [set pcolor 138 set Name "start_lot_c" set status 7 ]
+  if (pxcor = 60 ) and (pycor = 6   - 1) [set pcolor 138 set Name "start_lot_a" set status 7 ]
+  if (pxcor = 45 ) and (pycor = 6   - 1) [set pcolor 138 set Name "start_lot_l" set status 7 ]
+  if (pxcor = 31 ) and (pycor = 6   - 1) [set pcolor 138 set Name "start_lot_k" set status 7 ] ; right entrance
+  if (pxcor = 35 ) and (pycor = 66  - 1) [set pcolor 138 set Name "start_lot_m" set status 7 ]  
+  if (pxcor = 31 ) and (pycor = 86  - 1) [set pcolor 138 set Name "start_lot_p" set status 7 ] ; right entrance
+  
+  
+  set southeast-hunter-waypoints     [
+    "blue_portal" "int_6" 
+    "ent_lot_c" "start_lot_c" "ent_lot_c" "int_6"
+    "ent_lot_a" "start_lot_a" "ent_lot_a" "int_7" 
+    "ent_lot_l" "start_lot_l" "ent_lot_l" "int_8" "int_9"
+    "ent_lot_m" "start_lot_m" "ent_lot_m"
+    "crazy" "crazy"]
+  set southeast-hybrid-waypoints     [
+    "indigo_portal" "int_7"
+    "ent_lot_a" "start_lot_a" "ent_lot_a" "int_6" 
+    "ent_lot_c" "start_lot_c" "ent_lot_c" "int_5"
+    "ent_lot_s" "start_lot_s" "ent_lot_s" "int_4" "int_3" 
+    "ent_lot_h" "start_lot_h" "ent_lot_h"
+    "crazy" "crazy"]
+  set southeast-satisf-waypoints     [
+    "blue_portal" "int_6"
+    "ent_lot_c" "start_lot_c" "ent_lot_c" "int_6" 
+    "ent_lot_a" "start_lot_a" "ent_lot_a" "int_7" "int_8" 
+    "ent_lot_k" "start_lot_k" "ent_lot_k" "int_8" "int_9" "int_1" 
+    "ent_lot_o" "start_lot_o" "ent_lot_o"
+    "crazy" "crazy"]
+    
+  set west-central-hunter-waypoints  [
+    "indigo_portal"  "int_7" 
+    "ent_lot_a" "start_lot_a" "ent_lot_a" "int_7" 
+    "ent_lot_l" "start_lot_l" "ent_lot_l" "int_8" "int_9"
+    "ent_lot_p" "start_lot_p" "ent_lot_p" 
+    "ent_lot_m" "start_lot_m" "ent_lot_m"
+    "crazy" "crazy"]
+  set west-central-hybrid-waypoints  [
+    "violet_portal"  "int_8" 
+    "ent_lot_l" "start_lot_l" "ent_lot_l" "int_8"
+    "ent_lot_k" "start_lot_k" "ent_lot_k" "int_8" "int_9" 
+    "ent_lot_m" "start_lot_m" "ent_lot_m" "int_9" "int_8" "int_7" "int_6" "int_5" 
+    "ent_lot_s" "start_lot_s" "ent_lot_s"
+    "crazy" "crazy"]
+  set west-central-satisf-waypoints  [
+    "indigo_portal"  "int_7" 
+    "ent_lot_a" "start_lot_a" "ent_lot_a" "int_7"
+    "ent_lot_l" "start_lot_l" "ent_lot_l" "int_8" 
+    "ent_lot_k" "start_lot_k" "ent_lot_k" "int_8" "int_9" "int_1"
+    "ent_lot_o" "start_lot_o" "ent_lot_o"
+    "crazy" "crazy"]
+  
+  set north-west-hunter-waypoints    [
+    "rainbow_portal" "int_9" 
+    "ent_lot_p" "start_lot_p" "ent_lot_p" "int_1" "int_2"
+    "ent_lot_r" "start_lot_r" "ent_lot_r" "int_2" 
+    "ent_lot_h" "start_lot_h" "ent_lot_h" "int_3" "int_4"
+    "ent_lot_s" "start_lot_s" "ent_lot_s"
+    "crazy" "crazy"]
+  set north-west-hybrid-waypoints    [
+    "rainbow_portal" "int_9" 
+    "ent_lot_p" "start_lot_p" "ent_lot_p" "int_1" "int_2" 
+    "ent_lot_r" "start_lot_r" "ent_lot_r" "int_2" 
+    "ent_lot_h" "start_lot_h" "ent_lot_h" "int_2" "int_1" 
+    "ent_lot_m" "start_lot_m" "ent_lot_m"
+    "crazy" "crazy"]
+  set north-west-satisf-waypoints    [
+    "orange_portal"  
+    "ent_lot_r" "start_lot_r" "ent_lot_r" "int_2" "int_1" 
+    "ent_lot_p" "start_lot_p" "ent_lot_p" "int_9" "int_8" 
+    "ent_lot_k" "start_lot_k" "ent_lot_k" "int_8" "int_9" "int_1"
+    "ent_lot_o" "start_lot_o" "ent_lot_o"
+    "crazy" "crazy"]
+  
+  set exit_o_lot  ["start_lot_o"  "ent_lot_o"  "int_1" "red_portal"]
+  set exit_r_lot  ["start_lot_r"  "ent_lot_r"          "orange_portal"]
+  set exit_h_lot  ["start_lot_h"  "ent_lot_h"  "int_2" "orange_portal"]
+  set exit_s_lot  ["start_lot_s"  "ent_lot_s"  "int_4" "yellow_portal"]
+  set exit_c_lot  ["start_lot_c"  "ent_lot_c"  "int_6" "blue_portal"]
+  set exit_a_lot  ["start_lot_a"  "ent_lot_a"  "int_7" "indigo_portal"]
+  set exit_l_lot  ["start_lot_l"  "ent_lot_l"  "int_8" "violet_portal"]
+  set exit_k_lot  ["start_lot_k"  "ent_lot_k"          "violet_portal"]
+  set exit_m_lot  ["start_lot_m"  "ent_lot_m"  "int_9" "rainbow_portal"]
+  set exit_p_lot  ["start_lot_p"  "ent_lot_p"  "int_9" "rainbow_portal"]
+  
+end
+
+
+
+;---------------------------------------------------------------------------------------------------------
+;-------------------------------------------SETUP TURTLES (CARS)--------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+
+to setup-cars
+  
+  let total_workers (early_workers + standard_workers + late_workers)
+  let total_students (morning_student + afternoon_student + early_evening_student + late_evening_student)
+  let total_random (short_random + long_random)
+  let total_cars  (total_workers + total_students + total_random)
+  
+  set turtle-count total_cars
+  set turtle-count-list []
+  set turtle-count-list lput turtle-count turtle-count-list
+  
+  set-default-shape hunter "x"
+  set-default-shape satisf "triangle"
+  set-default-shape hybrid "circle"
+  
+  ;convert the population proportions to probabilities 
+  set hunter_probability (Hunter_Proportion / (Hunter_Proportion + Hybrid_Proportion + satisf_Proportion))
+  set hybrid_probability (Hybrid_Proportion / (Hunter_Proportion + Hybrid_Proportion + satisf_Proportion))
+  set satisf_probability (satisf_Proportion / (Hunter_Proportion + Hybrid_Proportion + satisf_Proportion))
+  
+  ;WORKERS
+  let temp_EW early_workers  
+  let temp_SW standard_workers  
+  let temp_LW late_workers  
+
+  Create_New_Cars temp_EW 8000  9000   ;8  to 4
+  Create_New_Cars temp_SW 9000  9000   ;9  to 5
+  Create_New_Cars temp_EW 10000 9000   ;10 to 6
+
+  ;STUDENTS
+  let temp_MS morning_student  
+  let temp_AS afternoon_student  
+  let temp_ES early_evening_student  
+  let temp_LS late_evening_student  
+  Create_New_Cars temp_MS 9000  3000   ;9    to 12
+  Create_New_Cars temp_AS 13000 3500   ;1    to 4:30
+  Create_New_Cars temp_ES 16500 2667   ;4:30 to 7:10
+  Create_New_Cars temp_LS 19333 2667   ;7:20 to 10:00
+  
+  ;RANDOM
+  let temp_SR short_random  
+  let temp_LR long_random  
+   
+  while [temp_SR > 0] [
+    Create_New_Cars 3 (8000 + (random 100 * 100)) (500  + (random 20 * 100 ))
+    set temp_SR (temp_SR - 3 )
+  ]
+  while [temp_LR > 0] [
+    Create_New_Cars 3 (8000 + (random 100 * 100)) (3000 + (random 20 * 100 ))
+    set temp_LR (temp_LR - 3)
+  ]
+    
+  ask turtles [
+    set-turtles-up-for-next-day
+    ifelse (who mod 2 = 1)
+      [ set search-type "inner_loop" ]
+      [ set search-type "outer_loop" ]
+  ]
+
+end
+
+
+
+
+TO Create_New_Cars [Num ENT_TIME STD_PK_TIME]  
+  
+  ;calculate the proportion of each type
+  let num_hunter_create  round(hunter_probability * num)
+  let num_hybrid_create  round(hybrid_probability * num)
+  let num_satisf_create  round(satisf_probability * num)
+
+
+  ;-------------------------------Create hunters----------------------------------------
+  ;Calculate proportion going to each destination area, (note systematic preference to northwest, can't be helped, but balanced by other breeds preferences)
+  let temp_SE floor   (num_hunter_create / 3)
+  let temp_WC floor   (num_hunter_create / 3)
+  let temp_NW ceiling (num_hunter_create / 3)  
+  ;Actually create the breed, while assigning creation variables all at once 
+  create-hunter temp_SE [set Standard-parking-time STD_PK_TIME + (random 1000) - 500 set entrance-time ENT_TIME + (random 500) - 250 set type-of-turtle "SE_HUNT" set std-waypoint-list southeast-hunter-waypoints set final-x SE-X set final-y SE-Y]
+  create-hunter temp_WC [set Standard-parking-time STD_PK_TIME + (random 1000) - 500 set entrance-time ENT_TIME + (random 500) - 250 set type-of-turtle "WC_HUNT" set std-waypoint-list west-central-hunter-waypoints set final-x WC-X set final-y WC-Y]
+  create-hunter temp_NW [set Standard-parking-time STD_PK_TIME + (random 1000) - 500 set entrance-time ENT_TIME + (random 500) - 250 set type-of-turtle "NW_HUNT" set std-waypoint-list north-west-hunter-waypoints set final-x NW-X set final-y NW-Y]
+
+  ;-------------------------------Create hybrids----------------------------------------
+  ;Calculate proportion going to each destination area, (note systematic preference to west-central, can't be helped, but balanced by other breeds preferences)
+  set temp_SE floor   (num_hybrid_create / 3)
+  set temp_WC ceiling (num_hybrid_create / 3)
+  set temp_NW floor   (num_hybrid_create / 3)  
+  ;Actually create the breed, while assigning creation variables all at once 
+  create-hybrid temp_SE [set Standard-parking-time STD_PK_TIME + (random 1000) - 500 set entrance-time ENT_TIME + (random 500) - 250 set type-of-turtle "SE_HYBR" set std-waypoint-list southeast-hybrid-waypoints set final-x SE-X set final-y SE-Y]
+  create-hybrid temp_WC [set Standard-parking-time STD_PK_TIME + (random 1000) - 500 set entrance-time ENT_TIME + (random 500) - 250 set type-of-turtle "WC_HYBR" set std-waypoint-list west-central-hybrid-waypoints set final-x WC-X set final-y WC-Y]
+  create-hybrid temp_NW [set Standard-parking-time STD_PK_TIME + (random 1000) - 500 set entrance-time ENT_TIME + (random 500) - 250 set type-of-turtle "NW_HYBR" set std-waypoint-list north-west-hybrid-waypoints set final-x NW-X set final-y NW-Y]
+
+  ;-------------------------------Create satisfs----------------------------------------
+  ;Calculate proportion going to each destination area, (note systematic preference to southeast, can't be helped, but balanced by other breeds preferences)
+  set temp_SE ceiling (num_satisf_create / 3)
+  set temp_WC floor   (num_satisf_create / 3)
+  set temp_NW floor   (num_satisf_create / 3)  
+  ;Actually create the breed, while assigning creation variables all at once 
+  create-satisf temp_SE [set Standard-parking-time STD_PK_TIME + (random 1000) - 500 set entrance-time ENT_TIME + (random 500) - 250 set type-of-turtle "SE_SATS" set std-waypoint-list southeast-satisf-waypoints set final-x SE-X set final-y SE-Y]
+  create-satisf temp_WC [set Standard-parking-time STD_PK_TIME + (random 1000) - 500 set entrance-time ENT_TIME + (random 500) - 250 set type-of-turtle "WC_SATS" set std-waypoint-list west-central-satisf-waypoints set final-x WC-X set final-y WC-Y]
+  create-satisf temp_NW [set Standard-parking-time STD_PK_TIME + (random 1000) - 500 set entrance-time ENT_TIME + (random 500) - 250 set type-of-turtle "NW_SATS" set std-waypoint-list north-west-satisf-waypoints set final-x NW-X set final-y NW-Y]
+  
+end
+
+
+
+
+
+
+
+
+
+
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;-------------------------------------------Utility Programs----------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+
+
+
+to set-turtles-up-for-next-day
+  
+  setxy 60 63
+  set speed  base-speed + random-float random-speed
+  set turtle-state 10
+  hide-turtle
+  set waypoint-list std-waypoint-list
+    
+end
+
+
+;-------------------------------------------Routing to next destination----------------------------------
+
+to go-to-next-destination
+  
+  set waypoint-list remove-item 0 waypoint-list
+  
+  ;This section is designed to speed things up
+  let first-dest-text (item 0 waypoint-list)
+  let first-destination one-of patches with [name = first-dest-text]
+  set waypt-x [pxcor] of first-destination
+  set waypt-y [pycor] of first-destination
+  facexy waypt-x waypt-y  
+  
+end
+
+;-------------------------------------------Go from routing to searching----------------------------------
+
+
+to transition-to-searching-for-a-space
+  
+  ;keep track of lot capacity
+  let curr-dest first waypoint-list
+  if last curr-dest = "o" [set lot_o_current (lot_o_current + 1)]
+  if last curr-dest = "r" [set lot_r_current (lot_r_current + 1)]
+  if last curr-dest = "h" [set lot_h_current (lot_h_current + 1)]
+  if last curr-dest = "s" [set lot_s_current (lot_s_current + 1)]
+  if last curr-dest = "c" [set lot_c_current (lot_c_current + 1)]
+  if last curr-dest = "a" [set lot_a_current (lot_a_current + 1)]
+  if last curr-dest = "l" [set lot_l_current (lot_l_current + 1)]
+  if last curr-dest = "k" [set lot_k_current (lot_k_current + 1)]
+  if last curr-dest = "m" [set lot_m_current (lot_m_current + 1)]
+  if last curr-dest = "p" [set lot_p_current (lot_p_current + 1)]
+  
+  
+  ;Establish new state variables
+  set waypoint-list remove-item 0 waypoint-list
+  set curr-dest first waypoint-list
+  set turtle-state 30
+  set color white
+  setxy (round xcor) (round ycor)  ;move back to origin of patch
+  set No-spots-counter 0 
+  set cooldown-counter 10
+  
+  ;left entrance, inner loop 
+  if (curr-dest = "ent_lot_r"  and search-type = "inner_loop")   [set heading 90]
+  if (curr-dest = "ent_lot_h"  and search-type = "inner_loop")   [set heading 90]
+  if (curr-dest = "ent_lot_c"  and search-type = "inner_loop")   [set heading 90]
+  if (curr-dest = "ent_lot_a"  and search-type = "inner_loop")   [set heading 90]
+  if (curr-dest = "ent_lot_l"  and search-type = "inner_loop")   [set heading 90]
+  if (curr-dest = "ent_lot_m"  and search-type = "inner_loop")   [set heading 90]
+  
+  ;left entrance, outer loop
+  if (curr-dest = "ent_lot_r"  and search-type = "outer_loop")   [set heading 180]
+  if (curr-dest = "ent_lot_h"  and search-type = "outer_loop")   [set heading 180]
+  if (curr-dest = "ent_lot_c"  and search-type = "outer_loop")   [set heading 180]
+  if (curr-dest = "ent_lot_a"  and search-type = "outer_loop")   [set heading 180]
+  if (curr-dest = "ent_lot_l"  and search-type = "outer_loop")   [set heading 180]
+  if (curr-dest = "ent_lot_m"  and search-type = "outer_loop")   [set heading 180]
+  
+  ;right entrance, inner loop 
+  if (curr-dest = "ent_lot_o"  and search-type = "inner_loop")   [set heading 180]
+  if (curr-dest = "ent_lot_s"  and search-type = "inner_loop")   [set heading 180]
+  if (curr-dest = "ent_lot_k"  and search-type = "inner_loop")   [set heading 180]
+  if (curr-dest = "ent_lot_p"  and search-type = "inner_loop")   [set heading 180]
+
+  ;right entrance, outer loop 
+  if (curr-dest = "ent_lot_o"  and search-type = "outer_loop")   [set heading 270]
+  if (curr-dest = "ent_lot_s"  and search-type = "outer_loop")   [set heading 270]
+  if (curr-dest = "ent_lot_k"  and search-type = "outer_loop")   [set heading 270]
+  if (curr-dest = "ent_lot_p"  and search-type = "outer_loop")   [set heading 270]    
+  
+end
+
+
+;-------------------------------------------Back to normal----------------------------------
+
+to back-to-normal
+
+  ;track changes
+  if breed = hunter [set hunter_waypoints_change (hunter_waypoints_change + 1)]
+  if breed = hybrid [set Hybrid_waypoints_change (Hybrid_waypoints_change + 1)]
+  if breed = satisf [set satisf_waypoints_change (satisf_waypoints_change + 1)]
+
+  ;give them new parking directions
+  let randomchoice random 9 
+  if (randomchoice = 0)   [set std-waypoint-list southeast-hunter-waypoints]
+  if (randomchoice = 1)   [set std-waypoint-list southeast-hybrid-waypoints]
+  if (randomchoice = 2)   [set std-waypoint-list southeast-satisf-waypoints]
+  if (randomchoice = 3)   [set std-waypoint-list west-central-hunter-waypoints]
+  if (randomchoice = 4)   [set std-waypoint-list west-central-hybrid-waypoints]
+  if (randomchoice = 5)   [set std-waypoint-list west-central-satisf-waypoints]
+  if (randomchoice = 6)   [set std-waypoint-list north-west-hunter-waypoints]
+  if (randomchoice = 7)   [set std-waypoint-list north-west-hybrid-waypoints]
+  if (randomchoice = 8)   [set std-waypoint-list north-west-satisf-waypoints]
+  
+  set Searching-cars (Searching-cars - 1)
+  
+  ;arrive 10 minutes earlier
+  if entrance-time > 7900 [set entrance-time (entrance-time - 167)]
+
+  ;reboot
+  set-turtles-up-for-next-day
+  
+  ;but if this has been happening too much - give up
+  set crazy-count (crazy-count + 1)
+  if crazy-count >= 3 [
+    if breed = hunter [set Hunter_abandon_drive_GMU (Hunter_abandon_drive_GMU + 1)]
+    if breed = hybrid [set Hybrid_abandon_drive_GMU (Hybrid_abandon_drive_GMU + 1)]
+    if breed = satisf [set Satisf_abandon_drive_GMU (Satisf_abandon_drive_GMU + 1)]
+    set turtle-count turtle-count - 1
+    die
+  ]
+
+end
+
+
+;-------------------------------------------Reports if there is available parking----------------------------------
+
+to-report park_avail [destination requirement]
+
+  let current     1
+  let capacity    1
+
+  if last destination = "o" [set current lot_o_current     set capacity lot_o_capacity]
+  if last destination = "r" [set current lot_r_current     set capacity lot_r_capacity]
+  if last destination = "h" [set current lot_h_current     set capacity lot_h_capacity]  
+  if last destination = "s" [set current lot_s_current     set capacity lot_s_capacity]
+  if last destination = "c" [set current lot_c_current     set capacity lot_c_capacity]
+  if last destination = "a" [set current lot_a_current     set capacity lot_a_capacity]
+  if last destination = "l" [set current lot_l_current     set capacity lot_l_capacity]
+  if last destination = "k" [set current lot_k_current     set capacity lot_k_capacity]
+  if last destination = "m" [set current lot_m_current     set capacity lot_m_capacity]
+  if last destination = "p" [set current lot_p_current     set capacity lot_p_capacity]
+   
+  let fullness ((current / capacity) + random (2 * variability-in-lot-full-estimate) - variability-in-lot-full-estimate)
+  
+  ifelse fullness > requirement
+    [report 0] ;too full
+    [report 1] ;ok to park  
+  
+end
+
+
+;-------------------------------------------keep track of lot capacity----------------------------------
+
+to set-lot-count-down-one
+  
+  let curr-dest first waypoint-list
+  if last curr-dest = "o" [set lot_o_current (lot_o_current - 1)]
+  if last curr-dest = "r" [set lot_r_current (lot_r_current - 1)]
+  if last curr-dest = "h" [set lot_h_current (lot_h_current - 1)]
+  if last curr-dest = "s" [set lot_s_current (lot_s_current - 1)]
+  if last curr-dest = "c" [set lot_c_current (lot_c_current - 1)]
+  if last curr-dest = "a" [set lot_a_current (lot_a_current - 1)]
+  if last curr-dest = "l" [set lot_l_current (lot_l_current - 1)]
+  if last curr-dest = "k" [set lot_k_current (lot_k_current - 1)]
+  if last curr-dest = "m" [set lot_m_current (lot_m_current - 1)]
+  if last curr-dest = "p" [set lot_p_current (lot_p_current - 1)]
+
+end
+
+
+;-------------------------------------------Change waypoints to exit GMU waypoints----------------------------------
+
+to update-waypoints-to-exit
+
+  let curr-dest first waypoint-list
+  
+  if last curr-dest = "o" [set waypoint-list exit_o_lot]
+  if last curr-dest = "r" [set waypoint-list exit_r_lot]
+  if last curr-dest = "h" [set waypoint-list exit_h_lot]
+  if last curr-dest = "s" [set waypoint-list exit_s_lot]
+  if last curr-dest = "c" [set waypoint-list exit_c_lot]
+  if last curr-dest = "a" [set waypoint-list exit_a_lot]
+  if last curr-dest = "l" [set waypoint-list exit_l_lot]
+  if last curr-dest = "k" [set waypoint-list exit_k_lot]
+  if last curr-dest = "m" [set waypoint-list exit_m_lot]
+  if last curr-dest = "p" [set waypoint-list exit_p_lot]
+  
+end
