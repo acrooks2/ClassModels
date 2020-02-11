@@ -7,7 +7,7 @@ These models come from a varity of end of semester projects from studnets who ha
 ## Release Notes
 Please note these models ***come as is***. Furthermore, no personal information is given on who created these models (unless there is a publication withit, but I need to acknowledge all the students who submitted the models, you know who you are! This project would not be possible without you!), What explanations there are is given in the README file for each model (these mainly come in the form of abstracts from the papers that were submitted with the models). **No further explanations, support etc. will be given**. Lastly, these models are only given for pedagogical reasons and where possible each model has been upgraded to NetLogo 6.1.
 
-Note this a work in progress project and more models will be added over time.
+**Note:** this a work in progress project and more models might be added over time.
 
 
 ## Model Categories
