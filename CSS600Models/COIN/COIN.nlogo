@@ -390,7 +390,6 @@ Future extensions to this model could include:
 (2) Allowing insurgents to kill government forces.
 (3) Creating varying skill levels for the government forces to replicate heterogeneous military capabilities.
 
-
 @#$#@#$#@
 default
 true
