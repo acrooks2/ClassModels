@@ -144,6 +144,7 @@ For those interested, models with "***(GIS)***" next to them are ones which util
 * [Modeling Sustainable Crab Harvest in the Chesapeake Bay](CSS645Models/Chesapeake-Bay-Crab)
 * [Simulated Lift for Individual Passage (SLIP): An Individual-Based Model for Fishlift Passage of American Shad](CSS645Models/Fishlift) (GIS)
 * [The Summer Flounder Regime Shift and Consequential Changes in Trophic Structure: A Theoretical Individual-­based Model](CSS645Models/Flounder)
+* [Deer Against Suburban Hunters (DASH): An Agent Based Model of a Population of Suburban Deer and their Effects](CSS600Models/Dash)
 
 
 
