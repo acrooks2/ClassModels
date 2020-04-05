@@ -7,7 +7,7 @@ The model exists for the user to observe the varying phenomenon which occurs dur
  
 
 ## &nbsp;
-The NetLogo Graphical User Interface of the Model: 
+The NetLogo Graphical User Interface of the model: 
 ![The NetLogo Graphical User Interface](GUI.png)
 
 ## &nbsp;
