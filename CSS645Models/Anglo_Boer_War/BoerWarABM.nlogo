@@ -1,4 +1,3 @@
-;; ABM of Anglo-Boer War's guerilla phase
 
 globals [
   battles

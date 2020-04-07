@@ -1,6 +1,3 @@
-;; BOATS and FISH interactions Agent-Based Modelling: A tool for Fisheries Management
-;;                          BOFISLYNK
-
 
 globals [boat1_count boat2_count boat3_count fish_count ]
 ;; boat and fish are both breeds of turtle.
@@ -233,7 +230,6 @@ to spend_fuel_boat1
 end
 
    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
 
 
 

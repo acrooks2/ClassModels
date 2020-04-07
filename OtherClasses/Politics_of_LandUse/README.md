@@ -2,7 +2,7 @@
 
 ## Description
 
-The goal of this term paper is to examine the effect that changing land use regulations has on the growth and distribution of population within a metropolitan area over time. 
+"The goal of model is to examine the effect that changing land use regulations has on the growth and distribution of population within a metropolitan area over time." 
 
 ## &nbsp;
 

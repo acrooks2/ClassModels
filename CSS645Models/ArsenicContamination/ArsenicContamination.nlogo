@@ -326,10 +326,6 @@ You can use GIS for getting real world reference as well as you can get more spa
 ## NETLOGO FEATURES
 
 Note the use of a patch variable to store precomputed neighborhood agentsets. This improves performance because the neighborhoods don't have to be calculated over and over again.
-
-## CREDITS AND REFERENCES
-
-The model is a part of the term final paper of Sptial Agent Based Modeling. Thanks goes to Dr.Andrew Crooks, the course teacher for his support, advice and guidence.
 @#$#@#$#@
 default
 true

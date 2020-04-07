@@ -1,7 +1,3 @@
-; Bomb placement agent based model
-
-;
-; P
 
 breed [ officers officer ]
 breed [ citizens citizen ]
