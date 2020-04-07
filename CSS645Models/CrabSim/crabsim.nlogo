@@ -1,6 +1,3 @@
-;; CrabSim v1.0
-;; by Ellen Badgley
-;; GMU - CSS 645 (Spatial Agent-Based Modeling)
 
 ;; This model is a (stylized) exploration of the optimality of foraging behavior in sand-bubbler crabs (specifically Scopimera inflata)
 ;; compared to a theoretical optimal forager within the same environment and with the same feeding area constraints.  It was inspired by
@@ -385,10 +382,10 @@ end
 GRAPHICS-WINDOW
 395
 10
-893
-529
-30
-30
+891
+507
+-1
+-1
 8.0
 1
 10
@@ -490,7 +487,7 @@ feeding-threshold
 feeding-threshold
 0
 100
-60
+60.0
 10
 1
 percent
@@ -888,9 +885,8 @@ false
 0
 Polygon -7500403 true true 270 75 225 30 30 225 75 270
 Polygon -7500403 true true 30 75 75 30 270 225 225 270
-
 @#$#@#$#@
-NetLogo 5.3.1
+NetLogo 6.1.0
 @#$#@#$#@
 @#$#@#$#@
 @#$#@#$#@
@@ -1000,7 +996,6 @@ true
 0
 Line -7500403 true 150 150 90 180
 Line -7500403 true 150 150 210 180
-
 @#$#@#$#@
 1
 @#$#@#$#@

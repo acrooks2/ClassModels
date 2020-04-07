@@ -22,6 +22,6 @@ The NetLogo Graphical User Interface of the Model:
 
 ## &nbsp;
 
-**Version of NetLogo**: NetLogo 5.3.1
+**Version of NetLogo**: NetLogo 6.1.0
 
 **Semester Created**: Spring 2010

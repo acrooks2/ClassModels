@@ -1,5 +1,4 @@
 ;; -----------------------------------------------------------------------
-;; chesapeake-bay-crab-fishing.nlogo
 ;;
 ;; agent-based model to demonstrate population dynamics of crabs and
 ;; and economics of commercial crab fishing in the Chesapeake Bay area
