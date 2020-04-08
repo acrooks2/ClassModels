@@ -293,11 +293,11 @@ end
 GRAPHICS-WINDOW
 210
 10
-647
-448
+781
+582
 -1
 -1
-13.0
+17.061
 1
 10
 1
@@ -674,9 +674,6 @@ As always, a good extension would be using actual street maps for the town (home
 
 (models in the NetLogo Models Library and elsewhere which are of related interest)
 
-## CREDITS AND REFERENCES
-
-This model was created for George Mason University: CSS 645 (Spring 2015)
 @#$#@#$#@
 default
 true

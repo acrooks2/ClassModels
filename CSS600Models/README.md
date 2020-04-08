@@ -14,7 +14,7 @@ Click on the links to see a selection of course projects from [Fall 2014](https:
 [Sample Syllabus](https://www.dropbox.com/s/xmi2qgeosmxgdw5/CSS600.pdf?dl=0)
 
 ## Release Notes
-Please note these models ***come as is***. Furthermore, no personal information is given on who created these models (unless there is a publication withit, but I need to acknowledge all the students who submitted the models, you know who you are! This project would not be possible without you!), What explanations there are given by the README file for each model (these mainly come in the form of abstracts from the papers that were submitted with the models). **No further explanations, support etc. will be given**. Lastly, these models are only given for pedagogical reasons and where possible each model has been upgraded to NetLogo 6.1.
+Please note these models ***come as is***. Furthermore, no personal information is given on who created these models (but I need to acknowledge all the students who submitted the models, you know who you are! This project would not be possible without you!), What explanations there are given by the README file for each model (these mainly come in the form of abstracts from the papers that were submitted with the models). **No further explanations, support etc. will be given**. Lastly, these models are only given for pedagogical reasons and where possible each model has been upgraded to NetLogo 6.1.
 
 For those interested, models with "***(GIS)***" next to them are ones which utilize GIS data.
 

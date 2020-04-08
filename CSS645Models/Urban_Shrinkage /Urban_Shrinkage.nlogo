@@ -986,9 +986,6 @@ sum [hPrice] of households / count households
 @#$#@#$#@
 ## WHAT IS IT?
 
-CSS645 Final Project
-Spatial ABM
-
 The objective of this model is to simulate the trades between buyers and seller within the three different sub-housing markets in Detroit Tri-County area including downtown (red), city suburban (blue) and far suburban (green) housing markets in the model.
 
 ## HOW IT WORKS

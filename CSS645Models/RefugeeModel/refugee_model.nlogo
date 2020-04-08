@@ -12,14 +12,14 @@ to setup
   clear-all
   ask patches [ set pcolor black ]
   setpatches
-  
+
   ;setting the nearby variable to von-neumann-offsets and size of 4
-  set nearby von-neumann-offsets 4  
-  
+  set nearby von-neumann-offsets 4
+
   ;creating 5 cities within the area where part of the city won't overlap the country borders
   ask n-of 2 patches with [pxcor > -28 and pxcor < 28 and pycor > -28 and pycor < 28][
-    
-    sprout 1 
+
+    sprout 1
     [
       ;; see the entry for AT-POINTS in the NetLogo Dictionary
       ask patches at-points nearby [
@@ -27,16 +27,16 @@ to setup
       ]
       set color white
     ]
-    
+
   ]
-  
+
   ;setting the nearby variable to von-neumann-offsets and size of 4
-  set nearby von-neumann-offsets 2  
-  
+  set nearby von-neumann-offsets 2
+
   ;creating 5 cities within the area where part of the city won't overlap the country borders
   ask n-of 4 patches with [pxcor > -28 and pxcor < 28 and pycor > -28 and pycor < 28][
-    
-    sprout 1 
+
+    sprout 1
     [
       ;; see the entry for AT-POINTS in the NetLogo Dictionary
       ask patches at-points nearby [
@@ -44,16 +44,16 @@ to setup
       ]
       set color white
     ]
-    
+
   ]
-  
+
   ;;set-default-shape rebels "rebels"
   create-rebels initial-number-rebels  ;; create the rebels, then initialize their variables
   [
     randomize
     set color orange
     set size 1  ;; easier to see
-     
+
     ;setxy random-xcor random-ycor
   ]
   ;;set-default-shape government "government"
@@ -62,8 +62,8 @@ to setup
     randomize
     set color red
     set size 1  ;; easier to see
-     
-    ;setxy random-xcor random-ycor 
+
+    ;setxy random-xcor random-ycor
   ]
     ;;set-default-shape refugees "refugees"
   ;create-refugees initial-number-refugees  ;; create the refugees, then initialize their variables
@@ -71,14 +71,14 @@ to setup
     ;randomize
     ;set color green
     ;set size 2  ;; easier to see
-    
+
     ;setxy random-xcor random-ycor
   ;]
     ;;set-default-shape camps "camps"
- 
+
   set conflict count patches with [pcolor = red]
   reset-ticks
-  
+
 end
 
 ;sets all the patch colors and the boundary
@@ -102,34 +102,34 @@ to setpatches
     if ( pycor = (0 + halfedge) and pxcor >= (- halfedge) and pxcor <= (0 + halfedge) )
       [set pcolor blue]                                ;; ... draws upper edge in blue
     ]
-  
+
   ;creates the brown areas, representing other countries
   ask patches[
     if (pxcor < (- halfedge))
-      [set pcolor brown] 
+      [set pcolor brown]
     if (pxcor > ( halfedge))
-      [set pcolor green] 
+      [set pcolor green]
     if (pycor < (- halfedge))
-      [set pcolor orange] 
+      [set pcolor orange]
     if (pycor > ( halfedge))
-      [set pcolor pink] 
+      [set pcolor pink]
   ]
-  
+
   ;;set up 4 camps
   ask patches[
    if (pxcor = 0 and pycor = 32)
-   [set pcolor magenta] 
+   [set pcolor magenta]
    if (pxcor = 0 and pycor = -32)
-   [set pcolor magenta] 
+   [set pcolor magenta]
    if (pxcor = 32 and pycor = 0)
-   [set pcolor magenta] 
+   [set pcolor magenta]
    if (pxcor = -32 and pycor = 0)
-   [set pcolor magenta] 
+   [set pcolor magenta]
   ]
-  
+
    ;;set up IDP camps
    create-IDPcamps
-  
+
 end
 
 ; set random location
@@ -150,12 +150,12 @@ end
 
 to-report von-neumann-offsets [n]
   let result [list pxcor pycor] of patches with [abs pxcor + abs pycor <= n]
-    report result 
+    report result
 end
 
 
-to go 
-  
+to go
+
   ask rebels [
     move
     battle
@@ -165,26 +165,26 @@ to go
   ]
   ask refugees [
     evacuate
-    reach-camp-limit 
+    reach-camp-limit
   ]
-  ask patches [ 
+  ask patches [
     end-conflict
   ]
-  
+
   set-label
-  
+
   tick
 end
 
 
 to set-label
-  
+
   ask patches [
     ifelse count turtles-here > 1
     [set plabel count turtles-here]
     [set plabel ""]
   ]
-  
+
   ask patches [
     if (pxcor = 0 and pycor = 32)
     [set north-camp-counter count turtles-here]
@@ -195,14 +195,14 @@ to set-label
     if (pxcor = -32 and pycor = 0)
     [set west-camp-counter count turtles-here]
   ]
-  
+
   ;;count IDPcamps
   ask patches [
     if (pcolor = violet)
       [set idp-camp-counter count turtles-here]
   ]
-  
-  
+
+
 end
 
 to move  ;; turtle procedure
@@ -224,25 +224,25 @@ to battle  ;; rebel procedure
   ;let creates a new local variable and give it the given value
   let opponent one-of government-here           ;; grab a random government
   if opponent != nobody [                        ;; did we get one?  if so,
-     ;set pcolor red  
-     
+     ;set pcolor red
+
   ;if any? government-here
-  ;[ 
+  ;[
     ;sprout refugees
     if pcolor = yellow [
-      
-    
-    
+
+
+
     ask patch-here [
       ;for some reason it doesn't want to turn the patch red most of the time, oh well
-      set pcolor red 
+      set pcolor red
       sprout-refugees refugees-per-cell [set size 2 set color green]
-      
-    ]    
-    
+
+    ]
+
    ]
-      
-  
+
+
   ]
 end
 
@@ -273,7 +273,7 @@ to end-conflict  ;; patch procedure
 end
 
 to reach-camp-limit
-  
+
   if any? refugees-here
   [
     if pcolor = violet [
@@ -282,17 +282,16 @@ to reach-camp-limit
       ]
     ]
   ]
- 
-end
 
+end
 @#$#@#$#@
 GRAPHICS-WINDOW
 274
 10
-994
-751
-35
-35
+992
+729
+-1
+-1
 10.0
 1
 10
@@ -386,7 +385,7 @@ initial-number-rebels
 initial-number-rebels
 0
 100
-40
+40.0
 1
 1
 NIL
@@ -401,7 +400,7 @@ initial-number-government
 initial-number-government
 0
 100
-40
+40.0
 1
 1
 NIL
@@ -416,7 +415,7 @@ refugees-per-cell
 refugees-per-cell
 0
 100
-40
+40.0
 1
 1
 NIL
@@ -431,7 +430,7 @@ conflict-end-time
 conflict-end-time
 0
 500
-234
+234.0
 1
 1
 NIL
@@ -487,7 +486,7 @@ INPUTBOX
 107
 285
 IDP-camp-limit
-500
+500.0
 1
 0
 Number
@@ -855,9 +854,8 @@ false
 0
 Polygon -7500403 true true 270 75 225 30 30 225 75 270
 Polygon -7500403 true true 30 75 75 30 270 225 225 270
-
 @#$#@#$#@
-NetLogo 5.0.5
+NetLogo 6.1.0
 @#$#@#$#@
 @#$#@#$#@
 @#$#@#$#@
@@ -873,7 +871,6 @@ true
 0
 Line -7500403 true 150 150 90 180
 Line -7500403 true 150 150 210 180
-
 @#$#@#$#@
 0
 @#$#@#$#@

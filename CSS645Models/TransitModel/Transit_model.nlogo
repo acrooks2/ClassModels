@@ -501,8 +501,6 @@ patches-own [
   set-histogram-num-bars 1000
   histogram [total-trip-speed-avg] of turtles
 
-
-
  end
 @#$#@#$#@
 GRAPHICS-WINDOW

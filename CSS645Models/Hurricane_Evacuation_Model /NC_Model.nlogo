@@ -223,7 +223,6 @@ to update-globals  ;; designates areas that are safe and not-safe
 
 
 end
-
 @#$#@#$#@
 GRAPHICS-WINDOW
 148
@@ -552,8 +551,6 @@ Adding a simulate hurricane to specifically designate evacuees.
 Limit number of evacuees to a "safe zone" city. 
 Block roads with flooding. 
 Determine return to home city timeframe and have agents return if safe.
-
-## CREDITS AND REFERENCES
 @#$#@#$#@
 default
 true

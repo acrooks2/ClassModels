@@ -1,12 +1,4 @@
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Agent-based Implementation of
-;; Needs-based Pattern of Life
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;
-;;
-;; Implemented in Netlogo 5.0.3, upgraded to 6.1
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 globals
 [
   active-patches          ;; patchset of non-border patches
@@ -876,7 +868,6 @@ to run-ADNN
   output-print (word "count play-locations visited:................." count anchors with [anchor-type = "play" and color = red])
   output-print (word "count food-locations visited:................." count anchors with [anchor-type = "food" and color = red])
 end
-
 
 @#$#@#$#@
 GRAPHICS-WINDOW
@@ -2001,7 +1992,7 @@ series of buttons used to activate procedures in the code for testing purposes
 series of monitors for displaying outputs for model testing and validation procedures.
 
 
-###References
+### References
 
 Beauregard, E., Proulx, J., Rossmo, K., Leclerc, B., & Allaire, J. (2007). Script Analysis of the Hunting Process of Serial Sex Offenders. Criminal Justice and Behavior, 25, 1069-1084.
 Berk, R. (2008). How you can tell if the simulations in computational criminology are any good. Journal of Experimental Criminology, 4, 289-308.
@@ -2036,7 +2027,6 @@ Simon, H. (1996). The Sciences of the Artificial (3rd ed.). Cambridge, Massachus
 Ward, T., Hudson, S. M., & Keenan, T. (1998). A Self-regulation Model of the Sexual Offense Process. Sexual Abuse: A Journal of Research and Treatment, 10(2), 141-157.
 Warren, J., Reboussin, R., & Hazelwood, R. (1995). Geographic and Temporal Sequencing of Serial Rape: Final report submitted to the National Institute of Justice. United States Department of Justice, National Institute of Justice. Washington: Federal Bureau of Investigation.
 Welinsky, U. (1999). Netlogo. 5.0.3. Center for Connected Learning and Computer-based Modeling, Northwestern University. Retrieved from http://ccl.northwestern.edu/netlogo/
-
 
 
 @#$#@#$#@

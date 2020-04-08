@@ -606,7 +606,6 @@ Counts of population and routes taken
 
 Buffer was added around the dataset to prevent turtles from falling off the layer
 
-
 @#$#@#$#@
 default
 true

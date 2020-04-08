@@ -3,8 +3,7 @@
 ## Abstract: 
 
 
-The diffusion of technology and the rate at which technology is adopted has an important impact on the adaptability of the system as a whole. This model explores how memory retention and activation (from advertising) impacts solar power adoption applied to a stylized area in Texas. 
-**Kewwords:** Agent based modeling, GIS, Solar Technology Adoption
+"The diffusion of technology and the rate at which technology is adopted has an important impact on the adaptability of the system as a whole. This model explores how memory retention and activation (from advertising) impacts solar power adoption applied to a stylized area in Texas."
 
 ## &nbsp;
 

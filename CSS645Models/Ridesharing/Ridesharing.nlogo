@@ -14,7 +14,6 @@
 ;http://stackoverflow.com/questions/24786908/get-mean-heading-of-neighboring-turtles
 ;http://stackoverflow.com/questions/23015625/netlogo-finding-the-average-value-of-a-set-of-turtles
 
-;;Most of the GIS specific code in this model was originallty learned from Melanie Swartz Reston Model and her Tutorial.
 
 
 extensions [ gis csv ]
@@ -527,17 +526,6 @@ to scenario-saturday
 
 
 end
-
-
-
-
-
-
-
-
-
-
-
 @#$#@#$#@
 GRAPHICS-WINDOW
 299

@@ -20,7 +20,3 @@ The NetLogo Graphical User Interface of the Model:
 
 **Semester Created**: Spring 2016.
 
-Final version of this paper:
-
-**Iasiello, C. (2017)**, 'Using Agent Based Modeling to Replication Origins of Social Complexity: The Case of Limited Evidence in the Late Longshan Cultures and Early Erlitou Culture', in Chan, W.K.V., D'Ambrogio, A., Zacharewicz, G., Mustafee, N., Wainer, G. and Page, E. (eds.), *Proceedings of the 2017 Winter Simulation Conference*, IEEE, Las Vegas, NV.
-

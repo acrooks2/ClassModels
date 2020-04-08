@@ -64,16 +64,16 @@ to setup
 
  gis:set-world-envelope gis:envelope-of SDmap
 
- foreach gis:feature-list-of SDmap [gis:set-drawing-color 35  gis:fill ? 1.0]
+ foreach gis:feature-list-of SDmap [ ?1 -> gis:set-drawing-color 35  gis:fill ?1 1.0 ]
 
  gis:apply-coverage SDfires "FIRE_NAME" patch-fire
  gis:apply-coverage SDmap "ID" ID
 
 
- foreach gis:feature-list-of SDfires [
+ foreach gis:feature-list-of SDfires [ ?1 ->
 
   ;;locate fires
-  let location gis:location-of gis:centroid-of ?
+  let location gis:location-of gis:centroid-of ?1
      if not empty? location
            [
              create-fires 1[
@@ -82,23 +82,23 @@ to setup
                 set size 1.2
                 set shape "fire"
                 set color red
-                set days gis:property-value ? "days"
-                set firename gis:property-value ? "FIRE_NAME"
+                set days gis:property-value ?1 "days"
+                set firename gis:property-value ?1 "FIRE_NAME"
                 set hidden? true
                 set on? false
-                ]]]
+                ]] ]
 
 
  ;;locate roads
- foreach gis:feature-list-of SDroads[
+ foreach gis:feature-list-of SDroads[ ?1 ->
 
-  foreach gis:vertex-lists-of ? ; for the road feature, get the list of vertices
-       [
+  foreach gis:vertex-lists-of ?1 ; for the road feature, get the list of vertices
+       [ ??1 ->
         let previous-node-pt nobody
 
-        foreach ?  ; for each vertex in road segment feature
-         [
-          let location gis:location-of ?
+        foreach ??1  ; for each vertex in road segment feature
+         [ ???1 ->
+          let location gis:location-of ???1
           if not empty? location
            [
              create-vertices 1
@@ -118,7 +118,7 @@ to setup
                  [create-link-with previous-node-pt] ; create link to previous node
                   set previous-node-pt self]
                ;]
-           ]]] ]
+           ] ] ] ]
 
 ;;delete duplicate vertices (there may be more than one vertice on the same patch due to reducing size of the map). therefore, this map is simplified from the original map.
 
@@ -146,11 +146,11 @@ to setup
 
 
  ;;create people according to popu
- foreach gis:feature-list-of SDmap [
+ foreach gis:feature-list-of SDmap [ ?1 ->
 
-   let create-popu round ((1 / times) * gis:property-value ? "popu")
+   let create-popu round ((1 / times) * gis:property-value ?1 "popu")
 
-   if create-popu > 0 [let mypatches patches with [gis:contains? ? self = true]
+   if create-popu > 0 [let mypatches patches with [gis:contains? ?1 self = true]
 
    repeat create-popu [ask one-of mypatches [sprout 1 [set breed people set shape "circle" set color green set size 0.5 ]]]]
    ]
@@ -317,25 +317,25 @@ to restart
   ask fires [ if new-fire = 1 [die]  set on? false ht ]
 
    ;;create people according to popu
-   foreach gis:feature-list-of SDmap [
+   foreach gis:feature-list-of SDmap [ ?1 ->
 
-     let create-popu round ((1 / times) * gis:property-value ? "popu")
+     let create-popu round ((1 / times) * gis:property-value ?1 "popu")
 
-     if create-popu > 0 [let mypatches patches with [gis:contains? ? self = true]
+     if create-popu > 0 [let mypatches patches with [gis:contains? ?1 self = true]
 
      repeat create-popu [ask one-of mypatches [sprout 1 [set breed people set shape "circle" set color green set size 0.5]]]]
    ]
 
    ;;locate roads
- foreach gis:feature-list-of SDroads[
+ foreach gis:feature-list-of SDroads[ ?1 ->
 
-  foreach gis:vertex-lists-of ? ; for the road feature, get the list of vertices
-       [
+  foreach gis:vertex-lists-of ?1 ; for the road feature, get the list of vertices
+       [ ??1 ->
         let previous-node-pt nobody
 
-        foreach ?  ; for each vertex in road segment feature
-         [
-          let location gis:location-of ?
+        foreach ??1  ; for each vertex in road segment feature
+         [ ???1 ->
+          let location gis:location-of ???1
           if not empty? location
            [
              create-vertices 1
@@ -355,7 +355,7 @@ to restart
                  [create-link-with previous-node-pt] ; create link to previous node
                   set previous-node-pt self]
                ;]
-           ]]] ]
+           ] ] ] ]
 
    ;;delete duplicate vertices (there may be more than one vertice on the same patch due to reducing size of the map). therefore, this map is simplified from the original map.
 
@@ -395,8 +395,8 @@ end
 GRAPHICS-WINDOW
 229
 20
-1093
-633
+1091
+611
 -1
 -1
 9.705
@@ -470,7 +470,7 @@ INPUTBOX
 188
 130
 times
-5000
+5000.0
 1
 0
 Number
@@ -501,7 +501,7 @@ vision
 vision
 1
 20
-5
+5.0
 1
 1
 NIL
@@ -526,7 +526,7 @@ cars-allowed-on-lane
 cars-allowed-on-lane
 1
 10
-15
+15.0
 1
 1
 NIL
@@ -541,7 +541,7 @@ burn-radius
 burn-radius
 1
 5
-1
+1.0
 1
 1
 NIL
@@ -596,7 +596,7 @@ anxiety-caused-by-congestion
 anxiety-caused-by-congestion
 0
 50
-10
+10.0
 1
 1
 NIL
@@ -950,9 +950,8 @@ false
 0
 Polygon -7500403 true true 270 75 225 30 30 225 75 270
 Polygon -7500403 true true 30 75 75 30 270 225 225 270
-
 @#$#@#$#@
-NetLogo 5.3.1
+NetLogo 6.1.0
 @#$#@#$#@
 @#$#@#$#@
 @#$#@#$#@
@@ -994,7 +993,6 @@ true
 0
 Line -7500403 true 150 150 90 180
 Line -7500403 true 150 150 210 180
-
 @#$#@#$#@
 0
 @#$#@#$#@

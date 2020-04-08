@@ -1,10 +1,3 @@
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;  Using Agent-Based Modeling to Show Gentrification in a Southeast area of the District of Columbia
-;;
-;; This program is
-;; written in NetLogo 5.0.3 utilizing the GIS extensions
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
 
 ; Load NetLogo extension to handle GIS functionality
 extensions [gis]

@@ -1,4 +1,3 @@
-
 ;;Portions noted below were inspired by Sugarscape Li, J. and Wilensky, U. (2009). NetLogo Sugarscape 1 Immediate Growback model. http://ccl.northwestern.edu/netlogo/models/Sugarscape1ImmediateGrowback. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.
 ;;Wilensky, U. (1999). NetLogo. http://ccl.northwestern.edu/netlogo/. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.
 ;;Portions of this model that relate to individualized agent memory are not used in this iteration.

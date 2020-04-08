@@ -43,7 +43,7 @@ states-own [
 to setup
   clear-all
   reset-ticks
-  
+
   ; set various globals
   set stable? false
   set-default-shape households "x"
@@ -51,46 +51,46 @@ to setup
   set-default-shape cbds "box"
   set-default-shape states "flag"
 
-  
+
   ; central business district initializes first to have who id 0
   if cbd? [
-    create-cbds 1 [ 
-      setxy (max-pxcor / 2) (max-pycor / 2) 
+    create-cbds 1 [
+      setxy (max-pxcor / 2) (max-pycor / 2)
       set color gray]]
-  
+
   ; error checking
-  if num-issues mod 2 = 1 [ error "num-issues must be even"] 
-  
+  if num-issues mod 2 = 1 [ error "num-issues must be even"]
+
   ; generate the agents
   if scenario = "default" [ generate-towns ]
   if scenario = "16" [ generate-16-towns ]
   if scenario = "64" [ generate-64-towns ]
-  setup-households  
+  setup-households
   if states? [
     spawn-states
   ]
-  
+
   if color-boundaries? [ color-towns ]
-  update-desirability 
-  
+  update-desirability
+
   ; execute "tick 0"
   ask households [evaluate]
   update-stats
 end
 
-to spawn-states 
-  let x ceiling (max-pxcor * .75) 
+to spawn-states
+  let x ceiling (max-pxcor * .75)
   let y floor (max-pycor * .25)
   ask patch x x [ sprout-states 1 [ set quadrant 1 ] ]
   ask patch x y [ sprout-states 1 [ set quadrant 2 ] ]
   ask patch y x [ sprout-states 1 [ set quadrant 3 ] ]
-  ask patch y y [ sprout-states 1 [ set quadrant 4 ] ]  
-  ask states [ set color black 
+  ask patch y y [ sprout-states 1 [ set quadrant 4 ] ]
+  ask states [ set color black
     set state-policies []
-    repeat num-issues / 2 [set state-policies fput (random 2) state-policies ]    
+    repeat num-issues / 2 [set state-policies fput (random 2) state-policies ]
   ]
   ask towns [
-    set my-state min-one-of states [ distance myself ] 
+    set my-state min-one-of states [ distance myself ]
   ]
 end
 
@@ -109,17 +109,17 @@ to color-towns
 end
 
 
-to generate-towns 
+to generate-towns
   ;; Generate towns as Voronoi tesellations. Much of this code is adapted from Wilensky (2006).
   ask towns [
     set color [ 255 255 255 0 ]
     set location 0 ]
-  set available-colors shuffle filter [(? mod 10 >= 2) and (? mod 10 <= 8)] n-values 140 [?]
+  set available-colors shuffle filter [ ?1 -> (?1 mod 10 >= 2) and (?1 mod 10 <= 8) ] n-values 140 [ ?1 -> ?1 ]
   ;  if num-households > count patches
   ;    [ user-message (word "This area only has room for " count patches " towns.")
   ;      stop ]
-  
-  ;; create towns  
+
+  ;; create towns
   ask n-of num-communities patches [
     sprout-towns 1 [
       if line? [setxy 0 who - 1]
@@ -141,25 +141,25 @@ set num-communities 64
   ask towns [
     set color [ 255 255 255 0 ]
     set location 0 ]
-  set available-colors shuffle filter [(? mod 10 >= 2) and (? mod 10 <= 8)] n-values 140 [?]
-  
+  set available-colors shuffle filter [ ?1 -> (?1 mod 10 >= 2) and (?1 mod 10 <= 8) ] n-values 140 [ ?1 -> ?1 ]
+
   let one (max-pxcor * (1 / 16))
   let two (max-pxcor * (3 / 16))
-  let three (max-pxcor * (5 / 16)) 
+  let three (max-pxcor * (5 / 16))
   let four (max-pxcor * (7 / 16))
   let five (max-pxcor * (9 / 16))
   let six (max-pxcor * (11 / 16))
   let seven (max-pxcor * (13 / 16))
   let eight (max-pxcor * (15 / 16))
-  
+
 ;  let one 7.5
 ;  let two 22.5
 ;  let three 37.5
 ;  let four 52.5
-  
-  let x 0 
+
+  let x 0
   repeat 64 [
-    ask n-of 1 patches [ 
+    ask n-of 1 patches [
       sprout-towns 1 [
         ; ugly location code
         if floor (x / 8) = 0 [ set xcor one ]
@@ -170,8 +170,8 @@ set num-communities 64
         if floor (x / 8) = 5 [ set xcor six ]
         if floor (x / 8) = 6 [ set xcor seven ]
         if floor (x / 8) = 7 [ set xcor eight ]
-        
-        
+
+
         if x mod 8 = 0 [ set ycor one ]
         if x mod 8 = 1 [ set ycor two ]
         if x mod 8 = 2 [ set ycor three ]
@@ -179,7 +179,7 @@ set num-communities 64
         if x mod 8 = 4 [ set ycor five ]
         if x mod 8 = 5 [ set ycor six ]
         if x mod 8 = 6 [ set ycor seven ]
-        if x mod 8 = 7 [ set ycor eight ]        
+        if x mod 8 = 7 [ set ycor eight ]
 
         set size 1
         set color first available-colors
@@ -199,33 +199,33 @@ set num-communities 16
   ask towns [
     set color [ 255 255 255 0 ]
     set location 0 ]
-  set available-colors shuffle filter [(? mod 10 >= 2) and (? mod 10 <= 8)] n-values 140 [?]
-  
+  set available-colors shuffle filter [ ?1 -> (?1 mod 10 >= 2) and (?1 mod 10 <= 8) ] n-values 140 [ ?1 -> ?1 ]
+
   let one ceiling (max-pxcor * .125)
   let two floor (max-pxcor * .375)
   let three ceiling (max-pxcor * .625)
   let four floor (max-pxcor * .875)
-  
+
 ;  let one 7.5
 ;  let two 22.5
 ;  let three 37.5
 ;  let four 52.5
-  
-  let x 0 
+
+  let x 0
   repeat 16 [
-    ask n-of 1 patches [ 
+    ask n-of 1 patches [
       sprout-towns 1 [
         ; ugly location code
         if floor (x / 4) = 0 [ set xcor one ]
         if floor (x / 4) = 1 [ set xcor two ]
         if floor (x / 4) = 2 [ set xcor three ]
         if floor (x / 4) = 3 [ set xcor four ]
-        
+
         if x mod 4 = 0 [ set ycor one ]
         if x mod 4 = 1 [ set ycor two ]
         if x mod 4 = 2 [ set ycor three ]
         if x mod 4 = 3 [ set ycor four ]
-        
+
         set size 1
         set color first available-colors
         set available-colors butfirst available-colors
@@ -243,31 +243,31 @@ end
 to set-town-policies
   ;if cbd? is true, town policies are biased by distance from cbd. Directly on cbd = [ 1 1 1 ... 1 1]
   let x 0
-  ifelse states? 
+  ifelse states?
   [set x num-issues / 2 ]
-  [set x num-issues ] 
-  
+  [set x num-issues ]
+
   ifelse cbd?
   [
     set town-policies []
     repeat x [
-      ifelse random-float 1 > location 
+      ifelse random-float 1 > location
       [ set town-policies fput 1 town-policies ]
       [ set town-policies fput 0 town-policies ]
     ]
   ]
   [
     set town-policies []
-    repeat x [set town-policies fput (random 2) town-policies ]    
+    repeat x [set town-policies fput (random 2) town-policies ]
   ]
 end
 
 to setup-households
   create-households num-households
   ask households [
-    set color gray 
+    set color gray
     set happy? false]
-  
+
   ;; create random binary list of issue positions for each household, e.g. [0 1 1 0 1],
   ;; and position them randomly
   ask households [
@@ -282,14 +282,14 @@ end
 ;;;;;;;;;;;;;;;;;;;;;;;
 to go
   tick
-  
+
   if ticks >= max-length [
     stop ]
-  
+
   if all? households [happy?] [
     set stable? true
     stop ]
-  
+
   move-unhappy
   if ticks mod town-election-cycle = 0 [ hold-referenda-town ]
   if states? and ticks mod state-election-cycle = 0 [ hold-referenda-state ]
@@ -301,71 +301,71 @@ to step
   go
 end
 
-to evaluate 
+to evaluate
   let my-pcolor [pcolor] of self
   let similarity 0
   let local-policies []
-  
-  ifelse states?  
+
+  ifelse states?
     ;;true
     [ ask min-one-of states [ distance myself ] [
-      foreach state-policies [
-        set local-policies lput ? local-policies]]
+      foreach state-policies [ ?1 ->
+        set local-policies lput ?1 local-policies ]]
 ;    ask min-one-of towns [ distance myself] [
-;      foreach town-policies 
+;      foreach town-policies
 ;      [ set local-policies lput ? local-policies]] ]
     ask min-one-of towns [ distance myself] [
-      foreach reverse town-policies 
-      [ set local-policies fput ? local-policies]] ]
+      foreach reverse town-policies
+      [ ?1 -> set local-policies fput ?1 local-policies ]] ]
     ;;false
     [ ask min-one-of towns [distance myself] [
-      foreach town-policies 
-      [ set local-policies lput ? local-policies]]]
-  
-  
-  
+      foreach town-policies
+      [ ?1 -> set local-policies lput ?1 local-policies ]]]
+
+
+
   ;   show my-issues
   ;   show local-policies
-  (foreach my-issues local-policies  [
+  (foreach my-issues local-policies  [ [?1 ?2] ->
     if ?1 = ?2 [
-      set similarity (similarity + 1)]])
-  
+      set similarity (similarity + 1)] ])
+
   ;  show similarity
   ; < should be the correct comparison, you want, e.g. 6/12 to evaluate to true
-  ifelse similarity < (num-issues * (intensity / 100)) 
+  ifelse similarity < (num-issues * (intensity / 100))
     [ set happy? false ]
     [ set happy? true ]
-  
+
   ; handle equality case randomly to avoid bias on even values of intensity
   if similarity = (num-issues * (intensity / 100)) [
-    ifelse random 2 = 1 
+    ifelse random 2 = 1
     [ set happy? true ]
     [ set happy? false ]]
-  
+
 end
 
 to hold-referenda-state
   ask states [ set referendum [] ]
-  ask households [ 
+  ask households [
     let vote my-issues
-    repeat num-issues / 2 [ set vote butlast vote ] 
+    repeat num-issues / 2 [ set vote butlast vote ]
 ;    show vote ; debug
-    ask min-one-of states [distance myself] 
+    ask min-one-of states [distance myself]
       [ set referendum lput vote referendum ]]
-  
+
   ask states [
     ;    show state-policies
     let issue 0
     let new-policies []
     repeat num-issues / 2 [
       let votes []
-      foreach referendum 
-        [ set votes fput item issue ? votes ]
+      foreach referendum
+        [ ?1 -> set votes fput item issue ?1 votes ]
       let winner median votes
       ifelse winner = 1 or winner = 0
       [ set new-policies lput winner new-policies ]
       [ set new-policies lput item issue state-policies new-policies ]
-      
+
       set issue issue + 1 ]
     ;   show new-policies
     set state-policies new-policies ]
@@ -374,26 +374,26 @@ end
 
 to hold-referenda-town
   ;show ticks
-  
+
   ;; x is a variable representing either the set of all issues or half that;
   ;; used to avoid excessive conditionals around the state? variable
   let x 0
   ifelse states?
   [ set x num-issues / 2 ]
   [ set x num-issues ]
-  
-  
+
+
   ask towns [ set referendum [] ]
-  ask households [ 
+  ask households [
     let vote my-issues
-    repeat num-issues - x [ set vote butfirst vote ] 
+    repeat num-issues - x [ set vote butfirst vote ]
     ;    show vote ; debug
-    ask min-one-of towns [distance myself] 
+    ask min-one-of towns [distance myself]
       [ set referendum lput vote referendum ]]
-  
-  
-  
-  
+
+
+
+
   ask towns [
     ;     show town-policies
     let near-me my-color
@@ -402,9 +402,9 @@ to hold-referenda-town
       let new-policies []
       repeat x [
         let votes []
-        foreach referendum 
-          [ set votes fput item issue ? votes ]
-        if not empty? votes [ let winner median votes  
+        foreach referendum
+          [ ?1 -> set votes fput item issue ?1 votes ]
+        if not empty? votes [ let winner median votes
         ifelse winner = 1 or winner = 0
         [ set new-policies lput winner new-policies ]
         [ set new-policies lput item issue town-policies new-policies ]
@@ -414,7 +414,7 @@ to hold-referenda-town
 end
 
 to move-unhappy
-  ask households with [happy? = false] 
+  ask households with [happy? = false]
    [ setxy random-pxcor random-pycor ]
 end
 
@@ -426,33 +426,33 @@ to shade-houses
   ask households [
     set color gray
     let x reduce + my-issues
-    if x / num-issues < 0.4 
+    if x / num-issues < 0.4
       [set color white ]
     if x / num-issues > 0.6
-      [set color black ]] 
+      [set color black ]]
 end
 
-to update-desirability 
-  ask towns 
+to update-desirability
+  ask towns
   [ let col my-color
     set desirability count patches with [ pcolor = col ]]
 end
 
 to update-stats
   set percent-happy 100 * (count households with [happy? = true]) / (count households)
-  
+
   let town-ideologies []
   let state-ideologies []
   if states? [ ask states [ set state-ideologies lput summarize-ideology state-policies state-ideologies ] ]
   ask towns [ set town-ideologies lput summarize-ideology town-policies town-ideologies ]
-  
+
   if states? [
     set min-state-ideology min state-ideologies
     set max-state-ideology max state-ideologies
     set mean-state-ideology mean state-ideologies
     set sd-town-ideology standard-deviation town-ideologies
   ]
-  
+
   set min-town-ideology min town-ideologies
   set max-town-ideology max town-ideologies
   set mean-town-ideology mean town-ideologies
@@ -466,8 +466,8 @@ end
 GRAPHICS-WINDOW
 503
 19
-1025
-562
+1023
+540
 -1
 -1
 8.0
@@ -550,7 +550,7 @@ num-communities
 num-communities
 10
 80
-64
+64.0
 1
 1
 NIL
@@ -565,7 +565,7 @@ num-households
 num-households
 1000
 5000
-2000
+2000.0
 50
 1
 NIL
@@ -580,7 +580,7 @@ num-issues
 num-issues
 2
 100
-50
+50.0
 2
 1
 NIL
@@ -606,7 +606,7 @@ max-length
 max-length
 200
 2000
-500
+500.0
 100
 1
 NIL
@@ -621,7 +621,7 @@ intensity
 intensity
 1
 100
-50
+50.0
 1
 1
 NIL
@@ -680,7 +680,7 @@ state-election-cycle
 state-election-cycle
 0
 50
-20
+20.0
 1
 1
 NIL
@@ -695,7 +695,7 @@ town-election-cycle
 town-election-cycle
 0
 50
-20
+20.0
 1
 1
 NIL
@@ -1197,9 +1197,8 @@ false
 0
 Polygon -7500403 true true 270 75 225 30 30 225 75 270
 Polygon -7500403 true true 30 75 75 30 270 225 225 270
-
 @#$#@#$#@
-NetLogo 5.1.0
+NetLogo 6.1.0
 @#$#@#$#@
 @#$#@#$#@
 @#$#@#$#@
@@ -1473,7 +1472,6 @@ true
 0
 Line -7500403 true 150 150 90 180
 Line -7500403 true 150 150 210 180
-
 @#$#@#$#@
 0
 @#$#@#$#@

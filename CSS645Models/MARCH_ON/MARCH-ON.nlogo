@@ -1,5 +1,3 @@
-;Modeling Appalachian Trail Recreation: Camping, Hiking & Overcrowding in our Natural parks (MARCH-ON)
-
 
 globals [
  shelters

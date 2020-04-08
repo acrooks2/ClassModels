@@ -1,7 +1,4 @@
 ;==============================================================================================
-; CSS 645 --- Spatial ABM of Human/Environment Interactions
-; Spring 2019
-;
 ; This NetLogo model explores the phenomenon of a Common Pool Resource (CPR) Dilemma.  The scenario is described as follows:
 ;   1)  There are two star-crossed noble houses, living in a fantastic, magical world.
 ;   2)  Growing in a wellspring at the center of the city, there are magic purple truffles that can be gathered.

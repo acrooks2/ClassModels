@@ -1,4 +1,3 @@
-
 ;;Simulate information propragation in physical and cyber spaces
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -68,45 +67,45 @@ end
 to setup-USstates
   file-open "Data/stateid.txt" let patch-sid file-read file-close
   (foreach sort patches patch-sid
-     [ ask ?1 [ set layer-sid ?2 ] ] )  ;store stateid in layer-sid
+     [ [?1 ?2] -> ask ?1 [ set layer-sid ?2 ] ] )  ;store stateid in layer-sid
   ask patches
     [set pcolor layer-sid]
 
   file-open "Data/statedensity.txt" let patch-sdens file-read file-close
   (foreach sort patches patch-sdens
-     [ ask ?1 [ set layer-sdens ?2 ] ] ) ;store statedens in layer-sdens
+     [ [?1 ?2] -> ask ?1 [ set layer-sdens ?2 ] ] ) ;store statedens in layer-sdens
 
   file-open "Data/govid.txt" let patch-gid file-read file-close
   (foreach sort patches patch-gid
-     [ ask ?1 [ set layer-govid ?2 ] ] )
+     [ [?1 ?2] -> ask ?1 [ set layer-govid ?2 ] ] )
 
   file-open "Data/govparty.txt" let patch-gp file-read file-close
   (foreach sort patches patch-gp
-     [ ask ?1 [ set layer-govparty ?2 ] ] )
+     [ [?1 ?2] -> ask ?1 [ set layer-govparty ?2 ] ] )
 
   file-open "Data/govyear.txt" let patch-gyr file-read file-close
   (foreach sort patches patch-gyr
-     [ ask ?1 [ set layer-govyear ?2 ] ] )
+     [ [?1 ?2] -> ask ?1 [ set layer-govyear ?2 ] ] )
 
   file-open "Data/govvote.txt" let patch-gvote file-read file-close
   (foreach sort patches patch-gvote
-     [ ask ?1 [ set layer-govvote ?2 ] ] )
+     [ [?1 ?2] -> ask ?1 [ set layer-govvote ?2 ] ] )
 
   file-open "Data/govtwyear.txt" let patch-gty file-read file-close
   (foreach sort patches patch-gty
-     [ ask ?1 [ set layer-govtwyear ?2 ] ] )
+     [ [?1 ?2] -> ask ?1 [ set layer-govtwyear ?2 ] ] )
 
   file-open "Data/govfol.txt" let patch-gf file-read file-close
   (foreach sort patches patch-gf
-     [ ask ?1 [ set layer-govfol ?2 ] ] )
+     [ [?1 ?2] -> ask ?1 [ set layer-govfol ?2 ] ] )
 
   file-open "Data/sparty.txt" let patch-sparty file-read file-close
   (foreach sort patches patch-sparty
-     [ ask ?1 [ set layer-sparty ?2 ] ] )
+     [ [?1 ?2] -> ask ?1 [ set layer-sparty ?2 ] ] )
 
   file-open "Data/svote.txt" let patch-sv file-read file-close
   (foreach sort patches patch-sv
-     [ ask ?1 [ set layer-svote ?2 ] ] )
+     [ [?1 ?2] -> ask ?1 [ set layer-svote ?2 ] ] )
 end
 
 to setup-governors
@@ -274,8 +273,8 @@ end
 GRAPHICS-WINDOW
 210
 10
-1106
-416
+1104
+394
 -1
 -1
 1.5
@@ -304,7 +303,7 @@ BUTTON
 131
 43
 NIL
-setup\n
+setup
 NIL
 1
 T
@@ -359,7 +358,7 @@ PLOT
 420
 289
 585
-population
+population_1
 time
 population
 0.0
@@ -444,7 +443,7 @@ chances-to-change-mind
 chances-to-change-mind
 0
 5
-2
+2.0
 1
 1
 NIL
@@ -490,7 +489,7 @@ PLOT
 421
 590
 583
-population
+population_1
 time
 Count
 0.0
@@ -528,7 +527,7 @@ decay-after-times-heard
 decay-after-times-heard
 0
 72
-36
+36.0
 12
 1
 NIL
@@ -934,9 +933,8 @@ false
 0
 Polygon -7500403 true true 270 75 225 30 30 225 75 270
 Polygon -7500403 true true 30 75 75 30 270 225 225 270
-
 @#$#@#$#@
-NetLogo 5.3.1
+NetLogo 6.1.0
 @#$#@#$#@
 @#$#@#$#@
 @#$#@#$#@
@@ -952,7 +950,6 @@ true
 0
 Line -7500403 true 150 150 90 180
 Line -7500403 true 150 150 210 180
-
 @#$#@#$#@
 0
 @#$#@#$#@
