@@ -5,7 +5,7 @@
 
 ## &nbsp;
 
-User Changeable Parameters:
+"User Changeable Parameters":
 ![User Changeable Parameters](ChangeableParameters.png)
 
 The NetLogo Graphical User Interface of the Model: 

@@ -339,12 +339,7 @@ to calc-efficiency
     set hedge-harea-ratio 0
   ]
 
-
-
 end
-
-
-
 @#$#@#$#@
 GRAPHICS-WINDOW
 521

@@ -1,4 +1,3 @@
-
 globals
 [
   ;; the speed an elephant will move (slightly slower than poachers)

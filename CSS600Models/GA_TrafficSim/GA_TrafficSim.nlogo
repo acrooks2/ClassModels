@@ -4,7 +4,6 @@ globals[
  acceleration
  speed-limit
 
-
  ;GA variables
  generation-count
  max-light-time
@@ -48,7 +47,6 @@ patches-own[
 to setup
   clear-all
   reset-ticks
-
 
   ;setup the world
   setup-roads

@@ -9,7 +9,7 @@
 **Ajzen, I. (1985)**. From intentions to actions: A theory of planned behavior.  In *Action control* (pp. 11-39). Springer, Berlin, Heidelberg.
 
 ## &nbsp;
-Simplified diagram of Ajzen’s theory of planned behavior. The dashed line implies that *perceived behavioral control* (PBC), if correctly perceived, can be actual behavioral control and thus contribute directly to behavior:
+"Simplified diagram of Ajzen’s theory of planned behavior. The dashed line implies that *perceived behavioral control* (PBC), if correctly perceived, can be actual behavioral control and thus contribute directly to behavior:"
 ![Simplified diagram](fig1.png)
 
 Model Logic Flow:

@@ -1,8 +1,3 @@
-; ABM Interactional Theory
-; Youth and Environment Risk and Protective Scores (YERP)
-;
-;
-
 
 globals [
   home-patches         ;; agentset of blue patches representing the home areas

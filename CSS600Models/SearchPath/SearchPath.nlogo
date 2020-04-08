@@ -9703,7 +9703,6 @@ to target-seen
        ]
 end
 
-
 @#$#@#$#@
 GRAPHICS-WINDOW
 219
@@ -10261,7 +10260,7 @@ This model extensively uses the matrix functions in Netlogo
 
 ## CREDITS AND REFERENCES
 
-This model is original work my Jarrod Grewe George Mason University 2015. The following sources were used to create it.
+The following sources were used to create it.
 
 1.	“NetLogo 5.2.1 User Manual.” NetLogo 5.2.1 User Manual. Web. 30 Nov. 2015. 
 2.	J. F. J. Vermeulen, and M. van den Brink. “The Search for an Alerted Moving Target”. The Journal of the Operational Research Society 56.5 (2005): 514–525. Web… 

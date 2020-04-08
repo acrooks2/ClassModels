@@ -499,17 +499,11 @@ let lst []
 
      ]
 
-
-
  csv:to-file (word n-extremists-leaders "-" threshold-sentiment ".csv") lst
  file-close
 
 
 end
-
-
-
-
 @#$#@#$#@
 GRAPHICS-WINDOW
 204

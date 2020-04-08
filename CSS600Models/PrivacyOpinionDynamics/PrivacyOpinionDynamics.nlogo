@@ -1,4 +1,3 @@
-
 ;; Define attributes of each employee agent
 turtles-own [
   adopted?                    ;; Binary that signifies that the employee has adopted the wellness plan

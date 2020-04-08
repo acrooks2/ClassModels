@@ -7,9 +7,8 @@
 As a modeling platform, the original urban housing selection, which was developed based on the Schelling Segregation model in Netlogo is adopted. This model provided us with a starting point for the study and comparison of the two models through a variety of modifications, including multiple categories of attributes, multiple attributes and multiple distances at which those categories and attributes would affect agents’ selection choices."
 
 ## &nbsp;
-Comparison of this modified model compared to the original Schelling model in Netlogo:
+"Comparison of this modified model compared to the original Schelling model in Netlogo":
 ![Comparison of models](Comparison.png)
-
 
 The NetLogo Graphical User Interface of the Model: 
 ![The NetLogo Graphical User Interface](GUI.png)

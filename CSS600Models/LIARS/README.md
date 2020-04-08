@@ -15,4 +15,3 @@ The NetLogo Graphical User Interface of the Model:
 **Version of NetLogo**: NetLogo 6.1.0.
 
 **Semester Created**: Fall 2019
-

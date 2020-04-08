@@ -15,9 +15,6 @@
 ;; tick-limit
 
 
-
-
-
 ;; setting up the characteristics of firms/organizations
 breed [firms firm]
 firms-own [quality member-count member-voice]

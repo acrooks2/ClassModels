@@ -1243,13 +1243,6 @@ Glaeser, Edward L. 2011. Triumph of the City: How Our Greatest Invention Makes U
 
 ## HOW TO CITE
 
-If you mention this model in a publication, we ask that you include these citations for the model itself and for the NetLogo software:
-
-This model was created as part of a research project to explore the use of agent based modeling simulations for solving urban challenges. This particular simulation is attempting to model the formation of creative clusters to explore the role of creativity and economic development.
-
-The authors of this model are George Mason University students Ammar Malik and Melanie Swartz.
-
-
 * Wilensky, U. (1997).  NetLogo Creative City model.  http://ccl.northwestern.edu/netlogo/models/Segregation.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.
 * Wilensky, U. (1999). NetLogo. http://ccl.northwestern.edu/netlogo/. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.
 

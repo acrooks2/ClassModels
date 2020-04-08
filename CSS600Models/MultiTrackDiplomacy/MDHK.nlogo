@@ -75,7 +75,6 @@ to setup
 ;  set g.propOpenMinded (1 - g.propClosedMinded)
 ;  set g.propModerateMinded 0
 
-
   set g.openMinded_min 0.40                         ;; as per Fu et al. (2015)
   set g.openMinded_max 0.90                         ;; as per Fu et al. (2015)
   set g.moderateMinded_min 0.20                     ;; as per Fu et al. (2015)
@@ -1188,7 +1187,7 @@ HORIZONTAL
 
 @#$#@#$#@
 # Continuous Opinion Dynamics under Bounded Confidence 
-### using code and Info tab descriptions from Jan Lorenz, with modifications by Brant Horio and Juliette Shedd.
+### using code and Info tab descriptions from Jan Lorenz, with modifications by the students.
 
 ## WHAT IS IT?
 
@@ -1289,7 +1288,6 @@ Groeber, P.; Schweitzer, F. & Press, K. [How Groups Can Foster Consensus: The Ca
 ## CREDITS AND REFERENCES
 
 Copyright 2012 Jan Lorenz. http://janlo.de, post@janlo.de for the orginal NetLogo code and for the majority of this fantastic Info tab write-up.
-Copyright 2015 Brant Horio for the code changes that have exended Jan Lorenz's code to now include MHK (Fu et al., 2015) and MDHK implementations.
 
 ![Creative Commons Attribution-ShareAlike 3.0 Unported License](http://i.creativecommons.org/l/by-sa/3.0/88x31.png)
  

@@ -360,8 +360,6 @@ Another good extension might be to make negative groups more likely to splinter.
 ## NETLOGO FEATURES
 
 This model does not make use of any particularly unusual NetLogo features, though the group ID is not operational at present because of NetLogo difficulties in determining and updating the feature.
-
-## RELATED MODELS
 @#$#@#$#@
 default
 true

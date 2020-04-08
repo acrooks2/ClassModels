@@ -10,8 +10,6 @@
 ;;    The functions called "be-social", "acquire-english", and "marry" borrow a socializing function from Wilensky's AIDS model, available in the
 ;;    NetLogo libary, part of the standard installation at the time of this code's writing.
 ;;
-;; Thanks for looking at my model. Hope you enjoy.
-;;
 
 ;;************************;;
 ;;INITIAL SETUP PROCEDURES;;

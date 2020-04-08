@@ -10,10 +10,10 @@
 Yee, Nick. 2007. Motivations of Play in Online Games. *Journal of Cyber Psychology and Behavior*, Vol.9: pg. 772-775.
 
 ## &nbsp;
-Simulation Process flow:
+"Simulation Process flow":
 ![Process Flow](ProcessFlow.png)
 
-Agent decision making: Example with Achievement as higher motivation:
+"Agent decision making: Example with Achievement as higher motivation":
 ![decision making](DecisionMaking.png)
 
 

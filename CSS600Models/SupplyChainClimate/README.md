@@ -10,7 +10,7 @@ The NetLogo Graphical User Interface of the Model:
 
 ## &nbsp;
 
-**Versions of NetLogo**: NetLogo 5.3.1 & 6.1.0
+**Versions of NetLogo**: NetLogo 6.1.0
 
 **Semester Created**: Fall 2012.
 

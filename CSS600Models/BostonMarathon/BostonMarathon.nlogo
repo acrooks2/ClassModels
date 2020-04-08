@@ -39,15 +39,6 @@ extensions [ gis ]
 to load
   clear-all
 
-  ;; I initially tried using shapefiles from the Massachusetts.gov website, but then abandoned that idea
-  ;;let view gis:load-dataset "/Users/kham/Desktop/Bos_neighborhoods.shp"
-  ;;gis:set-world-envelope-ds gis:envelope-of view
-  ;;foreach gis:feature-list-of view
-  ;;[
-   ;; gis:set-drawing-color white
-   ;; gis:draw ? 1.0
-  ;;]
-
   ;; I ended up taking a screenshot of a google maps image and making it my backdrop
   ;; The image is 2557 x 1206 so I have assigned 2 pixels per patch to make it 1278 x 603
 
@@ -626,7 +617,7 @@ to runners-move
   ask bystanders [
       ifelse any? bystanders with [ fear = FALSE ]
           [ forward 0]
-    ;;[ move-to-escape ]
+
 
     ;; new movement code from Steve Scott's pedestrian egress model
 
@@ -746,137 +737,7 @@ to bomb-blast
 end
 
 
-;; this is a modified set of code from Steve Scott's pedestrian egress model,
-;; I did not use it once I figured out how to make the turtles move along a gradient
-;; using a gradient, they never get stuck at a structure because its elevation is too high
-to move-to-escape
-  ;
-  ; define goal destination for agents
-  ;
-  ;; let target-spot one-of patches with [ ptype = "escape" ]
 
-  ;
-  ; iterate over agent set and move
-  ;
-  ask bystanders [
-
-
-
-    ;;let target-spot-northeast one-of patches with [ ptype = "northeast-escape-point" ]
-    ;;let target-spot-northwest one-of patches with [ ptype = "northwest-escape-point" ]
-    ;;let target-spot-north one-of patches with [ ptype = "north-escape-point" ]
-    ;;let target-spot-southeast one-of patches with [ ptype = "southeast-escape-point" ]
-    ;;let target-spot-southwest one-of patches with [ ptype = "southwest-escape-point" ]
-    ;;let target-spot-south one-of patches with [ ptype = "south-escape-point" ]
-
-
-
-
-    ;;with [myEscapePoint = "northeast-escape-point" ]
-
-    ;;face one-of patches with [ ptype = "northeast-escape-point" ]
-    ;;face target-spot-northeast
-
-    ;;with [myEscapePoint = "northwest-escape-point" ]
-    ;;with [ pxcor <= 47 and pycor >= 0 ]
-     ;;face patch -183 210
-    ;;[ face target-spot-northwest ]
-
-
-    ;;with [myEscapePoint = "north-escape-point" ]
-    ;;with [ pxcor > 47 and pycor > 0  ]
-    ;;face 216 210
-    ;;[ face target-spot-north ]
-
-    ;;with [myEscapePoint = "southeast-escape-point" ]
-    ;;face one-of patches with [ ptype = "southeast-escape-point" ]
-    ;;[ face target-spot-southeast ]
-
-    ;;with [myEscapePoint = "southwest-escape-point" ]
-    ;;with [ pxcor <= 47 and pycor <= 0 ]
-    ;;face -183 -225
-    ;;[ face target-spot-southwest ]
-
-
-    ;;with [myEscapePoint = "south-escape-point" ]
-    ;;with [ pxcor > 47 and pycor < 0 ]
-    ;;face 216 -225
-    ;;[ face target-spot-south ]
-
-    ;;face myEscapePoint
-
-    let done? false
-
-    ;;let spot n-of 1 neighbors
-
-    let spot one-of neighbors with [ not any? turtles-here and ptype = "outside" ] ;; using this command gives a crazy sort of brownian motion
-    ;;let spot patch-ahead 1
-    if spot != nobody and not any? bystanders-on spot [
-
-      ;
-      ; moving thru the space
-      ;
-      ;;if not done? [
-      ;;  if [ptype] of patch-here = "outside" and [ptype] of spot = "outside" [
-      ;;    move-to spot
-      ;;    set done? true
-      ;;  ]
-      ;;]
-
-      ;
-      ; stuck next to a structure
-      ;
-      if not done? [
-        if [ptype] of patch-here = "outside" and [ptype] of spot = "structure" [
-          set spot one-of neighbors with [ not any? turtles-here and ptype = "outside" ]
-          if spot != nobody [
-            move-to spot
-          ]
-          set done? true
-        ]
-      ]
-
-      ;
-      ; stuck in the crowd
-      ;
-      if not done? [
-        if ( [ptype] of patch-here = "outside" ) and ( sum [count turtles-here] of neighbors > 3 ) [
-
-           set spot one-of neighbors with [ not any? turtles-here and ptype = "outside" ]
-           if spot != nobody [
-           move-to spot
-           ]
-          set done? true
-        ]
-      ]
-
-      ;
-      ; in the exit, move outside
-      ;
-      ;;if not done? [
-      ;;  if [ptype] of patch-here = "exit" [
-      ;;    move-to spot
-      ;;    set done? true
-      ;;  ]
-      ;;]
-
-      ;
-      ; outside, all finished so die
-      ;
-      if not done? [
-        ;;if [ptype] of patch-here = "escape" [
-        if [pycor < -200 or pycor > 200] of patch-here [
-          die
-
-          set done? true
-        ]
-
-      ]
-
-    ]
-
-  ]
-end
 
 ;; I used this code to sweep manually through a variety of parameters
 ;; you must perform 'load' once before running the sweeper
@@ -1384,8 +1245,6 @@ New York Times (2013). Site of the explosions at the Boston marathon Interactive
 O’Leary, M., & Heide, E. A. der (2004). The First 72 Hours: A Community Approach to Disaster Preparedness. CH 27, Common Misconceptions about  Disasters: Panic,  the “Disaster Syndrome,” and  Looting. Retrieved from https://www.atsdr.cdc.gov/emergency_response/common_misconceptions.pdf
 
 Partners, B. G. M. (2013, April 16). How the Boston marathon bombings unfolded - the Boston globe. Retrieved November 5, 2016, from http://www.bostonglobe.com/2013/04/15/explosionreports/0gpSHeDd0JDbSw6P4irqXM/story.html
-
-Scott, Steve (Fall 2016) Pedestrian-egress.nlogo
 @#$#@#$#@
 default
 true

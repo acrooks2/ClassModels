@@ -419,17 +419,11 @@ to go
    [stop]]
 
   step
-
-
 end
-
-
 
 
 ; simulation management method
 to process-next-event
-
-
 
   set event-queue sort-on [event-time] events   ; sort event queue in increasing order by event-time
 
@@ -566,9 +560,6 @@ to process-next-event
     ]
   ]
 end
-
-
-
 
 to task-switching-cost
 ask workers [
@@ -1318,10 +1309,6 @@ Add a cost for training operators to a certain level of skill and a cost for eac
 ## RELATED MODELS
 
 I was unable to find related models, since Discrete Event Simulations do not appear to be traditionally done within Netlogo.
-
-## CREDITS AND REFERENCES
-
-Thank you to Steve Scott, George Mason Univeristy, for his contributions to this model's event management, discrete events simulation structure. 
 @#$#@#$#@
 default
 true

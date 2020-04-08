@@ -218,7 +218,6 @@ to create-new-generation
     ]
 end
 
-
 ;;updates the total population
 to update-total-population
   set total-population ((count workers) + (count retirees))

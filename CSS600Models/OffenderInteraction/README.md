@@ -12,8 +12,6 @@ Offender Interaction Process Model:
 Implementation of the Model:
 ![Implementation](Implementation.png)
 
-
-
 The NetLogo Graphical User Interface of the Model: 
 ![The NetLogo Graphical User Interface](GUI.png)
 

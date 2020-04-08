@@ -8,10 +8,10 @@
 Hirschman, Albert.  *Exit, Voice, and Loyalty: Responses to Decline in Firms, Organizations, and States*.  1970.  Harvard University Press: Cambridge.
 
 ## &nbsp;
-Flow diagram for member in a given tick (note that each member is asked to do all of this in a given tick, but not all at the same time):
+"Flow diagram for member in a given tick (note that each member is asked to do all of this in a given tick, but not all at the same time)":
 ![MemberFlow](MemberFlow.png)
 
-Flow diagram for firm in a given tick (note that each firm is asked to do all of this in a given tick, but not all at the same time):
+"Flow diagram for firm in a given tick (note that each firm is asked to do all of this in a given tick, but not all at the same time)":
 ![FirmFlow](FirmFlow.png)
 
 The NetLogo Graphical User Interface of the Model: 

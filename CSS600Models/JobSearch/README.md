@@ -6,7 +6,7 @@
 
 ## &nbsp;
 
-A conceptual flowchart of the model:
+"A conceptual flowchart of the model":
 ![conceptual flowchart](ConceptualFlowchart.png)
 
 The NetLogo Graphical User Interface of the Model: 

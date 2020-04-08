@@ -863,11 +863,6 @@ Note the extensive use of normal distributions with very wide tails in this appl
 ## CREDITS AND REFERENCES
 
 No code was borrowed for this application.
-
-
-## HOW TO CITE
-
-If you mention this model in a publication, I ask that you include a citationa for the model itself and for the NetLogo software.
 @#$#@#$#@
 default
 true
